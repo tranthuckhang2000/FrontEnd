@@ -27,9 +27,24 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/style_1.css",
+              "src/assets/css/style_1.css",
+              "src/assets/css/animate.css",
+              "src/assets/css/bootstrap.css",
+              "src/assets/css/media_query.css",
+              "src/assets/css/owl.carousel.css",
+              "src/assets/css/owl.theme.default.css",
+              "src/assets/sass/style_1.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/bootstrap.js",
+              "src/assets/js/jquery.stellar.min.js",
+              "src/assets/js/jquery.waypoints.min.js",
+              "src/assets/js/main.js",
+              "src/assets/js/modernizr-3.5.0.min.js",
+              "src/assets/js/owl.carousel.min.js"
+            ]
           },
           "configurations": {
             "production": {
