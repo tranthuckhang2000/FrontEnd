@@ -6,7 +6,13 @@ import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { CategorymenuComponent } from './category/categorymenu/categorymenu.component';
+import { CategorymenuComponent } from './category/quocte-menu/categorymenu.component';
+import { TrongNuocMenuComponent } from './category/trongnuoc-menu/trong-nuoc-menu.component';
+import { CongdoanMenuComponent } from './category/congdoan-menu/congdoan-menu.component';
+import { BandocMenuComponent } from './category/bandoc-menu/bandoc-menu.component';
+import { KinhteMenuComponent } from './category/kinhte-menu/kinhte-menu.component';
+import { SuckhoeMenuComponent } from './category/suckhoe-menu/suckhoe-menu.component';
+import { GiaoducMenuComponent } from './category/giaoduc-menu/giaoduc-menu.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +21,13 @@ import { CategorymenuComponent } from './category/categorymenu/categorymenu.comp
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    CategorymenuComponent
+    CategorymenuComponent,
+    TrongNuocMenuComponent,
+    CongdoanMenuComponent,
+    BandocMenuComponent,
+    KinhteMenuComponent,
+    SuckhoeMenuComponent,
+    GiaoducMenuComponent
   ],
   imports: [
     BrowserModule

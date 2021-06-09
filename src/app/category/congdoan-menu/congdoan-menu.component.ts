@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-categorymenu',
-  templateUrl: './categorymenu.component.html',
-  styleUrls: ['./categorymenu.component.css']
+  selector: 'app-congdoan-menu',
+  templateUrl: './congdoan-menu.component.html',
+  styleUrls: ['./congdoan-menu.component.css']
 })
-export class CategorymenuComponent implements OnInit {
+export class CongdoanMenuComponent implements OnInit {
+
   title?: string;
   title1?: string;
   title2?: string;
