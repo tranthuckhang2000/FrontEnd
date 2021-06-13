@@ -1,6 +1,6 @@
 /* Scss Document */
 
-$yellow:#ffff;
+$yellow:#f5bc04;
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -109,8 +109,7 @@ a, a:hover {
   //padding-bottom: 20px;
   margin: 0 10px;
   position: relative;
-  top: -16px;
-
+  top: -10px;
 }
 .navbar-light .navbar-nav .open > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .nav-link.active {
   color: #fff!important;
@@ -124,24 +123,25 @@ a, a:hover {
   @include clip-path(polygon(100% 0, 100% 85%, 14% 85%, 0 100%, 0% 60%, 0 0));
 }
 .navbar-light .navbar-nav .nav-link {
-  color: #FFFFFF !important;
+  white-space: nowrap;
+  color: #222!important;
   padding-top: 12px!important;
   padding-bottom: 15px!important;
-  padding-left: 20px!important;
-  padding-right: 20px!important;
-  margin: 0 20px!important;
+  padding-left: 10px!important;
+  padding-right: 10px!important;
+  margin: 0 0 !important;
   @include transition(0.5s);
   position: relative!important;
   @include clip-path(polygon(100% 0, 100% 85%, 14% 85%, 0 100%, 0% 60%, 0 0));
 
   &:focus, &:hover {
     background: $yellow!important;
-    color: black !important;
+    color: #fff!important;
     padding-top: 12px!important;
     padding-bottom: 15px!important;
-    padding-left: 20px!important;
-    padding-right: 20px!important;
-    margin: 0 20px;
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+    margin: 0 0;
     position: relative;
   }
 }
@@ -607,7 +607,7 @@ a, a:hover {
   border-top: 0px solid #fff!important;
   border-top: 0px solid #fff!important;
   box-shadow: none!important;
-  color: black !important;
+  color: #fff!important;
   display: -webkit-box!important;
 }
 .fh5co_footer_right_reserved {
@@ -912,3 +912,32 @@ a, a:hover {
     color: #0275d8;
   }
 }
+// item menu
+*{
+  font-family: "Verdana";
+}
+.card-horizontal {
+  display: flex;
+  flex: 1 1 200px;
+}
+.most-video{
+  margin-left: -25px;
+}
+.ad_tivi{
+  margin-top: -275px;
+  width: 25%;
+  height: 3000px;
+  float: right;
+  margin-right: 15px;
+}
+.title-main{
+  width: 250px;
+  height: 40px;
+  text-align: center;
+  background-color: lightgrey;
+  border-radius: 15px 30px;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  box-shadow: 0 8px 6px -6px black;
+}
+// end item menu
