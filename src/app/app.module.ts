@@ -13,6 +13,7 @@ import { BandocMenuComponent } from './category/bandoc-menu/bandoc-menu.componen
 import { KinhteMenuComponent } from './category/kinhte-menu/kinhte-menu.component';
 import { SuckhoeMenuComponent } from './category/suckhoe-menu/suckhoe-menu.component';
 import { GiaoducMenuComponent } from './category/giaoduc-menu/giaoduc-menu.component';
+import { FeedComponent } from './feed/feed.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { GiaoducMenuComponent } from './category/giaoduc-menu/giaoduc-menu.compo
     BandocMenuComponent,
     KinhteMenuComponent,
     SuckhoeMenuComponent,
-    GiaoducMenuComponent
+    GiaoducMenuComponent,
+    FeedComponent
   ],
   imports: [
     BrowserModule
