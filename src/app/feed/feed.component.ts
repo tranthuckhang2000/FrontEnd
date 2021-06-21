@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Data} from "./model/data";
+import {FeedService} from "./service/feed.service";
 
 @Component({
   selector: 'app-feed',
@@ -10,6 +11,8 @@ export class FeedComponent implements OnInit {
   title = 'FrontEnd';
   header: string[] | undefined;
   data: any[];
+  feed: FeedService;
+
 
 
   constructor(private httpData: Data) {
@@ -18,7 +21,7 @@ export class FeedComponent implements OnInit {
       .subscribe(value => {
         for (const [k, v] of Object.entries(value)) {
           this.data.push(v);
-          console.log(k);
+          // console.log(k);
         }
       });
 
