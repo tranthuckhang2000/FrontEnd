@@ -5,7 +5,11 @@ import {Observable} from "rxjs";
 @Injectable()
 
 export class Feed {
-  constructor() {
+  title: string;
+  url: string;
+  constructor(title: string, url: string) {
+    this.title = title;
+    this.url = url;
   }
 
 
