@@ -18,6 +18,7 @@ export class FeedComponent implements OnInit {
       .subscribe(value => {
         for (const [k, v] of Object.entries(value)) {
           this.data.push(v);
+          console.log(k);
         }
       });
 
