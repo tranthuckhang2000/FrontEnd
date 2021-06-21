@@ -14,6 +14,9 @@ import { KinhteMenuComponent } from './category/kinhte-menu/kinhte-menu.componen
 import { SuckhoeMenuComponent } from './category/suckhoe-menu/suckhoe-menu.component';
 import { GiaoducMenuComponent } from './category/giaoduc-menu/giaoduc-menu.component';
 import { FeedComponent } from './feed/feed.component';
+import {Data} from "./feed/model/data";
+import {HttpClientModule} from "@angular/common/http";
+import { FeedListComponent } from './feed/feed-list/feed-list.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +32,14 @@ import { FeedComponent } from './feed/feed.component';
     KinhteMenuComponent,
     SuckhoeMenuComponent,
     GiaoducMenuComponent,
-    FeedComponent
+    FeedComponent,
+    FeedListComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [Data],
+  exports: [HttpClientModule],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
