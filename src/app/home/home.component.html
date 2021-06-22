@@ -1,0 +1,580 @@
+<app-header></app-header>
+
+<div id="main">
+  <!--Main left -->
+  <div class="main-left">
+    <div class="card" style="width: 37rem;">
+      <img src="{{imgLink}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h3 class="card-title">{{title}}</h3>
+        <p class="card-text">{{content}}</p>
+      </div>
+    </div>
+    <!-- Noi dung 2 -->
+    <div *ngFor="let i of listItem"  class="card mb-3" style="max-width: 567px;margin-top: 20px ;border-top: none;border-left:none;border-right:none;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://nld.mediacdn.vn/zoom/220_139/291774122806476800/2021/6/7/1-16230698476032081224043.jpg
+                "alt="...">
+        </div>
+        <div class="col-md-8">
+          <div style="margin-left: 20px;line-height: 15px;margin-top: -20px" class="card-body">
+            <h5 class="card-title">{{title}}</h5>
+            <p class="card-text">{{title}}</p>
+            <p class="card-text">{{title}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End Main left -->
+  <!--Main Center -->
+  <div class="main-center">
+    <div class="container scroll">
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs ">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#tabtinnong">Tin Nóng</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#tabtinmoi">Tin Mới</a>
+        </li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content ">
+        <div id="tabtinnong" class="container tab-pane active"><br>
+          <div class="list-group" style="width: 16rem;margin-left: -15px">
+            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
+            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
+            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
+            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
+            <a href="#" class="list-group-item list-group-item-action ">{{tinnong}}</a>
+            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
+            <a href="#" class="list-group-item list-group-item-action ">{{tinnong}}</a>
+            <a href="#" class="list-group-item list-group-item-action ">{{tinnong}}</a>
+            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
+            <a href="#" class="list-group-item list-group-item-action ">{{tinnong}}</a>
+            <a href="#" class="list-group-item list-group-item-action ">{{tinnong}}</a>
+          </div>
+        </div>
+        <div id="tabtinmoi" class="container tab-pane fade"><br>
+          <div class="list-group" style="width: 16rem;margin-left: -15px">
+            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
+            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
+            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
+            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
+            <a href="#" class="list-group-item list-group-item-action ">{{tinnong}}</a>
+            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
+            <a href="#" class="list-group-item list-group-item-action ">{{tinnong}}</a>
+            <a href="#" class="list-group-item list-group-item-action ">{{tinnong}}</a>
+            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
+            <a href="#" class="list-group-item list-group-item-action ">{{tinnong}}</a>
+            <a href="#" class="list-group-item list-group-item-action ">{{tinnong}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Noi Dung 2 -->
+    <div *ngFor="let i of listItem2" class="card" style="width: 16rem; margin-top: 20px;margin-left: 15px">
+      <img src="{{image}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">{{title}}</p>
+      </div>
+    </div>
+  </div>
+  <!--End Main Center -->
+  <!--Main Right -->
+  <div class="main-right">
+    <!--Quang cao cot ben phai -->
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <img style="margin-left: 20px;" src="//adi.admicro.vn/adt/adn/2021/06/300x2-adx60cefec7b2d1c.png"/>
+    <!--Quang cao cot ben phai -->
+  </div>
+  <!--End Main Right -->
+</div>
+
+<!--Short form -->
+<div id="short-form">
+  <!-- SHort form left -->
+  <div class="short_form-left">
+    <div style="margin-top: 20px"   class="short_form-container">
+      <div class="menu-short">
+        <ul style="font-size: 12px;font-weight: bold;" class="nav justify-content-end">
+          <li  class="nav-item">
+            <a class="nav-link title-short" href="#">TRONG NƯỚC</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Chính Trị</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Xã hội</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Miền tây</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Hà Nội</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Miền Trung - Tây Nguyên</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Phóng sự - Bút Ký</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Biển đảo</a>
+          </li>
+        </ul>
+      </div>
+      <div class="content-short1">
+        <div class="card" style="width: 16rem;margin: auto">
+          <img src="{{image}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">{{title}}</p>
+            <p class="card-text">{{title}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="content-short2">
+        <div *ngFor="let i of listItem3"  class="card mb-3" style="max-width: 300px;margin: auto;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://nld.mediacdn.vn/zoom/114_71/291774122806476800/2021/6/21/dsc01343-16242789788411547686532.jpg
+                "alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body" style="padding: 10px;">
+                <p class="card-title">{{title}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="content-short3">
+        <div class="card" style="width: 16rem;margin: auto">
+          <img src="{{image}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">{{title}}</p>
+            <p class="card-text">{{title}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div style="margin-top: 20px;" class="short_form-left">
+    <div style="margin-top: 20px"   class="short_form-container">
+      <div class="menu-short">
+        <ul style="font-size: 12px;font-weight: bold;" class="nav justify-content-end">
+          <li  class="nav-item">
+            <a class="nav-link title-short" href="#">Quốc Tế</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Hồ Sơ</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Tin hay, Ảnh lạ</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Video Clip</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Khoa Học</a>
+          </li>
+        </ul>
+      </div>
+      <div class="content-short1">
+        <div class="card" style="width: 16rem;margin: auto">
+          <img src="{{image}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">{{title}}</p>
+            <p class="card-text">{{title}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="content-short2">
+        <div *ngFor="let i of listItem3"  class="card mb-3" style="max-width: 300px;margin: auto;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://nld.mediacdn.vn/zoom/114_71/291774122806476800/2021/6/21/dsc01343-16242789788411547686532.jpg
+                "alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body" style="padding: 10px;">
+                <p class="card-title">{{title}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="content-short3">
+        <div class="card" style="width: 16rem;margin: auto">
+          <img src="{{image}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">{{title}}</p>
+            <p class="card-text">{{title}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div style="margin-top: 20px;" class="short_form-left">
+    <div style="margin-top:20px"class="short_form-container">
+      <div class="menu-short">
+        <ul style="font-size: 12px;font-weight: bold;" class="nav justify-content-end">
+          <li  class="nav-item">
+            <a class="nav-link title-short" href="#">Công Đoàn</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Đời Sống Công Dân</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Đối Thoại</a>
+          </li>
+        </ul>
+      </div>
+      <div class="content-short1">
+        <div class="card" style="width: 16rem;margin: auto">
+          <img src="{{image}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">{{title}}</p>
+            <p class="card-text">{{title}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="content-short2">
+        <div *ngFor="let i of listItem3"  class="card mb-3" style="max-width: 300px;margin: auto;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://nld.mediacdn.vn/zoom/114_71/291774122806476800/2021/6/21/dsc01343-16242789788411547686532.jpg
+                "alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body" style="padding: 10px;">
+                <p class="card-title">{{title}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="content-short3">
+        <div class="card" style="width: 16rem;margin: auto">
+          <img src="{{image}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">{{title}}</p>
+            <p class="card-text">{{title}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 20px;" class="short_form-left">
+    <div style="margin-top:20px"class="short_form-container">
+      <div class="menu-short">
+        <ul style="font-size: 12px;font-weight: bold;" class="nav justify-content-end">
+          <li  class="nav-item">
+            <a class="nav-link title-short" href="#">Bạn Đọc</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Cuộc Sống Nhân Ái</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Tôi Lên Tiếng</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Nét Đẹp Đời Thường</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Góc Ảnh Bạn Đọc</a>
+          </li>
+        </ul>
+      </div>
+      <div class="content-short1">
+        <div class="card" style="width: 16rem;margin: auto">
+          <img src="{{image}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">{{title}}</p>
+            <p class="card-text">{{title}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="content-short2">
+        <div *ngFor="let i of listItem3"  class="card mb-3" style="max-width: 300px;margin: auto;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://nld.mediacdn.vn/zoom/114_71/291774122806476800/2021/6/21/dsc01343-16242789788411547686532.jpg
+                "alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body" style="padding: 10px;">
+                <p class="card-title">{{title}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="content-short3">
+        <div class="card" style="width: 16rem;margin: auto">
+          <img src="{{image}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">{{title}}</p>
+            <p class="card-text">{{title}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 20px;" class="short_form-left">
+    <div style="margin-top:20px"class="short_form-container">
+      <div class="menu-short">
+        <ul style="font-size: 12px;font-weight: bold;" class="nav justify-content-end">
+          <li  class="nav-item">
+            <a class="nav-link title-short" href="#">kinh tế</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Doanh Nghiệp</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Chuyện Quản Lý</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Xe Điện Máy</a>
+          </li>
+        </ul>
+      </div>
+      <div class="content-short1">
+        <div class="card" style="width: 16rem;margin: auto">
+          <img src="{{image}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">{{title}}</p>
+            <p class="card-text">{{title}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="content-short2">
+        <div *ngFor="let i of listItem3"  class="card mb-3" style="max-width: 300px;margin: auto;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://nld.mediacdn.vn/zoom/114_71/291774122806476800/2021/6/21/dsc01343-16242789788411547686532.jpg
+                "alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body" style="padding: 10px;">
+                <p class="card-title">{{title}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="content-short3">
+        <div class="card" style="width: 16rem;margin: auto">
+          <img src="{{image}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">{{title}}</p>
+            <p class="card-text">{{title}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 20px;" class="short_form-left">
+    <div style="margin-top:20px"class="short_form-container">
+      <div class="menu-short">
+        <ul style="font-size: 12px;font-weight: bold;" class="nav justify-content-end">
+          <li  class="nav-item">
+            <a class="nav-link title-short" href="#">sức khỏe</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Chuyển Động Y Học</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Giới Tính</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Thuốc & Dinh Dưỡng</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Khỏe & Đẹp</a>
+          </li>
+        </ul>
+      </div>
+      <div class="content-short1">
+        <div class="card" style="width: 16rem;margin: auto">
+          <img src="{{image}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">{{title}}</p>
+            <p class="card-text">{{title}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="content-short2">
+        <div *ngFor="let i of listItem3"  class="card mb-3" style="max-width: 300px;margin: auto;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://nld.mediacdn.vn/zoom/114_71/291774122806476800/2021/6/21/dsc01343-16242789788411547686532.jpg
+                "alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body" style="padding: 10px;">
+                <p class="card-title">{{title}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="content-short3">
+        <div class="card" style="width: 16rem;margin: auto">
+          <img src="{{image}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">{{title}}</p>
+            <p class="card-text">{{title}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 20px;" class="short_form-left">
+    <div style="margin-top:20px"class="short_form-container">
+      <div class="menu-short">
+        <ul style="font-size: 12px;font-weight: bold;" class="nav justify-content-end">
+          <li  class="nav-item">
+            <a class="nav-link title-short" href="#">giáo dục</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Du Học</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Sau Bục Giảng</a>
+          </li>
+
+        </ul>
+      </div>
+      <div class="content-short1">
+        <div class="card" style="width: 16rem;margin: auto">
+          <img src="{{image}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">{{title}}</p>
+            <p class="card-text">{{title}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="content-short2">
+        <div *ngFor="let i of listItem3"  class="card mb-3" style="max-width: 300px;margin: auto;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://nld.mediacdn.vn/zoom/114_71/291774122806476800/2021/6/21/dsc01343-16242789788411547686532.jpg
+                "alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body" style="padding: 10px;">
+                <p class="card-title">{{title}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="content-short3">
+        <div class="card" style="width: 16rem;margin: auto">
+          <img src="{{image}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">{{title}}</p>
+            <p class="card-text">{{title}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 20px;" class="short_form-left">
+    <div style="margin-top:20px"class="short_form-container">
+      <div class="menu-short">
+        <ul style="font-size: 12px;font-weight: bold;" class="nav justify-content-end">
+          <li  class="nav-item">
+            <a class="nav-link title-short" href="#">pháp luật</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Hỏi Đáp</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Truy Nã</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Chuyện Pháp Đình</a>
+          </li>
+
+        </ul>
+      </div>
+      <div class="content-short1">
+        <div class="card" style="width: 16rem;margin: auto">
+          <img src="{{image}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">{{title}}</p>
+            <p class="card-text">{{title}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="content-short2">
+        <div *ngFor="let i of listItem3"  class="card mb-3" style="max-width: 300px;margin: auto;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://nld.mediacdn.vn/zoom/114_71/291774122806476800/2021/6/21/dsc01343-16242789788411547686532.jpg
+                "alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body" style="padding: 10px;">
+                <p class="card-title">{{title}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="content-short3">
+        <div class="card" style="width: 16rem;margin: auto">
+          <img src="{{image}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">{{title}}</p>
+            <p class="card-text">{{title}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End SHort form left -->
+
+  <!-- Right - advertisement  -->
+  <div class="short_form-right">
+
+  </div>
+  <!--  End Right - advertisement  -->
+
+</div>
+<!--End Short form -->
+<app-footer></app-footer>
