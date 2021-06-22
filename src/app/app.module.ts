@@ -1,11 +1,9 @@
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
 import { CategorymenuComponent } from './category/quocte-menu/categorymenu.component';
 import { TrongNuocMenuComponent } from './category/trongnuoc-menu/trong-nuoc-menu.component';
 import { CongdoanMenuComponent } from './category/congdoan-menu/congdoan-menu.component';
@@ -24,7 +22,6 @@ import { FeedListComponent } from './feed/feed-list/feed-list.component';
     MenuComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent,
     CategorymenuComponent,
     TrongNuocMenuComponent,
     CongdoanMenuComponent,
