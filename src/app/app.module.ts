@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
 import { CategorymenuComponent } from './category/quocte-menu/categorymenu.component';
 import { TrongNuocMenuComponent } from './category/trongnuoc-menu/trong-nuoc-menu.component';
 import { CongdoanMenuComponent } from './category/congdoan-menu/congdoan-menu.component';
@@ -17,6 +16,9 @@ import { FeedComponent } from './feed/feed.component';
 import {Data} from "./feed/model/data";
 import {HttpClientModule} from "@angular/common/http";
 import { FeedListComponent } from './feed/feed-list/feed-list.component';
+import { AppRoutingModule } from './app-routing.module';
+import {RouterModule} from "@angular/router";
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,6 @@ import { FeedListComponent } from './feed/feed-list/feed-list.component';
     MenuComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent,
     CategorymenuComponent,
     TrongNuocMenuComponent,
     CongdoanMenuComponent,
@@ -33,11 +34,14 @@ import { FeedListComponent } from './feed/feed-list/feed-list.component';
     SuckhoeMenuComponent,
     GiaoducMenuComponent,
     FeedComponent,
-    FeedListComponent
+    FeedListComponent,
+    HomeComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        RouterModule
+    ],
   providers: [Data],
   exports: [HttpClientModule],
   bootstrap: [AppComponent],
