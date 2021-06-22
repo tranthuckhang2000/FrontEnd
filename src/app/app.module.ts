@@ -15,6 +15,9 @@ import { FeedComponent } from './feed/feed.component';
 import {Data} from "./feed/model/data";
 import {HttpClientModule} from "@angular/common/http";
 import { FeedListComponent } from './feed/feed-list/feed-list.component';
+import { AppRoutingModule } from './app-routing.module';
+import {RouterModule} from "@angular/router";
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +33,14 @@ import { FeedListComponent } from './feed/feed-list/feed-list.component';
     SuckhoeMenuComponent,
     GiaoducMenuComponent,
     FeedComponent,
-    FeedListComponent
+    FeedListComponent,
+    HomeComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        RouterModule
+    ],
   providers: [Data],
   exports: [HttpClientModule],
   bootstrap: [AppComponent],
