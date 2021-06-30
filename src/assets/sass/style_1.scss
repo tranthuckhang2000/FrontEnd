@@ -1,6 +1,6 @@
 /* Scss Document */
 
-$yellow:#f5bc04;
+$yellow:#00456e;
 
 @mixin border-radius($radius) {
 	-webkit-border-radius: $radius;
@@ -71,7 +71,7 @@ a, a:hover {
 	left: 9px;
 }
 .fh5co_logo_width {
-	width: 130px;
+	width: 30px;
 }
 .fh5co_mediya_right {
 	text-align: right;
@@ -119,7 +119,7 @@ a, a:hover {
 	padding-right: 20px!important;
 	margin: 0 20px!important;
 	@include transition(0.5s);
-	background: $yellow!important;
+	background: $yellow !important;
 	@include clip-path(polygon(100% 0, 100% 85%, 14% 85%, 0 100%, 0% 60%, 0 0));
 }
 .navbar-light .navbar-nav .nav-link {
@@ -611,7 +611,7 @@ a, a:hover {
 	display: -webkit-box!important;
 }
 .fh5co_footer_right_reserved {
-	background: #000!important;
+	background: $yellow!important;
 	color: #fff!important;
 }
 .footer_last_part_menu {
@@ -941,3 +941,15 @@ a, a:hover {
   box-shadow: 0 8px 6px -6px black;
 }
 // end item menu
+//chỉnh sửa header
+.headertop{
+  background-color: #005689;
+  padding-left: 20px;
+}
+.headertop .container .row .col-12 .text-center .fh5co_display_table {
+  margin-top: 14px;
+}
+.headertop .container .row .col-12 .text-center .fh5co_display_table .fh5co_verticle_middle i{
+  color: #FFFFFF;
+
+}
