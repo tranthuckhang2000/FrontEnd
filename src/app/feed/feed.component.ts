@@ -11,7 +11,7 @@ export class FeedComponent implements OnInit {
   title = 'FrontEnd';
   header: string[] | undefined;
   data: any[];
-  feed: FeedService;
+
 
 
 

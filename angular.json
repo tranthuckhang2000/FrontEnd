@@ -38,12 +38,7 @@
               "src/assets/sass/style_1.scss"
             ],
             "scripts": [
-              "src/assets/js/bootstrap.js",
-              "src/assets/js/jquery.stellar.min.js",
-              "src/assets/js/jquery.waypoints.min.js",
-              "src/assets/js/main.js",
-              "src/assets/js/modernizr-3.5.0.min.js",
-              "src/assets/js/owl.carousel.min.js"
+              "../node_modules/jquery/dist/jquery.min.js"
             ]
           },
           "configurations": {

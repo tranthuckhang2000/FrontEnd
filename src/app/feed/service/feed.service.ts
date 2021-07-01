@@ -18,7 +18,6 @@ export class FeedService {
    }
 
    createListFeedItems(list: FeedItems[], value: any){
-    console.log( );
     for(var i = 0; i<= value.items.length - 1; i++){
       var title = value.items[i].title;
       var pubDate = value.items[i].pubDate;

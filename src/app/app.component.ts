@@ -32,6 +32,7 @@ export class AppComponent implements OnInit{
         // }
         // console.log(value);
       });
+    console.log(this.data2)
 
   }
 
