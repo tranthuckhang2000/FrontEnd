@@ -7,27 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BandocMenuComponent implements OnInit {
 
-  TitleArrTNB: any;
-  ImgArrTNB: any;
-
-  TitleArr1: string = 'Bà Nguyễn Thị Lệ tái cử Chủ tịch HĐND TP HCM';
-  TitleArr2: string = 'Tổng Giám đốc Nanogen nói về đề nghị cấp phép khẩn cấp cho vắc-xin Nanocovax';
-  title: string = 'Ronaldo lập 3 kỷ lục, Bồ Đào Nha vào vòng 1/8 Euro 2020 chạm trán Bỉ';
-  ImgArrNews: any;
-  arrnew: any = [1,2,3,4,5,6,7,8,9,10];
-  titleXN: string = 'Khánh Hòa: Xuất hiện ca dương tính với SARS-CoV-2';
+  title?: string;
+  title1?: string;
+  title2?: string;
+  image?: string;
+  content?: string;
+  listItem: any;
   constructor() { }
 
   ngOnInit(): void {
-    this.TitleArrTNB = ['Ông Nguyễn Thành Phong tiếp tục được bầu làm Chủ tịch UBND TP HCM',
-      'Ông Nguyễn Thành Phong tiếp tục được bầu làm Chủ tịch UBND TP HCM',
-      'Ông Nguyễn Thành Phong tiếp tục được bầu làm Chủ tịch UBND TP HCM',
-      'Ông Nguyễn Thành Phong tiếp tục được bầu làm Chủ tịch UBND TP HCM',
-      'Ông Nguyễn Thành Phong tiếp tục được bầu làm Chủ tịch UBND TP HCM',
-      'Ông Nguyễn Thành Phong tiếp tục được bầu làm Chủ tịch UBND TP HCM',
-      'Ông Nguyễn Thành Phong tiếp tục được bầu làm Chủ tịch UBND TP HCM',
-    ];
-    this.ImgArrTNB = ['https://nld.mediacdn.vn/zoom/216_133/291774122806476800/2021/6/24/base64-16245077392541905338107.png'];
+    this.title = 'Ông Trump rời "đại bản doanh" Florida, tuyên bố Mỹ đang tụt lùi';
+    this.title1 ='Mỹ tấn công mạng, cài mã độc vào mạng lưới điện của Nga';
+    this.title2 = 'Triều Tiên bất ngờ nói về vụ mã độc tống tiền';
+    this.image = './assets/images/big_trump.jpg';
+    this.content = '(NLĐO) – Trong bài phát biểu tại hội nghị đảng Cộng hòa Bắc Carolina năm 2021, Cựu Tổng thống Mỹ Donald Trump khẳng định nước Mỹ đang tụt lùi dưới thời Tổng thống Joe Biden.';
+    this.listItem = [1,2,3,4,5];
   }
 
 }
