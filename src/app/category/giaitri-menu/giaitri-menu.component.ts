@@ -22,7 +22,7 @@ export class GiaitriMenuComponent implements OnInit {
     this.title1 ='Hậu sóng gió, Thu Thủy khoe bộ ảnh gia đình hạnh phúc';
     this.title2 = 'Đứng dậy sau đổ vỡ, ca sĩ Thu Thủy yêu lại từ đầu';
     this.title3 = 'Thu Thủy từng chịu "lời ra tiếng vào" về cuộc hôn nhân với chồng trẻ kém 10 tuổi';
-    this.image = './assets/images/giatri.png';
+    this.image = './assets/images/giaitri.png';
     this.listItem = [1,2,3,4,5];
   }
 

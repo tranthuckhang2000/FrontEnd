@@ -12,6 +12,8 @@ import { VanngheMenuComponent } from './category/vannghe-menu/vannghe-menu.compo
 import { ThethaoMenuComponent } from './category/thethao-menu/thethao-menu.component';
 import { DiemdenMenuComponent } from './category/diemden-menu/diemden-menu.component';
 import { CongngheMenuComponent } from './category/congnghe-menu/congnghe-menu.component';
+import {RouterModule} from "@angular/router";
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { CongngheMenuComponent } from './category/congnghe-menu/congnghe-menu.co
     CongngheMenuComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
