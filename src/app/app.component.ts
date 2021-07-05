@@ -7,8 +7,8 @@ import {FeedItems} from "./feed/model/feed-items";
 @Component({
   selector: 'app-root',
   // templateUrl: './app.component.html',
-  template: '<router-outlet></router-outlet>',
-  // template: '<app-home2></app-home2>',
+   template: '<router-outlet></router-outlet>',
+  //  template: '<app-footer></app-footer>',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
