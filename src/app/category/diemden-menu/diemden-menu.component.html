@@ -1,0 +1,146 @@
+<!--<app-header></app-header>-->
+<div class="container-fluid bg-faded fh5co_padd_mediya padding_786" xmlns="http://www.w3.org/1999/html">
+  <div class="container padding_786">
+    <nav class="navbar navbar-toggleable-md navbar-light ">
+      <button class="navbar-toggler navbar-toggler-right mt-3" type="button" data-toggle="collapse"
+              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
+      <a class="navbar-brand" href="#"><img src="images/logo.png" alt="img" class="mobile_logo_width"/></a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul style="margin-left: -50px" class="navbar-nav mr-auto">
+          <li  class="nav-item active">
+            <a  class="nav-link">ĐIỂM ĐẾN<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" >Xuyên việt<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" >Đừng bỏ lở<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" >Ra thế giới<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" >Ẩm thực<span class="sr-only">(current)</span></a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!--Big new -->
+<div class="container-fluid">
+  <div style="width: 68%; float: left; margin-left: 50px " class="row">
+    <div class="col-12 mt-3">
+      <div class="card">
+        <div class="card-horizontal">
+          <div class="img-square-wrapper">
+            <img class="" src="{{image}}" alt="Card image cap">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">{{title}}</h3>
+            <p class="card-text">{{content}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End Big new -->
+<div class="clearfix"></div>
+<div class="ad_tivi">
+  <div class="title-main">
+    <h3>Truyền Hình</h3>
+  </div>
+  <!--Item -->
+  <div *ngFor="let i of listItem" class="card" style="width: 19.5rem;">
+    <img src="{{image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">{{title}}</p>
+    </div>
+  </div>
+  <!-- End Item -->
+  <!--ad item -->
+  <div class="card-group">
+    <div class="card">
+      <img class="card-img-top" src="	https://adi.admicro.vn/adt/adn/2021/04/300x2-adx607bf39b74cb1.jpg" alt="Card image cap">
+    </div>
+  </div>
+  <!--End ad item -->
+</div>
+
+
+<div class="container-fluid pb-4 pt-4 paddding">
+  <div  class="container paddding">
+    <div   class="row mx-0">
+      <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
+        <div>
+          <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4"></div>
+        </div>
+        <!--New item -->
+        <div *ngFor="let i of listItem" class="card mb-3" style="max-width: 540px;border-top: none;border-left:none;border-right:none;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://nld.mediacdn.vn/zoom/220_139/291774122806476800/2021/6/4/photo-1-16227903817842079465235.jpg
+              "alt="...">
+            </div>
+            <div class="col-md-8">
+              <div style="margin-left: 20px;line-height: 15px;margin-top: -20px" class="card-body">
+                <h5 class="card-title">{{title3}}</h5>
+                <p class="card-text">{{title1}}</p>
+                <p class="card-text">{{title2}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End  new item -->
+      </div>
+      <div class="col-md-3 animate-box most-video" data-animate-effect="fadeInRight">
+        <div>
+          <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4"></div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="fh5co_tags_all">
+          <div class="title-main">
+            <h3>Tin Nổi Bật</h3>
+          </div>
+          <!--Item -->
+          <div *ngFor="let i of listItem" class="card" style="width: 16rem;">
+            <img src="{{image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">{{title}}</p>
+            </div>
+          </div>
+          <!-- End Item -->
+          <br/>
+          <div class="title-main"><h3>Xem Nhiều Nhất</h3></div>
+          <!--Item -->
+          <div class="card" style="width: 16rem;">
+            <img src="{{image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">{{title}}</p>
+            </div>
+          </div>
+          <div class="card" style="width: 16rem;">
+            <ul class="list-group list-group-flush">
+              <li *ngFor="let i of listItem" class="list-group-item">{{title}}</li>
+            </ul>
+          </div>
+          <!-- End Item -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
+
+
+
+
+
+
+
+

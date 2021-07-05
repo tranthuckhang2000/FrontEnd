@@ -18,6 +18,15 @@ import { FeedListComponent } from './feed/feed-list/feed-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import {RouterModule} from "@angular/router";
 import { HomeComponent } from './home/home.component';
+import { CongngheMenuComponent } from './category/congnghe-menu/congnghe-menu.component';
+import { DiemdenMenuComponent } from './category/diemden-menu/diemden-menu.component';
+import { GiaitriMenuComponent } from './category/giaitri-menu/giaitri-menu.component';
+import { PhapluatMenuComponent } from './category/phapluat-menu/phapluat-menu.component';
+import { ThethaoMenuComponent } from './category/thethao-menu/thethao-menu.component';
+import { VanngheMenuComponent } from './category/vannghe-menu/vannghe-menu.component';
+import { LytuongsongMenuComponent } from './category/lytuongsong-menu/lytuongsong-menu.component';
+import { NoithangMenuComponent } from './category/noithang-menu/noithang-menu.component';
+import { TindocquyenMenuComponent } from './category/tindocquyen-menu/tindocquyen-menu.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +43,16 @@ import { HomeComponent } from './home/home.component';
     GiaoducMenuComponent,
     FeedComponent,
     FeedListComponent,
-    HomeComponent
+    HomeComponent,
+    CongngheMenuComponent,
+    DiemdenMenuComponent,
+    GiaitriMenuComponent,
+    PhapluatMenuComponent,
+    ThethaoMenuComponent,
+    VanngheMenuComponent,
+    LytuongsongMenuComponent,
+    NoithangMenuComponent,
+    TindocquyenMenuComponent
   ],
     imports: [
         BrowserModule,
