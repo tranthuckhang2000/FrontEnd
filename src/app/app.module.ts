@@ -27,6 +27,9 @@ import { VanngheMenuComponent } from './category/vannghe-menu/vannghe-menu.compo
 import { LytuongsongMenuComponent } from './category/lytuongsong-menu/lytuongsong-menu.component';
 import { NoithangMenuComponent } from './category/noithang-menu/noithang-menu.component';
 import { TindocquyenMenuComponent } from './category/tindocquyen-menu/tindocquyen-menu.component';
+import { PhunuMenuComponent } from './category/phunu-menu/phunu-menu.component';
+import { ThitruongMenuComponent } from './category/thitruong-menu/thitruong-menu.component';
+import { DiaocMenuComponent } from './category/diaoc-menu/diaoc-menu.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,10 @@ import { TindocquyenMenuComponent } from './category/tindocquyen-menu/tindocquye
     VanngheMenuComponent,
     LytuongsongMenuComponent,
     NoithangMenuComponent,
-    TindocquyenMenuComponent
+    TindocquyenMenuComponent,
+    PhunuMenuComponent,
+    ThitruongMenuComponent,
+    DiaocMenuComponent
   ],
     imports: [
         BrowserModule,

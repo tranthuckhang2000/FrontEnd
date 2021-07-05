@@ -18,6 +18,9 @@ import {VanngheMenuComponent} from "./category/vannghe-menu/vannghe-menu.compone
 import {LytuongsongMenuComponent} from "./category/lytuongsong-menu/lytuongsong-menu.component";
 import {NoithangMenuComponent} from "./category/noithang-menu/noithang-menu.component";
 import {TindocquyenMenuComponent} from "./category/tindocquyen-menu/tindocquyen-menu.component";
+import {PhunuMenuComponent} from "./category/phunu-menu/phunu-menu.component";
+import {DiaocMenuComponent} from "./category/diaoc-menu/diaoc-menu.component";
+import {ThitruongMenuComponent} from "./category/thitruong-menu/thitruong-menu.component";
 
 
 let routes: Routes = [
@@ -37,7 +40,10 @@ let routes: Routes = [
   {path:'van-nghe' , component:VanngheMenuComponent},
   {path:'ly-tuong', component:LytuongsongMenuComponent},
   {path:'noi-thang', component:NoithangMenuComponent},
-  {path:'tin-docquyen', component:TindocquyenMenuComponent}
+  {path:'tin-docquyen', component:TindocquyenMenuComponent},
+  {path:'phu-nu', component:PhunuMenuComponent},
+  {path:'dia-oc', component:DiaocMenuComponent},
+  {path:'thi-truong', component:ThitruongMenuComponent}
 ]
 
 @NgModule({
