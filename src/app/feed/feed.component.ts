@@ -12,9 +12,6 @@ export class FeedComponent implements OnInit {
   header: string[] | undefined;
   data: any[];
 
-
-
-
   constructor(private httpData: Data) {
     this.data = [];
     httpData.getData('http://localhost:4200/assets/data.json')

@@ -12,7 +12,9 @@ export class FeedListComponent implements OnInit {
   title: string;
 
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit(): void {
     this.title = 'Product List';
