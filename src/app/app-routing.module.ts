@@ -21,10 +21,14 @@ import {TindocquyenMenuComponent} from "./category/tindocquyen-menu/tindocquyen-
 import {PhunuMenuComponent} from "./category/phunu-menu/phunu-menu.component";
 import {DiaocMenuComponent} from "./category/diaoc-menu/diaoc-menu.component";
 import {ThitruongMenuComponent} from "./category/thitruong-menu/thitruong-menu.component";
+import {FeedDetailComponent} from "./feed/feed-detail/feed-detail.component";
+import {FeedListComponent} from "./feed/feed-list/feed-list.component";
 
 
 let routes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: '', component: BandocMenuComponent},
+  {path: 'ban-doc/chi-tiet/:link', component: FeedDetailComponent},
+  {path: 'list', component: FeedListComponent},
   {path: 'ban-doc', component: BandocMenuComponent},
   {path: 'cong-doan', component:CongdoanMenuComponent},
   {path: 'giao-duc', component:GiaoducMenuComponent},
@@ -43,7 +47,8 @@ let routes: Routes = [
   {path:'tin-docquyen', component:TindocquyenMenuComponent},
   {path:'phu-nu', component:PhunuMenuComponent},
   {path:'dia-oc', component:DiaocMenuComponent},
-  {path:'thi-truong', component:ThitruongMenuComponent}
+  {path:'thi-truong', component:ThitruongMenuComponent},
+  {path:'chi-tiet', component: FeedDetailComponent}
 ]
 
 @NgModule({

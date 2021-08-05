@@ -6,9 +6,7 @@ import {FeedItems} from "./feed/model/feed-items";
 
 @Component({
   selector: 'app-root',
-  // templateUrl: './app.component.html',
    template: '<router-outlet></router-outlet>',
-  //  template: '<app-footer></app-footer>',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
@@ -32,7 +30,7 @@ export class AppComponent implements OnInit{
         // }
         // console.log(value);
       });
-    console.log(this.data2)
+    // console.log(this.data2)
   }
 
   ngOnInit(): void {

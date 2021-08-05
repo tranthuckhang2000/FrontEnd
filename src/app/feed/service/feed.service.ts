@@ -12,7 +12,6 @@ export class FeedService {
   }
 
   getData() {
-    console.log(1234576);
   }
 
   getDataRss(url: string, data: object = {}): Observable<any> {
@@ -28,10 +27,41 @@ export class FeedService {
       var thumbnail = value.items[i].thumbnail;
       var description = value.items[i].description;
       var content = value.items[i].content;
-      console.log('test data');
       let feedItems = new FeedItems({title, pubDate, link, guid, thumbnail, description, content});
+      // console.log('List From FeedService')
+      // console.log(feedItems.link);
       list.push(feedItems);
     }
     ;
   }
+
+
+
+  onSendService(formData: FormData):Observable<any>{
+    return this.http.post<any>('http://localhost/APICrawlData/crawl.php', formData);
+  }
+
+  formatData(title: string, content: any[], imageSrc: any[], imageAlt: any[], value: any){
+    for (var i = 0; i <= value.content.length - 1; i++){
+      content.push(value.content[i]);
+    }
+    for (var i = 0; i <= value.imageSrc.length - 1; i++){
+      imageSrc.push(value.imageSrc[i]);
+    }
+
+    for (var i = 0; i <= value.imageAlt.length - 1; i++){
+      imageAlt.push(value.imageAlt[i]);
+    }
+    title = value.title;
+
+  }
+  getContent(content: string[], value: any) {
+    for (var i = 0; i <= value.content.length - 1; i++){
+      content.push(value.content[i]);
+
+    }
+
+
+  }
+
 }
