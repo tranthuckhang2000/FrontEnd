@@ -27,7 +27,7 @@ import {FeedListComponent} from "./feed/feed-list/feed-list.component";
 
 let routes: Routes = [
   {path: '', component: BandocMenuComponent},
-  {path: 'ban-doc/chi-tiet/:link', component: FeedDetailComponent},
+  {path: 'ban-doc/chi-tiet/:title/:link', component: FeedDetailComponent},
   {path: 'list', component: FeedListComponent},
   {path: 'ban-doc', component: BandocMenuComponent},
   {path: 'cong-doan', component:CongdoanMenuComponent},

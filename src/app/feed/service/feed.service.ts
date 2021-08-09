@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {FeedItems} from "../model/feed-items";
+import {Image} from "../../model/image";
 
 @Injectable({
   providedIn: 'root'
@@ -41,18 +42,25 @@ export class FeedService {
     return this.http.post<any>('http://localhost/APICrawlData/crawl.php', formData);
   }
 
-  formatData(title: string, content: any[], imageSrc: any[], imageAlt: any[], value: any){
+  formatData(title: string, content: any[], image: any[], value: any){
     for (var i = 0; i <= value.content.length - 1; i++){
       content.push(value.content[i]);
     }
     for (var i = 0; i <= value.imageSrc.length - 1; i++){
-      imageSrc.push(value.imageSrc[i]);
+      let src = value.imageSrc[i];
+      let alt = value.imageAlt[i];
+      let item = new Image({src, alt});
+      image.push(item);
+      // imageSrc.push(value.imageSrc[i]);
+      console.log(image);
     }
+    //
+    // for (var i = 0; i <= value.imageAlt.length - 1; i++){
+    //   imageAlt.push(value.imageAlt[i]);
+    // }
 
-    for (var i = 0; i <= value.imageAlt.length - 1; i++){
-      imageAlt.push(value.imageAlt[i]);
-    }
     title = value.title;
+    console.log(title);
 
   }
   getContent(content: string[], value: any) {
