@@ -1,27 +1,27 @@
 <app-header></app-header>
-
-<div id="main">
+ <div id="main">
   <!--Main left -->
   <div class="main-left">
-    <div class="card" style="width: 37rem;">
-      <img src="{{imgLink}}" class="card-img-top" alt="...">
+    <div *ngFor="let i of data2.slice(9,10)" class="card" style="width: 37rem;">
+      <img src="{{i.thumbnail}}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h3 class="card-title">{{title}}</h3>
-        <p class="card-text">{{content}}</p>
+        <h3 class="card-title">{{i.title}}</h3>
+<!--        <p class="card-text">{{i.content}}</p>-->
+        <p class="datetime">{{i.pubDate}}</p>
       </div>
     </div>
     <!-- Noi dung 2 -->
-    <div *ngFor="let i of listItem"  class="card mb-3" style="max-width: 567px;margin-top: 20px ;border-top: none;border-left:none;border-right:none;">
+    <div *ngFor="let i of data2"  class="card mb-3" style="max-width: 567px;margin-top: 10px ;border-top: none;border-left:none;border-right:none; margin-bottom: 5px">
       <div class="row g-0">
         <div class="col-md-4">
-          <img src="https://nld.mediacdn.vn/zoom/220_139/291774122806476800/2021/6/7/1-16230698476032081224043.jpg
-                "alt="...">
+          <img src="{{i.thumbnail}}"alt="..." style="width: 250px ; height: 150px; margin-bottom: 10px">
         </div>
         <div class="col-md-8">
-          <div style="margin-left: 20px;line-height: 15px;margin-top: -20px" class="card-body">
-            <h5 class="card-title">{{title}}</h5>
-            <p class="card-text">{{title}}</p>
-            <p class="card-text">{{title}}</p>
+          <div style="margin-left:50px;line-height: 15px;margin-top: -20px" class="card-body">
+            <h5 class="card-title">{{i.title}}</h5>
+            <!--            <p class="card-text">{{title}}</p>-->
+            <!--            <p class="card-text">{{title}}</p>-->
+            <p class="datetime">{{i.pubDate}}</p>
           </div>
         </div>
       </div>
@@ -43,42 +43,24 @@
       <!-- Tab panes -->
       <div class="tab-content ">
         <div id="tabtinnong" class="container tab-pane active"><br>
-          <div class="list-group" style="width: 16rem;margin-left: -15px">
-            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
-            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
-            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
-            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
-            <a href="#" class="list-group-item list-group-item-action ">{{tinnong}}</a>
-            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
-            <a href="#" class="list-group-item list-group-item-action ">{{tinnong}}</a>
-            <a href="#" class="list-group-item list-group-item-action ">{{tinnong}}</a>
-            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
-            <a href="#" class="list-group-item list-group-item-action ">{{tinnong}}</a>
-            <a href="#" class="list-group-item list-group-item-action ">{{tinnong}}</a>
+          <div *ngFor="let a of data3.slice(0,10)" class="list-group" style="width: 16rem;margin-left: -15px; font-weight: bold">
+            <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-hand-o-right" aria-hidden="true"style=" margin-bottom: -21px;margin-left: -17px;"></i>{{a.title}}</a>
           </div>
         </div>
         <div id="tabtinmoi" class="container tab-pane fade"><br>
-          <div class="list-group" style="width: 16rem;margin-left: -15px">
-            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
-            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
-            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
-            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
-            <a href="#" class="list-group-item list-group-item-action ">{{tinnong}}</a>
-            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
-            <a href="#" class="list-group-item list-group-item-action ">{{tinnong}}</a>
-            <a href="#" class="list-group-item list-group-item-action ">{{tinnong}}</a>
-            <a href="#" class="list-group-item list-group-item-action">{{tinnong}}</a>
-            <a href="#" class="list-group-item list-group-item-action ">{{tinnong}}</a>
-            <a href="#" class="list-group-item list-group-item-action ">{{tinnong}}</a>
+          <div *ngFor="let t of data2" class="list-group" style="width: 16rem;margin-left: -15px">
+            <a href="#" class="list-group-item list-group-item-action" style="font-weight: bold"><i class="fa fa-hand-o-right" aria-hidden="true"style=" margin-bottom: -21px;margin-left: -17px;"></i>{{t.title}}</a>
+
           </div>
         </div>
       </div>
     </div>
     <!-- Noi Dung 2 -->
-    <div *ngFor="let i of listItem2" class="card" style="width: 16rem; margin-top: 20px;margin-left: 15px">
-      <img src="{{image}}" class="card-img-top" alt="...">
+    <div *ngFor="let i of data3.slice(0,6)" class="card" style="width: 16rem; margin-top: 5px;margin-left: 15px ; height: 17rem">
+      <img src="{{i.thumbnail}}" class="card-img-top" alt="...">
       <div class="card-body">
-        <p class="card-text">{{title}}</p>
+        <p class="card-title" style="font-weight: bold">{{i.title}}</p>
+        <p class="datetime">{{i.pubDate}}</p>
       </div>
     </div>
   </div>
@@ -112,9 +94,8 @@
   </div>
   <!--End Main Right -->
 </div>
-
 <!--Short form -->
-<div id="short-form">
+ <div id="short-form">
   <!-- SHort form left -->
   <div class="short_form-left">
     <div style="margin-top: 20px"   class="short_form-container">
@@ -142,41 +123,41 @@
             <a style="color: black" class="nav-link" href="#">Phóng sự - Bút Ký</a>
           </li>
           <li class="nav-item">
-            <a style="color: black" class="nav-link" href="#">Biển đảo</a>
+            <a style="color: black" class="nav-link" href="#">Biển đảo </a>
           </li>
         </ul>
       </div>
-      <div class="content-short1">
-        <div class="card" style="width: 16rem;margin: auto">
-          <img src="{{image}}" class="card-img-top" alt="...">
+      <div class="content-short1" >
+        <div *ngFor="let p of data3.slice(9,10)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{p.thumbnail}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">{{title}}</p>
-            <p class="card-text">{{title}}</p>
+            <p class="card-title">{{p.title}}</p>
+<!--            <p class="card-text">{{p.content}}</p>-->
           </div>
         </div>
       </div>
-      <div class="content-short2">
-        <div *ngFor="let i of listItem3"  class="card mb-3" style="max-width: 300px;margin: auto;">
+      <div class="content-short2" >
+        <div *ngFor="let i of data3.slice(0, 3)"  class="card mb-3" style="max-width: 350px;margin-left: 5px; margin-bottom: 1px; max-height: 100px">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="https://nld.mediacdn.vn/zoom/114_71/291774122806476800/2021/6/21/dsc01343-16242789788411547686532.jpg
-                "alt="...">
+              <img src="{{i.thumbnail}}
+                "alt="..."  class="image-center" >
             </div>
             <div class="col-md-8">
-              <div class="card-body" style="padding: 10px;">
-                <p class="card-title">{{title}}</p>
+              <div class="card-body" style="padding: 10px; margin-left: 30px">
+                <p class="card-title">{{i.title}}</p>
               </div>
             </div>
           </div>
         </div>
 
       </div>
-      <div class="content-short3">
-        <div class="card" style="width: 16rem;margin: auto">
-          <img src="{{image}}" class="card-img-top" alt="...">
+      <div class="content-short3" >
+        <div *ngFor="let p of data3.slice(6,7)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{p.thumbnail}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">{{title}}</p>
-            <p class="card-text">{{title}}</p>
+            <p class="card-title">{{p.title}}</p>
+<!--            <p class="card-text">{{title}}</p>-->
           </div>
         </div>
       </div>
@@ -200,29 +181,29 @@
             <a style="color: black" class="nav-link" href="#">Video Clip</a>
           </li>
           <li class="nav-item">
-            <a style="color: black" class="nav-link" href="#">Khoa Học</a>
+            <a style="color: black" class="nav-link" href="#"> Khoa Học </a>
           </li>
         </ul>
       </div>
       <div class="content-short1">
-        <div class="card" style="width: 16rem;margin: auto">
-          <img src="{{image}}" class="card-img-top" alt="...">
+        <div *ngFor="let k of data4.slice(9,10)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{k.thumbnail}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">{{title}}</p>
-            <p class="card-text">{{title}}</p>
+            <p class="card-title">{{k.title}}</p>
+<!--            <p class="card-text">{{title}}</p>-->
           </div>
         </div>
       </div>
       <div class="content-short2">
-        <div *ngFor="let i of listItem3"  class="card mb-3" style="max-width: 300px;margin: auto;">
+        <div *ngFor="let q of data4.slice(0,3)"  class="card mb-3" style="max-width: 350px;margin-left: 5px; margin-bottom: 1px; max-height: 100px">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="https://nld.mediacdn.vn/zoom/114_71/291774122806476800/2021/6/21/dsc01343-16242789788411547686532.jpg
-                "alt="...">
+              <img src="{{q.thumbnail}}
+                "alt="..." class="image-center">
             </div>
             <div class="col-md-8">
-              <div class="card-body" style="padding: 10px;">
-                <p class="card-title">{{title}}</p>
+              <div class="card-body" style="padding: 10px; margin-left: 30px">
+                <p class="card-title">{{q.title}}</p>
               </div>
             </div>
           </div>
@@ -230,11 +211,12 @@
 
       </div>
       <div class="content-short3">
-        <div class="card" style="width: 16rem;margin: auto">
-          <img src="{{image}}" class="card-img-top" alt="...">
+        <div class="title_right"> THƯ NƯỚC NGOÀI</div>
+        <div *ngFor="let k of data4.slice(5,6)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{k.thumbnail}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">{{title}}</p>
-            <p class="card-text">{{title}}</p>
+            <p class="card-title">{{k.title}}</p>
+<!--            <p class="card-text">{{title}}</p>-->
           </div>
         </div>
       </div>
@@ -252,29 +234,29 @@
             <a style="color: black" class="nav-link" href="#">Đời Sống Công Dân</a>
           </li>
           <li class="nav-item">
-            <a style="color: black" class="nav-link" href="#">Đối Thoại</a>
+            <a style="color: black" class="nav-link" href="#">Đối Thoại </a>
           </li>
         </ul>
       </div>
       <div class="content-short1">
-        <div class="card" style="width: 16rem;margin: auto">
-          <img src="{{image}}" class="card-img-top" alt="...">
+        <div *ngFor="let t of data5.slice(9,10)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">{{title}}</p>
-            <p class="card-text">{{title}}</p>
+            <p class="card-title">{{t.title}}</p>
+<!--            <p class="card-text">{{title}}</p>-->
           </div>
         </div>
       </div>
       <div class="content-short2">
-        <div *ngFor="let i of listItem3"  class="card mb-3" style="max-width: 300px;margin: auto;">
+        <div *ngFor="let t of data5.slice(0,3)"  class="card mb-3" style="max-width: 350px;margin-left: 5px; margin-bottom: 1px; max-height: 100px">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="https://nld.mediacdn.vn/zoom/114_71/291774122806476800/2021/6/21/dsc01343-16242789788411547686532.jpg
-                "alt="...">
+              <img src="{{t.thumbnail}}
+                "alt="..." class="image-center">
             </div>
             <div class="col-md-8">
-              <div class="card-body" style="padding: 10px;">
-                <p class="card-title">{{title}}</p>
+              <div class="card-body" style="padding: 10px; margin-left: 30px">
+                <p class="card-title">{{t.title}}</p>
               </div>
             </div>
           </div>
@@ -282,11 +264,12 @@
 
       </div>
       <div class="content-short3">
-        <div class="card" style="width: 16rem;margin: auto">
-          <img src="{{image}}" class="card-img-top" alt="...">
+        <div class="title_right"> CHÍNH SÁCH</div>
+        <div *ngFor="let t of data5.slice(5,6)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">{{title}}</p>
-            <p class="card-text">{{title}}</p>
+            <p class="card-title">{{t.title}}</p>
+<!--            <p class="card-text">{{title}}</p>-->
           </div>
         </div>
       </div>
@@ -309,29 +292,29 @@
             <a style="color: black" class="nav-link" href="#">Nét Đẹp Đời Thường</a>
           </li>
           <li class="nav-item">
-            <a style="color: black" class="nav-link" href="#">Góc Ảnh Bạn Đọc</a>
+            <a style="color: black" class="nav-link" href="#">Góc Ảnh Bạn Đọc </a>
           </li>
         </ul>
       </div>
       <div class="content-short1">
-        <div class="card" style="width: 16rem;margin: auto">
-          <img src="{{image}}" class="card-img-top" alt="...">
+        <div *ngFor="let t of data6.slice(9,10)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">{{title}}</p>
-            <p class="card-text">{{title}}</p>
+            <p class="card-title">{{t.title}}</p>
+<!--            <p class="card-text">{{title}}</p>-->
           </div>
         </div>
       </div>
       <div class="content-short2">
-        <div *ngFor="let i of listItem3"  class="card mb-3" style="max-width: 300px;margin: auto;">
+        <div *ngFor="let t of data6.slice(0,3)"  class="card mb-3" style="max-width: 350px;margin-left: 5px; margin-bottom: 1px; max-height: 100px">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="https://nld.mediacdn.vn/zoom/114_71/291774122806476800/2021/6/21/dsc01343-16242789788411547686532.jpg
-                "alt="...">
+              <img src="{{t.thumbnail}}
+                "alt="..." class="image-center">
             </div>
             <div class="col-md-8">
-              <div class="card-body" style="padding: 10px;">
-                <p class="card-title">{{title}}</p>
+              <div class="card-body" style="padding: 10px; margin-left: 30px">
+                <p class="card-title">{{t.title}}</p>
               </div>
             </div>
           </div>
@@ -339,11 +322,12 @@
 
       </div>
       <div class="content-short3">
-        <div class="card" style="width: 16rem;margin: auto">
-          <img src="{{image}}" class="card-img-top" alt="...">
+        <div class="title_right"> DƯ LUẬN</div>
+        <div *ngFor="let t of data6.slice(4,5)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">{{title}}</p>
-            <p class="card-text">{{title}}</p>
+            <p class="card-title">{{t.title}}</p>
+<!--            <p class="card-text">{{title}}</p>-->
           </div>
         </div>
       </div>
@@ -363,29 +347,29 @@
             <a style="color: black" class="nav-link" href="#">Chuyện Quản Lý</a>
           </li>
           <li class="nav-item">
-            <a style="color: black" class="nav-link" href="#">Xe Điện Máy</a>
+            <a style="color: black" class="nav-link" href="#">Xe Điện Máy </a>
           </li>
         </ul>
       </div>
       <div class="content-short1">
-        <div class="card" style="width: 16rem;margin: auto">
-          <img src="{{image}}" class="card-img-top" alt="...">
+        <div *ngFor="let t of data7.slice(9,10)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">{{title}}</p>
-            <p class="card-text">{{title}}</p>
+            <p class="card-title">{{t.title}}</p>
+<!--            <p class="card-text">{{title}}</p>-->
           </div>
         </div>
       </div>
       <div class="content-short2">
-        <div *ngFor="let i of listItem3"  class="card mb-3" style="max-width: 300px;margin: auto;">
+        <div *ngFor="let t of data7.slice(0,3)"  class="card mb-3" style="max-width: 350px;margin-left: 5px; margin-bottom: 1px; max-height: 100px">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="https://nld.mediacdn.vn/zoom/114_71/291774122806476800/2021/6/21/dsc01343-16242789788411547686532.jpg
-                "alt="...">
+              <img src="{{t.thumbnail}}
+                "alt="..." class="image-center">
             </div>
             <div class="col-md-8">
-              <div class="card-body" style="padding: 10px;">
-                <p class="card-title">{{title}}</p>
+              <div class="card-body" style="padding: 10px; margin-left: 30px">
+                <p class="card-title">{{t.title}}</p>
               </div>
             </div>
           </div>
@@ -393,11 +377,12 @@
 
       </div>
       <div class="content-short3">
-        <div class="card" style="width: 16rem;margin: auto">
-          <img src="{{image}}" class="card-img-top" alt="...">
+        <div class="title_right"> TÀI CHÍNH - ĐỊA ỐC</div>
+        <div *ngFor="let t of data7.slice(6,7)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">{{title}}</p>
-            <p class="card-text">{{title}}</p>
+            <p class="card-title">{{t.title}}</p>
+<!--            <p class="card-text">{{title}}</p>-->
           </div>
         </div>
       </div>
@@ -420,29 +405,29 @@
             <a style="color: black" class="nav-link" href="#">Thuốc & Dinh Dưỡng</a>
           </li>
           <li class="nav-item">
-            <a style="color: black" class="nav-link" href="#">Khỏe & Đẹp</a>
+            <a style="color: black" class="nav-link" href="#">Khỏe & Đẹp </a>
           </li>
         </ul>
       </div>
       <div class="content-short1">
-        <div class="card" style="width: 16rem;margin: auto">
-          <img src="{{image}}" class="card-img-top" alt="...">
+        <div *ngFor="let t of data8.slice(9,10)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">{{title}}</p>
-            <p class="card-text">{{title}}</p>
+            <p class="card-title">{{t.title}}</p>
+<!--            <p class="card-text">{{title}}</p>-->
           </div>
         </div>
       </div>
       <div class="content-short2">
-        <div *ngFor="let i of listItem3"  class="card mb-3" style="max-width: 300px;margin: auto;">
+        <div *ngFor="let t of data8.slice(0,3)"  class="card mb-3" style="max-width: 350px;margin-left: 5px; margin-bottom: 1px; max-height: 100px">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="https://nld.mediacdn.vn/zoom/114_71/291774122806476800/2021/6/21/dsc01343-16242789788411547686532.jpg
-                "alt="...">
+              <img src="{{t.thumbnail}}
+                "alt="..." class="image-center">
             </div>
             <div class="col-md-8">
-              <div class="card-body" style="padding: 10px;">
-                <p class="card-title">{{title}}</p>
+              <div class="card-body" style="padding: 10px; margin-left: 30px">
+                <p class="card-title">{{t.title}}</p>
               </div>
             </div>
           </div>
@@ -450,11 +435,12 @@
 
       </div>
       <div class="content-short3">
-        <div class="card" style="width: 16rem;margin: auto">
-          <img src="{{image}}" class="card-img-top" alt="...">
+        <div class="title_right"> SỨC KHỎE CHO NGƯỜI CÁCH LY</div>
+        <div *ngFor="let t of data8.slice(8,9)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">{{title}}</p>
-            <p class="card-text">{{title}}</p>
+            <p class="card-title">{{t.title}}</p>
+<!--            <p class="card-text">{{title}}</p>-->
           </div>
         </div>
       </div>
@@ -471,30 +457,30 @@
             <a style="color: black" class="nav-link" href="#">Du Học</a>
           </li>
           <li class="nav-item">
-            <a style="color: black" class="nav-link" href="#">Sau Bục Giảng</a>
+            <a style="color: black" class="nav-link" href="#">Sau Bục Giảng </a>
           </li>
 
         </ul>
       </div>
       <div class="content-short1">
-        <div class="card" style="width: 16rem;margin: auto">
-          <img src="{{image}}" class="card-img-top" alt="...">
+        <div *ngFor="let t of data9.slice(9,10)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">{{title}}</p>
-            <p class="card-text">{{title}}</p>
+            <p class="card-title">{{t.title}}</p>
+<!--            <p class="card-text">{{title}}</p>-->
           </div>
         </div>
       </div>
       <div class="content-short2">
-        <div *ngFor="let i of listItem3"  class="card mb-3" style="max-width: 300px;margin: auto;">
+        <div *ngFor="let t of data9.slice(0,3)"  class="card mb-3" style="max-width: 350px;margin-left: 5px; margin-bottom: 1px; max-height: 100px">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="https://nld.mediacdn.vn/zoom/114_71/291774122806476800/2021/6/21/dsc01343-16242789788411547686532.jpg
-                "alt="...">
+              <img src="{{t.thumbnail}}
+                "alt="..." class="image-center">
             </div>
             <div class="col-md-8">
-              <div class="card-body" style="padding: 10px;">
-                <p class="card-title">{{title}}</p>
+              <div class="card-body" style="padding: 10px; margin-left: 30px">
+                <p class="card-title">{{t.title}}</p>
               </div>
             </div>
           </div>
@@ -502,11 +488,12 @@
 
       </div>
       <div class="content-short3">
-        <div class="card" style="width: 16rem;margin: auto">
-          <img src="{{image}}" class="card-img-top" alt="...">
+        <div class="title_right"> TUYỂN SINH</div>
+        <div *ngFor="let t of data9.slice(5,6)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">{{title}}</p>
-            <p class="card-text">{{title}}</p>
+            <p class="card-title">{{t.title}}</p>
+<!--            <p class="card-text">{{title}}</p>-->
           </div>
         </div>
       </div>
@@ -526,30 +513,30 @@
             <a style="color: black" class="nav-link" href="#">Truy Nã</a>
           </li>
           <li class="nav-item">
-            <a style="color: black" class="nav-link" href="#">Chuyện Pháp Đình</a>
+            <a style="color: black" class="nav-link" href="#">Chuyện Pháp Đình </a>
           </li>
 
         </ul>
       </div>
       <div class="content-short1">
-        <div class="card" style="width: 16rem;margin: auto">
-          <img src="{{image}}" class="card-img-top" alt="...">
+        <div *ngFor="let t of data10.slice(9,10)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">{{title}}</p>
-            <p class="card-text">{{title}}</p>
+            <p class="card-title">{{t.title}}</p>
+<!--            <p class="card-text">{{title}}</p>-->
           </div>
         </div>
       </div>
       <div class="content-short2">
-        <div *ngFor="let i of listItem3"  class="card mb-3" style="max-width: 300px;margin: auto;">
+        <div *ngFor="let t of data10.slice(0,3)"  class="card mb-3" style="max-width: 350px;margin-left: 5px; margin-bottom: 1px; max-height: 100px">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="https://nld.mediacdn.vn/zoom/114_71/291774122806476800/2021/6/21/dsc01343-16242789788411547686532.jpg
-                "alt="...">
+              <img src="{{t.thumbnail}}
+                "alt="..." class="image-center">
             </div>
             <div class="col-md-8">
-              <div class="card-body" style="padding: 10px;">
-                <p class="card-title">{{title}}</p>
+              <div class="card-body" style="padding: 10px; margin-left: 30px">
+                <p class="card-title">{{t.title}}</p>
               </div>
             </div>
           </div>
@@ -557,24 +544,383 @@
 
       </div>
       <div class="content-short3">
-        <div class="card" style="width: 16rem;margin: auto">
-          <img src="{{image}}" class="card-img-top" alt="...">
+        <div class="title_right"> KỲ ÁN</div>
+        <div *ngFor="let t of data10.slice(5,6)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">{{title}}</p>
-            <p class="card-text">{{title}}</p>
+            <p class="card-title">{{t.title}}</p>
+<!--            <p class="card-text">{{title}}</p>-->
           </div>
         </div>
       </div>
+
     </div>
   </div>
-  <!--End SHort form left -->
+  <div style="margin-top: 20px;" class="short_form-left">
+    <div style="margin-top:20px"class="short_form-container">
+      <div class="menu-short">
+        <ul style="font-size: 12px;font-weight: bold;" class="nav justify-content-end">
+          <li  class="nav-item">
+            <a class="nav-link title-short" href="#">giải trí</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Hậu Trường Showbiz</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Mỗi Tuần Một Nhân Vật </a>
+          </li>
+          <li class="nav-item">
 
-  <!-- Right - advertisement  -->
-  <div class="short_form-right">
 
+        </ul>
+      </div>
+      <div class="content-short1">
+        <div *ngFor="let t of data11.slice(9,10)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-title">{{t.title}}</p>
+            <!--            <p class="card-text">{{title}}</p>-->
+          </div>
+        </div>
+      </div>
+      <div class="content-short2">
+        <div *ngFor="let t of data11.slice(0,3)"  class="card mb-3" style="max-width: 350px;margin-left: 5px; margin-bottom: 1px; max-height: 100px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="{{t.thumbnail}}
+                "alt="..." class="image-center">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body" style="padding: 10px; margin-left: 30px">
+                <p class="card-title">{{t.title}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="content-short3">
+        <div class="title_right"> CHUYỆN CỦA SAO</div>
+        <div *ngFor="let t of data11.slice(5,6)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-title">{{t.title}}</p>
+            <!--            <p class="card-text">{{title}}</p>-->
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
-  <!--  End Right - advertisement  -->
+  <div style="margin-top: 20px;" class="short_form-left">
+    <div style="margin-top:20px"class="short_form-container">
+      <div class="menu-short">
+        <ul style="font-size: 12px;font-weight: bold;" class="nav justify-content-end">
+          <li  class="nav-item">
+            <a class="nav-link title-short" href="#">thể thao</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Bóng Đá</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Tennis</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Chuyển Động Trong Ngày</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Hậu Trường</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">EURO 2020 </a>
+          </li>
+
+        </ul>
+      </div>
+      <div class="content-short1">
+        <div *ngFor="let t of data12.slice(9,10)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-title">{{t.title}}</p>
+            <!--            <p class="card-text">{{title}}</p>-->
+          </div>
+        </div>
+      </div>
+      <div class="content-short2">
+        <div *ngFor="let t of data12.slice(0,3)"  class="card mb-3" style="max-width: 350px;margin-left: 5px; margin-bottom: 1px; max-height: 100px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="{{t.thumbnail}}
+                "alt="..." class="image-center">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body" style="padding: 10px; margin-left: 30px">
+                <p class="card-title">{{t.title}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="content-short3">
+        <div *ngFor="let t of data12.slice(5,6)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-title">{{t.title}}</p>
+            <!--            <p class="card-text">{{title}}</p>-->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div style="margin-top: 20px;" class="short_form-left">
+    <div style="margin-top:20px"class="short_form-container">
+      <div class="menu-short">
+        <ul style="font-size: 12px;font-weight: bold;" class="nav justify-content-end">
+          <li  class="nav-item">
+            <a class="nav-link title-short" href="#">công nghệ</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Thiết Bị Số</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Bảo Mật </a>
+          </li>
+
+
+        </ul>
+      </div>
+      <div class="content-short1">
+        <div *ngFor="let t of data13.slice(9,10)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-title">{{t.title}}</p>
+            <!--            <p class="card-text">{{title}}</p>-->
+          </div>
+        </div>
+      </div>
+      <div class="content-short2">
+        <div *ngFor="let t of data13.slice(0,3)"  class="card mb-3" style="max-width: 350px;margin-left: 5px; margin-bottom: 1px; max-height: 100px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="{{t.thumbnail}}
+                "alt="..." class="image-center">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body" style="padding: 10px; margin-left: 30px">
+                <p class="card-title">{{t.title}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="content-short3">
+        <div class="title_right"> CƯ DÂN MẠNG</div>
+        <div *ngFor="let t of data13.slice(5,6)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-title">{{t.title}}</p>
+            <!--            <p class="card-text">{{title}}</p>-->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div style="margin-top: 20px;" class="short_form-left">
+    <div style="margin-top:20px"class="short_form-container">
+      <div class="menu-short">
+        <ul style="font-size: 12px;font-weight: bold;" class="nav justify-content-end">
+          <li  class="nav-item">
+            <a class="nav-link title-short" href="#">điểm đến</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Xuyên Việt</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Đừng Bỏ lở</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Ra Thế Giới </a>
+          </li>
+
+        </ul>
+      </div>
+      <div class="content-short1">
+        <div *ngFor="let t of data14.slice(9,10)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-title">{{t.title}}</p>
+            <!--            <p class="card-text">{{title}}</p>-->
+          </div>
+        </div>
+      </div>
+      <div class="content-short2">
+        <div *ngFor="let t of data14.slice(0,3)"  class="card mb-3" style="max-width: 350px;margin-left: 5px; margin-bottom: 1px; max-height: 100px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="{{t.thumbnail}}
+                "alt="..." class="image-center">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body" style="padding: 10px; margin-left: 30px">
+                <p class="card-title">{{t.title}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="content-short3">
+        <div class="title_right"> ẨM THỰC</div>
+        <div *ngFor="let t of data14.slice(5,6)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-title">{{t.title}}</p>
+            <!--            <p class="card-text">{{title}}</p>-->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div style="margin-top: 20px;" class="short_form-left">
+    <div style="margin-top:20px"class="short_form-container">
+      <div class="menu-short">
+        <ul style="font-size: 12px;font-weight: bold;" class="nav justify-content-end">
+          <li  class="nav-item">
+            <a class="nav-link title-short" href="#">phụ nữ</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Khỏe - Đẹp</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Tâm Sự</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Chuyện Của Sao</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Món Ngon</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Điểm Đến</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Tiêu Dùng Thông Minh</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Video</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Bản Lỉnh Sống </a>
+          </li>
+
+        </ul>
+      </div>
+      <div class="content-short1">
+        <div *ngFor="let t of data15.slice(9,10)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-title">{{t.title}}</p>
+            <!--            <p class="card-text">{{title}}</p>-->
+          </div>
+        </div>
+      </div>
+      <div class="content-short2">
+        <div *ngFor="let t of data15.slice(0,3)"  class="card mb-3" style="max-width: 350px;margin-left: 5px; margin-bottom: 1px; max-height: 100px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="{{t.thumbnail}}
+                "alt="..." class="image-center">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body" style="padding: 10px; margin-left: 30px">
+                <p class="card-title">{{t.title}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="content-short3">
+        <div *ngFor="let t of data15.slice(5,6)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-title">{{t.title}}</p>
+            <!--            <p class="card-text">{{title}}</p>-->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div style="margin-top: 20px;" class="short_form-left">
+    <div style="margin-top:20px"class="short_form-container">
+      <div class="menu-short">
+        <ul style="font-size: 12px;font-weight: bold;" class="nav justify-content-end">
+          <li  class="nav-item">
+            <a class="nav-link title-short" href="#">thị trường</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Nhịp Sống</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Tiêu Dùng</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Doanh Nghiệp - Doanh Nhân</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#">Du Lịch </a>
+          </li>
+        </ul>
+      </div>
+      <div class="content-short1">
+        <div *ngFor="let t of data16.slice(9,10)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-title">{{t.title}}</p>
+            <!--            <p class="card-text">{{title}}</p>-->
+          </div>
+        </div>
+      </div>
+      <div class="content-short2">
+        <div *ngFor="let t of data16.slice(0,3)"  class="card mb-3" style="max-width: 350px;margin-left: 5px; margin-bottom: 1px; max-height: 100px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="{{t.thumbnail}}
+                "alt="..." class="image-center">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body" style="padding: 10px; margin-left: 30px">
+                <p class="card-title">{{t.title}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="content-short3">
+        <div class="title_right"> VNMONEY</div>
+        <div *ngFor="let t of data16.slice(5,6)" class="card" style="width: 16rem;margin: auto">
+          <img src="{{t.thumbnail}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-title">{{t.title}}</p>
+            <!--            <p class="card-text">{{title}}</p>-->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 </div>
 <!--End Short form -->
-<app-footer></app-footer>
+<!--<app-footer></app-footer>-->
+
+
+
+
