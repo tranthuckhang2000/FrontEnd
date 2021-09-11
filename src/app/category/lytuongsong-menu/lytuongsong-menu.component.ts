@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FeedService} from "../../feed/service/feed.service";
+import {FeedItems} from "../../feed/model/feed-items";
 
 @Component({
   selector: 'app-lytuongsong-menu',
@@ -6,25 +8,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lytuongsong-menu.component.css']
 })
 export class LytuongsongMenuComponent implements OnInit {
+// @ts-ignore
+  feed = new FeedService();
+  data: FeedItems[] = [];
+  data2: FeedItems[];
+  data3: FeedItems[];
+  constructor(feedService: FeedService) {
+    this.data = [];
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fly-tuong-song.rss")
+      .subscribe(value => {
+        feedService.createListFeedItems(this.data,value);
+      });
+    this.data2 = [];
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Ftin-moi-nhat.rss")
+      .subscribe(value => {
+        feedService.createListFeedItems(this.data2,value);
+      });
+    this.data3 = [];
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fthoi-su.rss")
+      .subscribe(value => {
+        feedService.createListFeedItems(this.data3,value);
+      });
 
-  title?: string;
-  title1?: string;
-  title2?: string;
-  image?: string;
-  title3?: string;
-  content?: string;
-  listItem: any;
-
-  constructor() { }
-
-  ngOnInit(): void {
-    this.title = 'Báo chí bảo vệ quyền lợi nhân dân'
-    this.content='Trong quá trình lãnh đạo cách mạng, Đảng ta luôn chú trọng quan tâm đến báo chí, truyền thông; xem đây là phương tiện chuyển tải quan trọng trong việc triển khai chủ trương, đường lối, nghị quyết của Đảng đến mỗi cán bộ, đảng viên và quần chúng nhân dân.';
-    this.title1 ='Khen thưởng hướng về người lao động trực tiếp';
-    this.title2 = 'Năng động trong vai trò thủ lĩnh';
-    this.title3 = 'Gắn học tập với thực tiễn rèn luyện';
-    this.image = './assets/images/lytuong.jpg';
-    this.listItem = [1,2,3,4,5];
   }
-
+  ngOnInit(): void {
+  }
 }

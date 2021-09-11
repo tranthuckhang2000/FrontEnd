@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FeedService} from "../../feed/service/feed.service";
+import {FeedItems} from "../../feed/model/feed-items";
 
 @Component({
   selector: 'app-diemden-menu',
@@ -6,24 +8,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./diemden-menu.component.css']
 })
 export class DiemdenMenuComponent implements OnInit {
+// @ts-ignore
+  feed = new FeedService();
+  data: FeedItems[] = [];
+  data2: FeedItems[];
+  data3: FeedItems[];
+  constructor(feedService: FeedService) {
+    this.data = [];
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fdiem-den-hap-dan.rss")
+      .subscribe(value => {
+        feedService.createListFeedItems(this.data,value);
+      });
+    this.data2 = [];
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Ftin-moi-nhat.rss")
+      .subscribe(value => {
+        feedService.createListFeedItems(this.data2,value);
+      });
+    this.data3 = [];
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fthoi-su.rss")
+      .subscribe(value => {
+        feedService.createListFeedItems(this.data3,value);
+      });
 
-  title?: string;
-  title1?: string;
-  title2?: string;
-  image?: string;
-  title3?: string;
-  content?: string;
-  listItem: any;
-
-  constructor() { }
-
+  }
   ngOnInit(): void {
-    this.title = 'Những món ăn trứ danh từ cua biển ngon nhất miền Tây';
-    this.content = '(NLĐO) - Những món ăn được chế biến từ đặc sản cua biển ngon nhất miền Tây đã làm nao lòng nhiều thực khách khi đến với Cà Mau - vùng đất nằm ở cực Nam của Tổ quốc.';
-    this.title1 = 'Thái Lan chính thức mở cửa đón du khách toàn thế giới';
-    this.title2 = 'Du lịch Thái Lan bây giờ ra sao?';
-    this.title3 = 'Phuket hấp dẫn du khách với chiến dịch 1 USD 1 đêm';
-    this.image = './assets/images/diemden.jpg';
-    this.listItem = [1, 2, 3, 4, 5];
   }
 }

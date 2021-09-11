@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FeedService} from "../../feed/service/feed.service";
+import {FeedItems} from "../../feed/model/feed-items";
 
 @Component({
   selector: 'app-thitruong-menu',
@@ -6,23 +8,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./thitruong-menu.component.css']
 })
 export class ThitruongMenuComponent implements OnInit {
+// @ts-ignore
+  feed = new FeedService();
+  data: FeedItems[] = [];
+  data2: FeedItems[];
+  data3: FeedItems[];
+  constructor(feedService: FeedService) {
+    this.data = [];
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fthi-truong.rss")
+      .subscribe(value => {
+        feedService.createListFeedItems(this.data,value);
+      });
+    this.data2 = [];
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Ftin-moi-nhat.rss")
+      .subscribe(value => {
+        feedService.createListFeedItems(this.data2,value);
+      });
+    this.data3 = [];
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fthoi-su.rss")
+      .subscribe(value => {
+        feedService.createListFeedItems(this.data3,value);
+      });
 
-  title?: string;
-  title1?: string;
-  title2?: string;
-  image?: string;
-  title3?: string;
-  content?: string;
-  listItem: any;
-
-  constructor() { }
-
+  }
   ngOnInit(): void {
-    this.title ='Jonathan - Thương hiệu thời trang nam mang đến sự lịch lãm và hiện đại';
-    this.content='Thương hiệu thời trang Jonathan nhận được rất nhiều sự quan tâm của khách hàng không chỉ có chất lượng tốt, thiết kế đẹp, bắt kịp xu hướng mà còn có dịch vụ chu đáo. Mỗi mẫu sản phẩm cung cấp cho khách hàng đều được Jonathan đầu tư từ chất đến lượng và luôn đạt chuẩn là mặt hàng cao cấp.';
-    this.title1 ='“Dù giãn cách xã hội, nhưng nhà tôi vẫn đầy ắp thức ăn tươi ngon”, một nữ nhân viên văn phòng ở quận 3, TP HCM vui vẻ khoe với bạn bè.';
-    this.title3 ='“Tránh chốn đông người – đi chợ vẫn tươi” cùng Satramart – Siêu thị Sài Gòn';
-    this.image = './assets/images/thitruong.png';
-    this.listItem = [1,2,3,4,5];
   }
 }

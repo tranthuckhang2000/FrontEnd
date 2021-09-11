@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FeedService} from "../../feed/service/feed.service";
+import {FeedItems} from "../../feed/model/feed-items";
 
 @Component({
   selector: 'app-phunu-menu',
@@ -6,23 +8,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./phunu-menu.component.css']
 })
 export class PhunuMenuComponent implements OnInit {
+// @ts-ignore
+  feed = new FeedService();
+  data: FeedItems[] = [];
+  data2: FeedItems[];
+  data3: FeedItems[];
+  constructor(feedService: FeedService) {
+    this.data = [];
+    feedService.getDataRss(" https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fchuyen-trang-phu-nu.rss")
+      .subscribe(value => {
+        feedService.createListFeedItems(this.data,value);
+      });
+    this.data2 = [];
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Ftin-moi-nhat.rss")
+      .subscribe(value => {
+        feedService.createListFeedItems(this.data2,value);
+      });
+    this.data3 = [];
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fthoi-su.rss")
+      .subscribe(value => {
+        feedService.createListFeedItems(this.data3,value);
+      });
 
-  title?: string;
-  title1?: string;
-  title2?: string;
-  image?: string;
-  title3?: string;
-  content?: string;
-  listItem: any;
-
-  constructor() { }
-
+  }
   ngOnInit(): void {
-    this.title = 'Quy trình "May Vest Gấp 24h" tại Mon Amie Veston'
-    this.content='Thông thường, để may một bộ veston, khách hàng sẽ phải chờ từ 7-14 ngày. Tuy nhiên, đối với những khách hàng cần gấp veston để tham dự một sự kiện quan trọng. Mon Amie vẫn sẽ ưu tiên lựa chọn dịch vụ "May Vest Gấp 24h" này cho bạn, mà không tính thêm bất kỳ phụ phí nào.';
-    this.title1 ='Nhiều người thường có suy nghĩ rằng nâng mũi hỏng thì dễ sửa vì chỉ cần tháo silicon ra còn cắt mí mắt đã hỏng thì sửa rất khó. Tuy nhiên, thực tế có đơn giản như vậy?';
-    this.title3 = '"Dao kéo" hỏng: Nỗi khổ của bệnh nhân và cái khó của bác sĩ';
-    this.image = './assets/images/phunu.jpg';
-    this.listItem = [1,2,3,4,5];
   }
 }

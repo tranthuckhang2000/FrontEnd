@@ -1,1 +1,110 @@
 
+
+.banner-top .flex-item-left{
+  width: 67%;
+  height: 416px;
+  margin-right: 2px;
+}
+.banner-top .flex-item-right{
+  width: 33%;
+  height: 416px;
+}
+.banner-top .flex-item-right .flex-item1{
+  margin-bottom: 2px;
+}
+
+.featured-title{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 500;
+  text-shadow: 0px 1px 0px rgb(0 0 0);
+  line-height: 1.2;
+  position: absolute;
+  bottom: 30px;
+  left: 16px;
+}
+.featured-text{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-shadow: 0px 1px 0px rgb(0 0 0);
+  line-height: 1.2;
+  position: absolute;
+  bottom: 5px;
+  left: 16px;
+}
+/*two-column*/
+.two-column-flex .left-column{
+  width: 67%;
+  margin: 0;
+  padding: 0;
+}
+.two-column-flex .right-column{
+  width: 33%;
+  margin: 0;
+  padding: 0;
+}
+.two-column-flex .left-column .left-column-item{
+  width: 50%;
+  height: 360px;
+}
+/*End two column*/
+
+/*social media*/
+.social-media .list-icon button{
+  width: 45px;
+  height: 35px;
+  margin: 0 4px 8px 4px!important;
+}
+.social-media .list-icon .btn-success{
+  background-color: #5d82d1;
+}
+/*end social media*/
+
+/*responsive*/
+@media all and (max-width: 576px) {
+  .banner-top .flex-item-left{
+    width: 100%;
+  }
+  /* font-size of title in banner*/
+  .featured-title{
+    font-size: 19px;
+  }
+  /*font-size of pubDate in banner*/
+  .featured-text{
+    font-size: 13px;
+  }
+  .banner-top .banner-all{
+    flex-direction: column;
+  }
+  .banner-top .flex-item-right{
+    width: 100%;
+  }
+  .two-column-flex{
+    flex-direction: column;
+  }
+  .two-column-flex .left-column{
+    width: 100%;
+    flex-direction: column;
+  }
+  .two-column-flex .left-column .left-column-item{
+    width: 100%;
+  }
+  .two-column-flex .left-column .left-column-item img{
+    width: 100%;
+  }
+  /*right column*/
+  .two-column-flex .right-column{
+    width: 100%;
+  }
+
+  /*lists news*/
+  .list-news{
+    margin-top: 10px;
+  }
+  /*let location of title at righh*/
+  .list-news .mini-title{
+    width: 55%;
+  }
+}
+/*end responsive*/

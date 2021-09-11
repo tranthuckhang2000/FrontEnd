@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FeedService} from "../../feed/service/feed.service";
+import {FeedItems} from "../../feed/model/feed-items";
 
 @Component({
   selector: 'app-trongnuoc_menu',
@@ -6,22 +8,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./trong-nuoc-menu.component.css']
 })
 export class TrongNuocMenuComponent implements OnInit {
+// @ts-ignore
+  feed = new FeedService();
+  data: FeedItems[] = [];
+  data2: FeedItems[];
+  data3: FeedItems[];
+  constructor(feedService: FeedService) {
+    this.data = [];
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fthoi-su.rss")
+      .subscribe(value => {
+        feedService.createListFeedItems(this.data,value);
+      });
+    this.data2 = [];
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Ftin-moi-nhat.rss")
+      .subscribe(value => {
+        feedService.createListFeedItems(this.data2,value);
+      });
+    this.data3 = [];
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fkinh-te.rss")
+      .subscribe(value => {
+        feedService.createListFeedItems(this.data3,value);
+      });
 
-  title?: string;
-  title1?: string;
-  title2?: string;
-  image?: string;
-  content?: string;
-  listItem: any;
-  constructor() { }
-
-  ngOnInit(): void {
-    this.title = 'Ông Trump rời "đại bản doanh" Florida, tuyên bố Mỹ đang tụt lùi';
-    this.title1 ='Mỹ tấn công mạng, cài mã độc vào mạng lưới điện của Nga';
-    this.title2 = 'Triều Tiên bất ngờ nói về vụ mã độc tống tiền';
-    this.image = './assets/images/big_trump.jpg';
-    this.content = '(NLĐO) – Trong bài phát biểu tại hội nghị đảng Cộng hòa Bắc Carolina năm 2021, Cựu Tổng thống Mỹ Donald Trump khẳng định nước Mỹ đang tụt lùi dưới thời Tổng thống Joe Biden.';
-    this.listItem = [1,2,3,4,5];
   }
-
+  ngOnInit(): void {
+  }
 }

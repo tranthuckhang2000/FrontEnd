@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FeedService} from "../../feed/service/feed.service";
+import {FeedItems} from "../../feed/model/feed-items";
 
 @Component({
   selector: 'app-thethao-menu',
@@ -6,25 +8,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./thethao-menu.component.css']
 })
 export class ThethaoMenuComponent implements OnInit {
+// @ts-ignore
+  feed = new FeedService();
+  data: FeedItems[] = [];
+  data2: FeedItems[];
+  data3: FeedItems[];
+  constructor(feedService: FeedService) {
+    this.data = [];
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fthe-thao.rss")
+      .subscribe(value => {
+        feedService.createListFeedItems(this.data,value);
+      });
+    this.data2 = [];
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Ftin-moi-nhat.rss")
+      .subscribe(value => {
+        feedService.createListFeedItems(this.data2,value);
+      });
+    this.data3 = [];
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fthoi-su.rss")
+      .subscribe(value => {
+        feedService.createListFeedItems(this.data3,value);
+      });
 
-  title?: string;
-  title1?: string;
-  title2?: string;
-  image?: string;
-  title3?: string;
-  content?: string;
-  listItem: any;
-
-  constructor() { }
-
-  ngOnInit(): void {
-    this.title = 'Tuyển Việt Nam rộng cửa vào vòng loại 3 nếu thắng Malaysia';
-    this.content = 'Chiến thắng ấn tượng 4-0 trước đội tuyển Indonesia rạng sáng 8-6 đã giúp đội tuyển Việt Nam tiếp tục giữ vững ngôi đầu bảng G sau 6 lượt trận.';
-    this.title1 = 'Brazil độc diễn vòng loại World Cup Nam Mỹ';
-    this.title2 = 'World Cup 2022: Neymar tỏa sáng, Brazil vững ngôi đầu bảng Nam Mỹ';
-    this.title3 = 'Neymar tung hoành sân cỏ, Brazil hạ chủ nhà Paraguay';
-    this.image = './assets/images/thethao.jpg';
-    this.listItem = [1, 2, 3, 4, 5];
   }
-
+  ngOnInit(): void {
+  }
 }
