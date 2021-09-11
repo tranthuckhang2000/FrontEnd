@@ -5,7 +5,7 @@ import * as $ from 'jquery';
 import {FeedService} from "../service/feed.service";
 import {Image} from "../../model/image";
 // import { faCoffee, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
-import { faAlignJustify, faPlay, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { faAlignJustify, faPlay, faThumbsUp, faNewspaper, faBell } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -16,7 +16,9 @@ import { faAlignJustify, faPlay, faThumbsUp } from '@fortawesome/free-solid-svg-
 export class FeedDetailComponent implements OnInit {
   faAlignJustify = faAlignJustify;
   faThumbsUp = faThumbsUp;
-  faPlay = faPlay;
+  faPlay = faPlay
+  faNewspaper = faNewspaper;
+  faBell = faBell;
   product: FeedItems;
   dataContent: string[];
   image: any[];

@@ -1,66 +1,109 @@
-<!--<div *ngFor="let n of content">-->
-<!--  <p>{{n}}</p>-->
-<!--</div>-->
-<!--<div *ngFor="let n of imageSrc">-->
-<!--  <img src="{{n}}">-->
-<!--</div>-->
-
-<app-header></app-header>
-<div class="container-fluid pb-4 pt-5">
-  <div class="news-detail container animate-box">
-    <div>
-      <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4"><h4>{{title}}</h4></div>
-    </div>
-    <div id="slider2">
-      <div class="row">
-      <div class="col-sm-12">
-        <div class="intro-news">
-          <h2>{{title_main}}</h2>
-          <div class="quote">
-            <ul>
-              <li style="color: #F75D59; padding-right: 5px;">ANH VIỆT,</li>
-              <li>THEO PHÁP LUẬT & BẠN ĐỌC</li>
-            </ul>
+<div class="container">
+  <app-header></app-header>
+  <div class="container-fluid pb-4 pt-5">
+    <div style="border: 1px solid" class="row">
+      <div class="col-sm-8">
+        <div class="news-detail container animate-box">
+          <div>
+            <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4"><h5>{{title}}</h5></div>
           </div>
-          <div class="action">
-            <div class="social">
-              <ul>
-                <li>
-                  <p style="margin-left: 11px;"><fa-icon [icon]="faThumbsUp"></fa-icon></p>
-                  <p>Like</p>
-                  <p style="margin-right: 11px">201</p>
-                </li>
-                <li>
-                  <p>Chia sẽ</p>
-                </li>
-              </ul>
-            </div>
-            <div class="voice">
-              <div class="void-item">
-                <p><fa-icon [icon]="faPlay"></fa-icon></p>
-                <p>BÁO NÓI</p>
-                <p>-</p>
-                <p>4:12</p>
+          <div id="slider2">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="intro-news">
+                  <h2>{{title_main}}</h2>
+                  <div class="quote">
+                    <ul>
+                      <li style="color: #F75D59; padding-right: 5px;">ANH VIỆT,</li>
+                      <li>THEO PHÁP LUẬT & BẠN ĐỌC</li>
+                    </ul>
+                  </div>
+                  <div class="action">
+                    <div class="social">
+                      <ul>
+                        <li>
+                          <p style="margin-left: 11px;">
+                            <fa-icon [icon]="faThumbsUp"></fa-icon>
+                          </p>
+                          <p>Like</p>
+                          <p style="margin-right: 11px">201</p>
+                        </li>
+                        <li>
+                          <p style="margin: 0 10px;">Chia sẽ</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="voice">
+                      <div class="void-item">
+                        <p>
+                          <fa-icon [icon]="faPlay"></fa-icon>
+                        </p>
+                        <p>BÁO NÓI</p>
+                        <p>-</p>
+                        <p>4:12</p>
+                      </div>
+                    </div>
+
+                  </div>
+                  <h5 style="margin-bottom: 20px">{{cover}}</h5>
+                  <div class="content-body" *ngFor="let n of content">
+                    <div>{{n}}</div>
+                  </div>
+                  <div style="text-align: center" class="image-body" *ngFor="let n of imageArray">
+                    <div class="image-item">
+                      <img src="{{n.src}}">
+                      <p>{{n.alt}}</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-
           </div>
-        </div>
-        <h5 style="margin-bottom: 20px">{{cover}}</h5>
-        <div class="content-body" *ngFor="let n of content">
-          <p>{{n}}</p>
-        </div>
-        <div  style="text-align: center" class="image-body" *ngFor="let n of imageArray">
-          <div class="image-item">
-            <img src="{{n.src}}">
-            <p>{{n.alt}}</p>
-          </div>
-
         </div>
       </div>
+      <div class="col-sm-4">
+        <div class="news-cate">
+          <div class="title-cover">
+            <h5>
+              <fa-icon [icon]="faBell" style="color: #ef730d"></fa-icon>
+              <span>Tin tức bạn cần biết</span>
+            </h5>
+          </div>
+          <div class="news-cover">
+            <div class="news-item">
+              <img src="https://cdnstatic.baotintuc.vn/web_images/logo-share-02.jpg"/>
+              <h6>Đại dịch Covid 19 đã gây hại như thế nào?</h6>
+            </div>
+            <div class="news-item">
+              <img
+                src="https://image-us.24h.com.vn/upload/3-2020/images/2020-09-05/Bang-gia-Yamaha-Exciter-thang-9-2020-giam-ben-vung-ex3-1599270025-905-width660height490.jpg"
+                />
+              <h6>Đại dịch Covid 19 đã gây hại như thế nào?</h6>
+            </div>
+            <div class="news-item">
+              <img
+                src="https://img.websosanh.vn/v10/users/review/images/e3stfvfb2tcec/1568955013825_3158337.jpg?compress=85"
+               />
+              <h6>Đại dịch Covid 19 đã gây hại như thế nào?</h6>
+            </div>
+            <div class="news-item">
+              <img
+                src="data:image/jpeg;base64,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"
+                />
+              <h6>Đại dịch Covid 19 đã gây hại như thế nào?</h6>
+            </div>
+            <div class="news-item">
+              <img src="https://cdnstatic.baotintuc.vn/web_images/logo-share-02.jpg" />
+              <h6>Đại dịch Covid 19 đã gây hại như thế nào?</h6>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-  </div>
-</div>
 
-<app-footer></app-footer>
+  </div>
+
+  <app-footer></app-footer>
+
+</div>

@@ -45,6 +45,7 @@ export class FeedService {
   formatData(title: string, content: any[], image: any[], value: any){
     for (var i = 0; i <= value.content.length - 1; i++){
       content.push(value.content[i]);
+      console.log(content[i]);
     }
     for (var i = 0; i <= value.imageSrc.length - 1; i++){
       let src = value.imageSrc[i];
@@ -52,15 +53,15 @@ export class FeedService {
       let item = new Image({src, alt});
       image.push(item);
       // imageSrc.push(value.imageSrc[i]);
-      console.log(image);
+      // console.log(image);
     }
     //
     // for (var i = 0; i <= value.imageAlt.length - 1; i++){
     //   imageAlt.push(value.imageAlt[i]);
     // }
-
-    title = value.title;
-    console.log(title);
+    //
+    // title = value.title;
+    // console.log(title);
 
   }
   getContent(content: string[], value: any) {
