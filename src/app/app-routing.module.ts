@@ -14,7 +14,6 @@ import {PhapluatMenuComponent} from "./category/phapluat-menu/phapluat-menu.comp
 import {GiaitriMenuComponent} from "./category/giaitri-menu/giaitri-menu.component";
 import {DiemdenMenuComponent} from "./category/diemden-menu/diemden-menu.component";
 import {ThethaoMenuComponent} from "./category/thethao-menu/thethao-menu.component";
-import {VanngheMenuComponent} from "./category/vannghe-menu/vannghe-menu.component";
 import {LytuongsongMenuComponent} from "./category/lytuongsong-menu/lytuongsong-menu.component";
 import {NoithangMenuComponent} from "./category/noithang-menu/noithang-menu.component";
 import {TindocquyenMenuComponent} from "./category/tindocquyen-menu/tindocquyen-menu.component";
@@ -37,7 +36,6 @@ let routes: Routes = [
   {path:'giai-tri' , component:GiaitriMenuComponent},
   {path:'diem-den' , component:DiemdenMenuComponent},
   {path:'the-thao', component:ThethaoMenuComponent},
-  {path:'van-nghe' , component:VanngheMenuComponent},
   {path:'ly-tuong', component:LytuongsongMenuComponent},
   {path:'noi-thang', component:NoithangMenuComponent},
   {path:'tin-docquyen', component:TindocquyenMenuComponent},

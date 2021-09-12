@@ -23,7 +23,6 @@ import { DiemdenMenuComponent } from './category/diemden-menu/diemden-menu.compo
 import { GiaitriMenuComponent } from './category/giaitri-menu/giaitri-menu.component';
 import { PhapluatMenuComponent } from './category/phapluat-menu/phapluat-menu.component';
 import { ThethaoMenuComponent } from './category/thethao-menu/thethao-menu.component';
-import { VanngheMenuComponent } from './category/vannghe-menu/vannghe-menu.component';
 import { LytuongsongMenuComponent } from './category/lytuongsong-menu/lytuongsong-menu.component';
 import { NoithangMenuComponent } from './category/noithang-menu/noithang-menu.component';
 import { TindocquyenMenuComponent } from './category/tindocquyen-menu/tindocquyen-menu.component';
@@ -52,7 +51,6 @@ import { DiaocMenuComponent } from './category/diaoc-menu/diaoc-menu.component';
     GiaitriMenuComponent,
     PhapluatMenuComponent,
     ThethaoMenuComponent,
-    VanngheMenuComponent,
     LytuongsongMenuComponent,
     NoithangMenuComponent,
     TindocquyenMenuComponent,
