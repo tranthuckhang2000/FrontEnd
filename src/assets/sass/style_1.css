@@ -1005,6 +1005,8 @@ a, a:hover {
     margin: 0 auto; }
     .news-cate .news-cover .news-item {
       margin-bottom: 15%; }
+      .news-cate .news-cover .news-item h6 {
+        font-weight: 600; }
       .news-cate .news-cover .news-item img {
         width: 100%;
         margin-bottom: 5%; }
@@ -1072,7 +1074,8 @@ a, a:hover {
     font-size: 16px; }
 
   .intro-news h2 {
-    font-size: 22px; }
+    font-size: 22px;
+    font-weight: 600; }
 
   .quote ul {
     padding-left: 0;

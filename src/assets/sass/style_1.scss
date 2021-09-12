@@ -992,6 +992,9 @@ a, a:hover {
     margin: 0 auto;
     .news-item{
       //border: 1px solid red;
+      h6{
+        font-weight: 600;
+      }
       img{
         width: 100%;
         margin-bottom: 5%;
@@ -1102,6 +1105,7 @@ a, a:hover {
   .intro-news{
     h2{
       font-size: 22px;
+      font-weight: 600;
     }
   }
   .quote{
