@@ -44,8 +44,7 @@
               "src/assets/js/jquery.waypoints.min.js",
               "src/assets/js/main.js",
               "src/assets/js/modernizr-3.5.0.min.js",
-              "src/assets/js/owl.carousel.min.js",
-              "node_modules/font-awesome/css/font-awesome.css"
+              "src/assets/js/owl.carousel.min.js"
             ]
           },
           "configurations": {

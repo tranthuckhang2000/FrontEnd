@@ -14,13 +14,6 @@ export class BandocMenuComponent implements OnInit {
   data2: FeedItems[];
   data3: FeedItems[];
   constructor(feedService: FeedService) {
-  data: FeedItems[];
-  // @ts-ignore
-  feed: FeedService = new FeedService();
-  data2: FeedItems[];
-  data3: FeedItems[];
-  title: string;
-  constructor(private feedService: FeedService) {
     this.data = [];
     feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fban-doc.rss")
       .subscribe(value => {
@@ -39,6 +32,5 @@ export class BandocMenuComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.title = "Tin Bạn Đọc"
   }
 }

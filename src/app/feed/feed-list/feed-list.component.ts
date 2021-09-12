@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {NavigationExtras, Router} from '@angular/router';
 
 @Component({
   selector: 'app-feed-list',
@@ -9,13 +8,13 @@ import {NavigationExtras, Router} from '@angular/router';
 export class FeedListComponent implements OnInit {
   @Input() header: string[] | undefined;
   @Input() data: any[] | undefined;
+  // @ts-ignore
   title: string;
-  navigationExtras: NavigationExtras;
 
-  constructor(private router: Router) {
+
+  constructor() {
 
   }
-
 
   ngOnInit(): void {
     this.title = 'Product List';
