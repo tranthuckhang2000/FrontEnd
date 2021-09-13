@@ -25,6 +25,7 @@ export class BandocMenuComponent implements OnInit {
       .subscribe(value => {
         feedService.createListFeedItems(this.data2,value);
       });
+    console.log(this.data2);
     this.data3 = [];
     feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fthoi-su.rss")
       .subscribe(value => {
@@ -34,6 +35,7 @@ export class BandocMenuComponent implements OnInit {
   }
   ngOnInit(): void {
     this.title = "Bạn đọc";
+    console.log('tin moi nhat')
     console.log(this.data2)
   }
 }
