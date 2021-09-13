@@ -20,11 +20,13 @@ import {TindocquyenMenuComponent} from "./category/tindocquyen-menu/tindocquyen-
 import {PhunuMenuComponent} from "./category/phunu-menu/phunu-menu.component";
 import {DiaocMenuComponent} from "./category/diaoc-menu/diaoc-menu.component";
 import {ThitruongMenuComponent} from "./category/thitruong-menu/thitruong-menu.component";
+import {FeedDetailComponent} from "./feed/feed-detail/feed-detail.component";
 
 
 let routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'ban-doc', component: BandocMenuComponent},
+  {path: 'ban-doc/chi-tiet/:title/:link', component: FeedDetailComponent},
   {path: 'cong-doan', component:CongdoanMenuComponent},
   {path: 'giao-duc', component:GiaoducMenuComponent},
   {path: 'kinh-te', component:KinhteMenuComponent},

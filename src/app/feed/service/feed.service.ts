@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {FeedItems} from "../model/feed-items";
+import {Image} from "../../model/image";
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,6 @@ export class FeedService {
   }
 
   getData() {
-    console.log(1234576);
   }
 
   getDataRss(url: string, data: object = {}): Observable<any> {
@@ -28,10 +28,49 @@ export class FeedService {
       var thumbnail = value.items[i].thumbnail;
       var description = value.items[i].description;
       var content = value.items[i].content;
-      console.log('test data');
       let feedItems = new FeedItems({title, pubDate, link, guid, thumbnail, description, content});
+      // console.log('List From FeedService')
+      // console.log(feedItems.link);
       list.push(feedItems);
     }
     ;
   }
+
+
+
+  onSendService(formData: FormData):Observable<any>{
+    return this.http.post<any>('http://localhost/APICrawlData/crawl.php', formData);
+  }
+
+  formatData(title: string, content: any[], image: any[], value: any){
+    for (var i = 0; i <= value.content.length - 1; i++){
+      content.push(value.content[i]);
+      console.log(content[i]);
+    }
+    for (var i = 0; i <= value.imageSrc.length - 1; i++){
+      let src = value.imageSrc[i];
+      let alt = value.imageAlt[i];
+      let item = new Image({src, alt});
+      image.push(item);
+      // imageSrc.push(value.imageSrc[i]);
+      // console.log(image);
+    }
+    //
+    // for (var i = 0; i <= value.imageAlt.length - 1; i++){
+    //   imageAlt.push(value.imageAlt[i]);
+    // }
+    //
+    // title = value.title;
+    // console.log(title);
+
+  }
+  getContent(content: string[], value: any) {
+    for (var i = 0; i <= value.content.length - 1; i++){
+      content.push(value.content[i]);
+
+    }
+
+
+  }
+
 }

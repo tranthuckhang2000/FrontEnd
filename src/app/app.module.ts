@@ -29,6 +29,7 @@ import { TindocquyenMenuComponent } from './category/tindocquyen-menu/tindocquye
 import { PhunuMenuComponent } from './category/phunu-menu/phunu-menu.component';
 import { ThitruongMenuComponent } from './category/thitruong-menu/thitruong-menu.component';
 import { DiaocMenuComponent } from './category/diaoc-menu/diaoc-menu.component';
+import { FeedDetailComponent } from './feed/feed-detail/feed-detail.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { DiaocMenuComponent } from './category/diaoc-menu/diaoc-menu.component';
     TindocquyenMenuComponent,
     PhunuMenuComponent,
     ThitruongMenuComponent,
-    DiaocMenuComponent
+    DiaocMenuComponent,
+    FeedDetailComponent
   ],
     imports: [
         BrowserModule,
