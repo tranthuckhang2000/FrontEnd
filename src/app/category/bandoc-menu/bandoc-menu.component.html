@@ -46,6 +46,7 @@
 <!--start left column-->
     <div  class="left-column container d-flex flex-wrap">
       <div class="left-column-item" *ngFor="let d of data | slice:2:11">
+        <a [routerLink]="['chi-tiet',title, d.link]">
         <div sclass="card">
           <img width="365px" height="208px" src="{{d.thumbnail}}">
           <div class="mt-3">
@@ -53,6 +54,7 @@
             <p class="text-secondary font-italic">{{d.pubDate}}</p>
           </div>
         </div>
+        </a>
       </div>
     </div>
 <!--end left column-->
