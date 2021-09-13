@@ -956,11 +956,11 @@ a, a:hover {
 // chỉnh sửa home
 .card-title{
   font-weight: bold;
-  font-size: 13px;
+  font-size: 19px;
 }
 
 .content-short2 .row .col-md-8 .card-title{
-  font-size: 12px;
+  font-size: 15px;
 }
 .title_right{
     margin-left: 11px;
@@ -973,28 +973,64 @@ a, a:hover {
     font-size: 12px;
 }
 .image-center{
-  width: 120px;
-  height: 98px
+  width: 200px;
+  height: 150px
 }
 .card-main{
   font-size: 10px;
 }
+.main-right{
+  margin-top: -300px;
+  margin-left: 241px;
+
+}
+
+.main-right img{
+
+  width: 200px;
+  margin-left: 100px;
+
+}
+.main-center{
+  margin-top: -2760px;
+  margin-left: 660px;
+  padding-left: 77px;
+}
+.card-img-top{
+  width: 350px;
+  height: 230px;
+
+}
+.card-img-topT{
+  width: 318px;
+  height: 208px;
+}
+.card-img-topHuu{
+  width: 718px;
+  height: 280px;
+}
+.card-title-centerH{
+  font-size: 17px;
+  font-weight: bold;
+}
+.main-left{
+  margin-left:  -28px;
+}
+
 @media screen and (max-width: 1280px){
+
   .main{
-    max-width: 600px;
+    max-width: 100%;
   }
   .main-left{
-    width: 60%;
+    width: 80%;
     float: left;
   }
   .main-center{
     width: 19%;
     float: left;
   }
-  .main-right{
-    width: 19%;
-    float: left;
-  }
+
 
 }
 @media screen and (max-width: 2000px){
