@@ -748,8 +748,8 @@ a, a:hover {
 .fh5co_footer_bg {
   background: #222;
   color: #fff;
-  -webkit-clip-path: polygon(0 17%, 100% 0, 100% 100%, 0% 100%);
-  clip-path: polygon(0 17%, 100% 0, 100% 100%, 0% 100%)
+  /*-webkit-clip-path: polygon(0 17%, 100% 0, 100% 100%, 0% 100%);*/
+  /*clip-path: polygon(0 17%, 100% 0, 100% 100%, 0% 100%)*/
 }
 
 .footer_logo {
