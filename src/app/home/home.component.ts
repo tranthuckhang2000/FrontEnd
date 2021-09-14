@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import {FeedService} from "../feed/service/feed.service";
+import {FeedItems} from "../feed/model/feed-items";
+import {Image} from "../model/image";
+
 
 @Component({
   selector: 'app-home',
@@ -6,22 +10,71 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  imgLink: string;
-  title: string;
-  content: string;
-  tinnong: string = 'Tới lượt Mỹ bị điều tra về nguồn gốc dịch Covid-19?';
-  listItem: any = [1,2,3,4,5,6];
-  listItem2: any = [1,2,3,4];
-  listItem3: any = [1,2,3];
 
+  newsFeed: FeedItems[] = [];
+  nationalFeed: FeedItems[] = [];
+  topFeed: FeedItems[] = [];
+  unionFeed: FeedItems[] = [];
+  techniqueFeed: FeedItems[] = [];
+  estateFeed: FeedItems[] = [];
+  destinationFeed: FeedItems[] = [];
+  relaxFeed: FeedItems[] = [];
+  EduFeed: FeedItems[] = [];
+  EconomyFeed: FeedItems[] = [];
+  lifeFeed: FeedItems[] = [];
+  talkFeedItem: FeedItems[] = [];
+  lawFeed: FeedItems[] = [];
+  womenFeed: FeedItems[] = [];
+  healthFeed: FeedItems[] = [];
+  sportFeed: FeedItems[] = [];
+  businessFeed: FeedItems[] = [];
+  monopolyFeed: FeedItems[] = [];
+  internalFeed: FeedItems[] = [];
+  formData: FormData = new FormData();
+  title: "Tin mới";
+  cover: any;
+  content : string[] = [];
+  imageSrc: string[] = [];
+  imageAlt: string[] = [];
+  imageArray: Image[] = [];
+   
   image: string = './assets/images/big_trump.jpg';
-  constructor() { }
+  constructor(private feedService: FeedService) {
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fban-doc.rss")
+    .subscribe(value => {
+      feedService.createListFeedItems(this.newsFeed, value);
+    });
+    feedService.getDataRss(" https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fthoi-su-quoc-te.rss")
+    .subscribe(value => {
+      feedService.createListFeedItems(this.nationalFeed,value);
+    });
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fcong-doan.rss")
+    .subscribe(value => {
+      feedService.createListFeedItems(this.unionFeed,value);
+    });
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fcong-nghe.rss")
+    .subscribe(value => {
+      feedService.createListFeedItems(this.techniqueFeed, value);
+    });
+    this.onSend("https://nld.com.vn/kinh-te/ket-noi-cung-cau-nong-thuy-san-giua-cac-tinh-thanh-dbscl-va-tp-hcm-202109132153034.htm");
+    this.feedService.onSendService(this.formData).subscribe(
+      res =>{
+        this.feedService.formatData(this.title, this.content, this.imageArray, res);
+        this.title = res.title;
+        this.cover = res.cover;
+      },
+      error => {
+        console.log(error);
+      }
+    )
+   }
+
+
+   onSend(name: string){
+    this.formData.append('name', name);
+  }
 
   ngOnInit(): void {
-    this.imgLink = 'https://nld.mediacdn.vn/zoom/544_340/291774122806476800/2021/6/17/benh1a-1623886031186410911854.jpg';
-    this.title = 'Sáng 17-6, thêm 158 ca mắc Covid-19 trong nước, TP HCM có 45 ca';
-    this.content = '(NLĐO) - Sáng nay 17-6 ghi nhận thêm 159 ca Covid-19, gồm 1 ca nhập cảnh và 158 ca trong nước. Ngoài các điểm nóng Bắc Giang 87 ca, TP HCM 45 ca, ' +
-      'Tiền Giang và Bình Dương cũng phát hiện thêm nhiều ca bệnh với lần lượt 11 và 7 ca.';
 
   }
 

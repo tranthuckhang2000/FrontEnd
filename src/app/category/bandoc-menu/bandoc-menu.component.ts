@@ -18,7 +18,7 @@ export class BandocMenuComponent implements OnInit {
     this.data = [];
     feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fban-doc.rss")
       .subscribe(value => {
-        feedService.createListFeedItems(this.data,value);
+        feedService.createListFeedItems(this.data, value);
       });
     this.data2 = [];
     feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Ftin-moi-nhat.rss")

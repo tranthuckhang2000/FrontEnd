@@ -41,7 +41,6 @@ export class FeedDetailComponent implements OnInit {
     url = link;
     this.title = title;
     console.log(url);
-
     this.onSend(url);
     this.feedService.onSendService(this.formData).subscribe(
       res =>{

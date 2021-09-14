@@ -48,7 +48,7 @@
     <div  class="left-column container d-flex flex-wrap">
       <div class="left-column-item" *ngFor="let d of data | slice:2:11">
         <a [routerLink]="['chi-tiet',title, d.link]">
-        <div sclass="card">
+        <div class="card">
           <img width="365px" height="208px" src="{{d.thumbnail}}">
           <div class="mt-3">
             <h5 class="card-title">{{d.title}}</h5>

@@ -27,6 +27,7 @@ let routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'ban-doc', component: BandocMenuComponent},
   {path: 'ban-doc/chi-tiet/:title/:link', component: FeedDetailComponent},
+  {path: 'chi-tiet/:title/:link', component: FeedDetailComponent},
   {path: 'cong-doan', component:CongdoanMenuComponent},
   {path: 'giao-duc', component:GiaoducMenuComponent},
   {path: 'kinh-te', component:KinhteMenuComponent},
