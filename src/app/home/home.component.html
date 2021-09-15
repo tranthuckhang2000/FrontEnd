@@ -11,7 +11,7 @@
       <div class="news-top news-items hoverBoxshadow">
         <a [routerLink]="['chi-tiet/Tin tổng hợp', unionFeed[0].link]">
           <img src="{{ unionFeed[0].thumbnail }}" />
-          <div style="background-color: #f6f5f6">
+          <div>
             <h5>{{ unionFeed[0].title }}</h5>
             <p>
               (NLĐO)- Tọa đàm "Kết nối cung - cầu nông - thủy sản giữa các tỉnh,
@@ -60,7 +60,7 @@
     <div style="padding: 15px;" class="col-sm-2">
       <div class="logo-item">
         <img src="https://static.mediacdn.vn/nld/Images/solieucovid19-2.png" alt="">
-        <p class="pubDate">Tính từ ngày 27/4</p>
+        <p class="date pubDate">Tính từ ngày 27/4</p>
       </div>
 
     </div>
@@ -81,8 +81,26 @@
           <p class="ct">Tử vong</p>
           <h3 style="background-color: #e1e1e1; color: #515350">15.987</h3>
         </div>
-      </div>      <div style="border-bottom: 1px solid #e5e5e5;" class="country">
+      </div>   
+      <div style="border-bottom: 1px solid #e5e5e5;" class="country">
         <div class="covid-item">
+          <h3 class="title hcm">TP HCM</h3>
+        </div>
+        <div class="covid-item">
+          <p class="hcm">Số người mắc</p>
+          <h3 style="background-color: #ec4141; color: #ffffff">630.661</h3>
+        </div>
+        <div class="covid-item">
+          <p class="hcm">Điều trị khỏi</p>
+          <h3 style="background-color: #cae3c7; color: #3ea334">320.621</h3>
+        </div>
+        <div class="covid-item">
+          <p class="hcm">Tử vong</p>
+          <h3 style="background-color: #e1e1e1; color: #515350">15.987</h3>
+        </div>
+      </div>     
+      <!-- <div style="border-bottom: 1px solid #e5e5e5;" class="country">
+        <div style="min-width: 151px;" class="covid-item">
           <h3 class="title hcm">TP HCM</h3>
         </div>
         <div class="covid-item">
@@ -94,10 +112,10 @@
           <h3 style="background-color: #cae3c7; color: #3ea334">1530.621</h3>
         </div>
         <div class="covid-item">
-          <p class="HCM">Tử vong</p>
+          <p class="hcm">Tử vong</p>
           <h3 style="background-color: #e1e1e1; color: #515350">12.987</h3>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 
