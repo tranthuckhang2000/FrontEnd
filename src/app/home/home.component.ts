@@ -56,6 +56,20 @@ export class HomeComponent implements OnInit {
     .subscribe(value => {
       feedService.createListFeedItems(this.techniqueFeed, value);
     });
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fdia-oc.rss")
+    .subscribe(value => {
+      feedService.createListFeedItems(this.estateFeed, value);
+    });
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fdiem-den.rss")
+    .subscribe(value => {
+      feedService.createListFeedItems(this.destinationFeed, value);
+    });
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fgiai-tri.rss")
+    .subscribe(value => {
+      feedService.createListFeedItems(this.relaxFeed, value);
+    });
+
+
     this.onSend("https://nld.com.vn/kinh-te/ket-noi-cung-cau-nong-thuy-san-giua-cac-tinh-thanh-dbscl-va-tp-hcm-202109132153034.htm");
     this.feedService.onSendService(this.formData).subscribe(
       res =>{
