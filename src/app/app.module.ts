@@ -1,7 +1,5 @@
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
@@ -32,7 +30,7 @@ import { PhunuMenuComponent } from './category/phunu-menu/phunu-menu.component';
 import { ThitruongMenuComponent } from './category/thitruong-menu/thitruong-menu.component';
 import { DiaocMenuComponent } from './category/diaoc-menu/diaoc-menu.component';
 import { FeedDetailComponent } from './feed/feed-detail/feed-detail.component';
-import { NgApexchartsModule } from 'ng-apexcharts';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,7 +64,6 @@ import { NgApexchartsModule } from 'ng-apexcharts';
         BrowserModule,
         AppRoutingModule,
         RouterModule,
-        NgApexchartsModule
         
     ],
   providers: [Data],

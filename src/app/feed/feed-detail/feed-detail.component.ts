@@ -16,7 +16,7 @@ import { faAlignJustify, faPlay, faThumbsUp, faNewspaper, faBell } from '@fortaw
 export class FeedDetailComponent implements OnInit {
   faAlignJustify = faAlignJustify;
   faThumbsUp = faThumbsUp;
-  faPlay = faPlay
+  faPlay = faPlay;
   faNewspaper = faNewspaper;
   faBell = faBell;
   product: FeedItems;
