@@ -191,3 +191,39 @@
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
 }
+$(document).ready(function(){
+    let status = 0;
+    $('.icon-menu-mobile').click(function(){
+        if(status === 0){
+            changeStatus('-100%');
+            status = 1;
+        }
+        else{
+            changeStatus('0%');
+            status = 0;
+
+        }
+
+    })
+
+    function changeStatus(value){
+        // $('.nav-overlay').toggle();
+        $('.nav-mobile').css({
+        '-webkit-transform' : `translate(0, ${value})`,
+            '-webkit-transition': 'transform linear 0.2s',
+        
+            '-moz-transform' : `translate(${value})`,
+            '-moz-transition': 'transform linear 0.2s',
+
+            '-ms-transform' : `translate(${value})`,
+            '-ms-transition': 'transform linear 0.2s',
+
+            '-o-transform' : `translate(${value})`,
+            'transition': 'transform linear 0.2s',
+
+            '-o-transform' : `translate(${value})`,
+            'transition': 'transform linear 0.2s',
+        })
+    }
+
+})

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-// import { faHeart, faAlignJustify, faPlay, faThumbsUp, faNewspaper, faBell } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faStar, faCommentAlt, 
+  faGlobeAmericas, faSearch, faHome, faBars,
+  faTimes} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  // faHeart= faHeart;
-  // faPlay = faPlay;
-  // faNewspaper = faNewspaper;
-  // faBell = faBell;
-
+  faHeart= faHeart;
+  faStar= faStar;
+  faCommentAlt = faCommentAlt;
+  faGlobeAmericas = faGlobeAmericas;
+  faSearch = faSearch;
+  faHome = faHome;
+  faBars = faBars;
+  faTimes = faTimes;
 
   constructor() { }
 

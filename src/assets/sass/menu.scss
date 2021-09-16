@@ -1,0 +1,243 @@
+@mixin formatLink() {
+  a {
+    color: #ffffff;
+    p {
+      margin: auto 0;
+      padding: 7px 3px;
+      text-transform: uppercase;
+      font-size: 12px;
+      // border-right: 1px solid #ffffff;
+    }
+    p:hover {
+      color: red;
+      // background-color: #ffffff;
+      // border-bottom: 1px solid black;
+    }
+  }
+  a:hover {
+    text-decoration: none;
+    color: red;
+  }
+}
+.top-menu-main{
+  background-color: #222222; 
+  position: fixed; 
+  top: 0; 
+  z-index: 300;
+}
+.menu-main-top {
+  // position: fixed;
+  // z-index: 200;
+  top: 0;
+  background-color: #222222;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  .menu-main {
+    display: flex;
+    .logo-app {
+      img {
+        width: 100%;
+      }
+    }
+    @include formatLink;
+    .menu-item {
+      display: flex;
+    }
+  }
+  .search {
+    display: flex;
+    input {
+    }
+    .search-icon {
+      margin: auto 0;
+    }
+  }
+}
+
+.menu-bot-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  @include formatLink;
+}
+
+@media screen and(min-width: 63.9em) {
+  .nav-mobile, .icon-menu-mobile{
+    display: none;
+  }
+    @mixin formatLink() {
+  a {
+    color: #ffffff;
+    p {
+      margin: auto 0;
+      padding: 7px 3px;
+      text-transform: uppercase;
+      font-size: 12px;
+      // border-right: 1px solid #ffffff;
+    }
+    p:hover {
+      color: red;
+      // background-color: #ffffff;
+      // border-bottom: 1px solid black;
+    }
+  }
+  a:hover {
+    text-decoration: none;
+    color: red;
+  }
+}
+
+.menu-main-top {
+  .menu-main {
+    .logo-app {
+      width: 20%;
+      padding: 7px 0;
+      img {
+        width: 100%;
+      }
+    }
+    @include formatLink;
+    .menu-item {
+      margin-right: 15px;
+    }
+  }
+  .search {
+    input {
+      height: 40%;
+      width: 200px;
+      margin: auto 0;
+    }
+    .search-icon {
+      font-size: 30px;
+      margin: auto 0;
+      margin-left: 10px;
+    }
+  }
+}
+
+.menu-bot-item {
+  @include formatLink;
+}
+    
+}
+
+
+@media screen and (min-width: 46.25em)  and (max-width: 63.9em) {
+@mixin formatLink() {
+  a {
+    color: #ffffff;
+    p {
+      margin: auto 0;
+      padding: 7px 3px;
+      text-transform: uppercase;
+      font-size: 12px;
+      // border-right: 1px solid #ffffff;
+    }
+    p:hover {
+      color: red;
+      // background-color: #ffffff;
+      // border-bottom: 1px solid black;
+    }
+  }
+  a:hover {
+    text-decoration: none;
+    color: red;
+  }
+}
+
+.menu-main-top {
+  .menu-main {
+      justify-content: space-between;
+    .logo-app {
+      width: 20%;
+      padding: 7px 0;
+      img {
+        width: 100%;
+      }
+    }
+    @include formatLink;
+    .menu-item {
+      margin-right: 15px;
+    }
+  }
+    .icon-menu-mobile{
+    //   background-color: yellow;
+        margin: auto 0;
+        font-size: 25px;
+        // padding-left: 30px;
+    }
+  .search {
+      display: none;
+    input {
+      height: 40%;
+      width: 200px;
+      margin: auto 0;
+    }
+    .search-icon {
+      font-size: 30px;
+      margin: auto 0;
+      margin-left: 10px;
+    }
+  }
+}
+
+.menu-bot-item {
+  @include formatLink;
+  display: none;
+}
+
+.overlay-nav{
+    position: fixed;
+    top: 63px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+}
+.nav-mobile{
+  transform: translate(0, -100%);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: fixed;
+    // width: 50%;
+    z-index: 200;
+    background-color: #ffffff;
+    top: 63px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    // left: 0;
+    .exit-icon{
+      front-size: 20px;
+      padding: 7px;
+      margin-bottom: 5px;
+      p{
+        margin: auto 0;
+      }
+    }
+      .menu-item{
+        margin-top: 20px;
+        .nav-item{
+          display: flex;
+          justify-content: space-around;
+          margin-bottom: 4%;
+          a{
+            border: 1px solid #e7e9eb;
+            border-radius: 4px;
+            width: 45%;
+            color: #5a5b5b;
+            p{
+               background-color: #f4f7f8;
+               margin: auto 0;
+               padding: 6px 0;
+               text-align: center;
+               text-transform: uppercase;
+
+              }
+          }
+        }
+      }
+}
+}

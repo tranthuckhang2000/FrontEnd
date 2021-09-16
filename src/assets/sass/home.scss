@@ -41,6 +41,9 @@ a.hoverLink:hover {
   // justify-content: left;
   flex-direction: column;
 }
+.table-covid {
+  z-index: 10;
+}
 
 .news-main {
   margin-top: 50px;
@@ -78,6 +81,7 @@ a.hoverLink:hover {
 
 @media screen and (min-width: 63.9em) {
   .table-covid {
+    z-index: 10;
     border: 1px solid #d65662;
     border-radius: 10px;
     margin-top: 40px;
@@ -155,6 +159,7 @@ a.hoverLink:hover {
 
 @media screen and (min-width: 46.25em) and (max-width: 63.9em) {
   .table-covid {
+    z-index: 10;
     border: 1px solid #d65662;
     border-radius: 10px;
     margin-top: 40px;
@@ -251,6 +256,7 @@ a.hoverLink:hover {
 
 @media screen and (max-width: 46.25em) {
   .table-covid{
+    
     display: none;
   }
   .title-news {

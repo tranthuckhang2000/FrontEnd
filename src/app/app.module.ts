@@ -30,6 +30,7 @@ import { PhunuMenuComponent } from './category/phunu-menu/phunu-menu.component';
 import { ThitruongMenuComponent } from './category/thitruong-menu/thitruong-menu.component';
 import { DiaocMenuComponent } from './category/diaoc-menu/diaoc-menu.component';
 import { FeedDetailComponent } from './feed/feed-detail/feed-detail.component';
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { FeedDetailComponent } from './feed/feed-detail/feed-detail.component';
         BrowserModule,
         AppRoutingModule,
         RouterModule,
+        FontAwesomeModule,
         
     ],
   providers: [Data],

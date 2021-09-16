@@ -36,7 +36,9 @@
               "src/assets/css/owl.carousel.css",
               "src/assets/css/owl.theme.default.css",
               "src/assets/sass/style_1.scss",
-              "src/assets/sass/home.scss"
+              "src/assets/sass/home.scss",
+              "src/assets/sass/menu.scss"
+
 
             ],
             "scripts": [
