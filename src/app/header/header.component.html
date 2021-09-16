@@ -31,8 +31,11 @@
               </p>
               <p class="text-item">thị trường</p>
             </a>
-            <p class="icon-menu-mobile">
+            <p id="iconOpen" class="icon-menu-mobile">
               <fa-icon [icon]="faBars"></fa-icon>
+            </p>
+            <p id="iconClose" class="icon-menu-mobile">
+              <fa-icon [icon]="faTimes" class="home-icon"></fa-icon>
             </p>
           </div>
           <div class="search">
@@ -45,12 +48,13 @@
   </div>
 </div>
 
-<div style="background-color: #2e2e2e" class="container-fluid">
+<div style="background-color: #2e2e2e" class="container-fluid bot-menu-main">
   <div class="container menu-bot-item">
     <a href="/">
       <p id="icon-nav">
         <fa-icon [icon]="faHome" class="home-icon"></fa-icon>
       </p>
+      
     </a>
     <a href="/trong-nuoc">
       <p>trong nước</p>
