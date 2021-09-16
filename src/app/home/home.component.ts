@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   estateFeed: FeedItems[] = [];
   destinationFeed: FeedItems[] = [];
   relaxFeed: FeedItems[] = [];
-  EduFeed: FeedItems[] = [];
+  eduFeed: FeedItems[] = [];
   EconomyFeed: FeedItems[] = [];
   lifeFeed: FeedItems[] = [];
   talkFeedItem: FeedItems[] = [];
@@ -67,6 +67,10 @@ export class HomeComponent implements OnInit {
     feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fgiai-tri.rss")
     .subscribe(value => {
       feedService.createListFeedItems(this.relaxFeed, value);
+    });
+    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fgiao-duc.rss")
+    .subscribe(value => {
+      feedService.createListFeedItems(this.eduFeed, value);
     });
 
 
