@@ -1,21 +1,24 @@
-
 <app-header></app-header>
-<div style="margin-top: 25px;" class="container">
+<div style="margin-top: 7%" class="container">
   <div class="container-fluid pb-4 pt-5">
-    <div style="border: 1px solid" class="row">
+    <div class="row">
       <div class="col-sm-8">
         <div class="news-detail container animate-box">
           <div>
-            <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4"><h5>{{title}}</h5></div>
+            <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">
+              <h5>{{ title }}</h5>
+            </div>
           </div>
           <div id="slider2">
             <div class="row">
               <div class="col-sm-12">
                 <div class="intro-news">
-                  <h2>{{title_main}}</h2>
+                  <h2>{{ title_main }}</h2>
                   <div class="quote">
                     <ul>
-                      <li style="color: #F75D59; padding-right: 5px;">ANH VIỆT,</li>
+                      <li style="color: #f75d59; padding-right: 5px">
+                        ANH VIỆT,
+                      </li>
                       <li>THEO PHÁP LUẬT & BẠN ĐỌC</li>
                     </ul>
                   </div>
@@ -23,14 +26,14 @@
                     <div class="social">
                       <ul>
                         <li>
-                          <p style="margin-left: 11px;">
+                          <p style="margin-left: 11px">
                             <fa-icon [icon]="faThumbsUp"></fa-icon>
                           </p>
                           <p>Like</p>
                           <p style="margin-right: 11px">201</p>
                         </li>
                         <li>
-                          <p style="margin: 0 10px;">Chia sẽ</p>
+                          <p style="margin: 0 10px">Chia sẽ</p>
                         </li>
                       </ul>
                     </div>
@@ -44,16 +47,19 @@
                         <p>4:12</p>
                       </div>
                     </div>
-
                   </div>
-                  <h5 style="margin-bottom: 20px">{{cover}}</h5>
+                  <h5 style="margin-bottom: 20px">{{ cover }}</h5>
                   <div class="content-body" *ngFor="let n of content">
-                    <div>{{n}}</div>
+                    <div>{{ n }}</div>
                   </div>
-                  <div style="text-align: center" class="image-body" *ngFor="let n of imageArray">
+                  <div
+                    style="text-align: center"
+                    class="image-body"
+                    *ngFor="let n of imageArray"
+                  >
                     <div class="image-item">
-                      <img src="{{n.src}}">
-                      <p>{{n.alt}}</p>
+                      <img src="{{ n.src }}" />
+                      <p>{{ n.alt }}</p>
                     </div>
                   </div>
                 </div>
@@ -78,7 +84,9 @@
               <h6>Iphone 13 sẽ có giá 50 tỉ đồng</h6>
             </div>
             <div class="news-item">
-              <img src="https://papatrader.com/wp-content/uploads/2020/09/nasa-1200.jpg"/>
+              <img
+                src="https://papatrader.com/wp-content/uploads/2020/09/nasa-1200.jpg"
+              />
               <h6>Nasa sắp phá sản do đại dịch Covid?</h6>
             </div>
             <div class="news-item">
@@ -94,17 +102,15 @@
               <h6>BMW S1000RR có gì nổi bật</h6>
             </div>
             <div class="news-item">
-              <img src="https://cdnstatic.baotintuc.vn/web_images/logo-share-02.jpg" />
+              <img
+                src="https://cdnstatic.baotintuc.vn/web_images/logo-share-02.jpg"
+              />
               <h6>Đại dịch Covid 19 đã gây hại như thế nào?</h6>
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
   </div>
-
-  <app-footer></app-footer>
-
 </div>
+<app-footer></app-footer>
