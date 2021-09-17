@@ -19,16 +19,24 @@
     color: red;
   }
 }
+
+.nav-header {
+  position: fixed;
+  z-index: 300;
+  top: 0;
+  left: 0;
+  right: 0;
+}
 .top-menu-main {
   background-color: #222222;
-  position: fixed;
-  top: 0;
-  z-index: 300;
+  // position: fixed;
+  // top: 0;
+  // z-index: 300;
 }
 .bot-menu-main {
-  position: fixed;
-  top: 77px;
-  z-index: 300;
+  // position: fixed;
+  // top: 77px;
+  // z-index: 300;
   background-color: #2e2e2e;
 }
 .menu-main-top {
@@ -44,6 +52,7 @@
     .logo-app {
       img {
         width: 100%;
+        padding: 5px;
       }
     }
     @include formatLink;
@@ -60,8 +69,40 @@
     }
   }
 }
-
 .menu-bot-item {
+  background-color: #2e2e2e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include formatLink;
+}
+
+.footer-main {
+  background-color: #222222;
+  .logo-footer {
+    text-align: center;
+    img {
+      width: 15%;
+    }
+  }
+  .footer-mid {
+    border-bottom: 2px solid red;
+  }
+  .footer-bot {
+    color: #6e6e6e;
+    span.email {
+      colo: red;
+    }
+    .item-text {
+      margin: 20px 0;
+      p {
+        margin: 2px 0;
+      }
+    }
+  }
+}
+
+.footer-bot-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,6 +111,9 @@
 }
 
 @media screen and(min-width: 63.9em) {
+  .format-margin {
+    margin-top: 130px;
+  }
   #iconClose {
     display: none;
   }
@@ -133,6 +177,12 @@
 }
 
 @media screen and (max-width: 46.25em) {
+    .format-margin {
+    margin-top: 60px;
+  }
+  .footer-bot-item {
+    display: none;
+  }
   #iconClose {
     display: none;
   }
@@ -208,7 +258,7 @@
       }
     }
     .menu-item {
-      margin-top: 10px;
+      margin-top: 25px;
       .nav-item {
         display: flex;
         justify-content: space-around;
@@ -233,6 +283,9 @@
 }
 
 @media screen and (min-width: 46.25em) and (max-width: 63.9em) {
+    .format-margin {
+    margin-top: 100px;
+  }
   #iconClose {
     display: none;
   }
@@ -315,10 +368,11 @@
     // width: 50%;
     z-index: 200;
     background-color: #ffffff;
-    top: 63px;
+    top: 5%;
     bottom: 0;
     right: 0;
     left: 0;
+    margin-top: 20px;
     // left: 0;
     .exit-icon {
       front-size: 20px;

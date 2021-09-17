@@ -1,105 +1,104 @@
-<div class="container-fluid top-menu-main">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="menu-main-top">
-          <div class="menu-main">
-            <div class="logo-app">
-              <img src="./assets/images/logo.ico" alt="logo" />
+<div class="nav-header">
+  <div style="margin: 0 0" class="container-fluid top-menu-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="menu-main-top">
+            <div class="menu-main">
+              <div class="logo-app">
+                <img src="./assets/images/logo.ico" alt="logo" />
+              </div>
+              <a href="/ly-tuong" class="menu-item">
+                <p class="icon-item">
+                  <fa-icon [icon]="faHeart"></fa-icon>
+                </p>
+                <p class="text-item">lý tưởng sống</p>
+              </a>
+              <a href="/doc-quyen" class="menu-item">
+                <p class="icon-item">
+                  <fa-icon [icon]="faStar"></fa-icon>
+                </p>
+                <p class="text-item">độc quyền</p>
+              </a>
+              <a href="/noi-thang" class="menu-item">
+                <p class="icon-item">
+                  <fa-icon [icon]="faCommentAlt"></fa-icon>
+                </p>
+                <p class="text-item">nói thẳng</p>
+              </a>
+              <a href="/thi-truong" class="menu-item">
+                <p class="icon-item">
+                  <fa-icon [icon]="faGlobeAmericas"></fa-icon>
+                </p>
+                <p class="text-item">thị trường</p>
+              </a>
+              <p id="iconOpen" class="icon-menu-mobile">
+                <fa-icon [icon]="faBars"></fa-icon>
+              </p>
+              <p id="iconClose" class="icon-menu-mobile">
+                <fa-icon [icon]="faTimes" class="home-icon"></fa-icon>
+              </p>
             </div>
-            <a href="/ly-tuong-song" class="menu-item">
-              <p class="icon-item">
-                <fa-icon [icon]="faHeart"></fa-icon>
-              </p>
-              <p class="text-item">lý tưởng sống</p>
-            </a>
-            <a href="/doc-quyen" class="menu-item">
-              <p class="icon-item">
-                <fa-icon [icon]="faStar"></fa-icon>
-              </p>
-              <p class="text-item">độc quyền</p>
-            </a>
-            <a href="/noi-thang" class="menu-item">
-              <p class="icon-item">
-                <fa-icon [icon]="faCommentAlt"></fa-icon>
-              </p>
-              <p class="text-item">nói thẳng</p>
-            </a>
-            <a href="/thi-truong" class="menu-item">
-              <p class="icon-item">
-                <fa-icon [icon]="faGlobeAmericas"></fa-icon>
-              </p>
-              <p class="text-item">thị trường</p>
-            </a>
-            <p id="iconOpen" class="icon-menu-mobile">
-              <fa-icon [icon]="faBars"></fa-icon>
-            </p>
-            <p id="iconClose" class="icon-menu-mobile">
-              <fa-icon [icon]="faTimes" class="home-icon"></fa-icon>
-            </p>
-          </div>
-          <div class="search">
-            <input type="text" />
-            <fa-icon [icon]="faSearch" class="search-icon"></fa-icon>
+            <div class="search">
+              <input type="text" />
+              <fa-icon [icon]="faSearch" class="search-icon"></fa-icon>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+  <div style="background-color: #2e2e2e" class="container-fluid bot-menu-main">
+    <div class="container menu-bot-item">
+      <a href="/">
+        <p id="icon-nav">
+          <fa-icon [icon]="faHome" class="home-icon"></fa-icon>
+        </p>
+      </a>
+      <a href="/trong-nuoc">
+        <p>trong nước</p>
+      </a>
+      <a href="/quoc-te">
+        <p>quốc tế</p>
+      </a>
+      <a href="/ban-doc">
+        <p>bạn đọc</p>
+      </a>
 
-<div style="background-color: #2e2e2e" class="container-fluid bot-menu-main">
-  <div class="container menu-bot-item">
-    <a href="/">
-      <p id="icon-nav">
-        <fa-icon [icon]="faHome" class="home-icon"></fa-icon>
-      </p>
-      
-    </a>
-    <a href="/trong-nuoc">
-      <p>trong nước</p>
-    </a>
-    <a href="/quoc-te">
-      <p>quốc tế</p>
-    </a>
-    <a href="/ban-doc">
-      <p>bạn đọc</p>
-    </a>
+      <a href="/kinh-te">
+        <p>kinh tế</p>
+      </a>
+      <a href="/suc-khoe">
+        <p>sức khoẻ</p>
+      </a>
 
-    <a href="/kinh-te">
-      <p>kinh tế</p>
-    </a>
-    <a href="/suc-khoe">
-      <p>sức khoẻ</p>
-    </a>
+      <a href="/giao-duc">
+        <p>giáo dục</p>
+      </a>
+      <a href="/phap-luat">
+        <p>pháp luật</p>
+      </a>
 
-    <a href="/giao-duc">
-      <p>giáo dục</p>
-    </a>
-    <a href="/phap-luat">
-      <p>pháp luật</p>
-    </a>
+      <a href="/van-nghe">
+        <p>văn nghệ</p>
+      </a>
+      <a href="/giai-tri">
+        <p>giải trí</p>
+      </a>
 
-    <a href="/van-nghe">
-      <p>văn nghệ</p>
-    </a>
-    <a href="/gia-tri">
-      <p>giải trí</p>
-    </a>
-
-    <a href="/the-thao">
-      <p>thể thao</p>
-    </a>
-    <a href="/cong-nghe">
-      <p>công nghệ</p>
-    </a>
-    <a href="/phu-nu">
-      <p>phụ nữ</p>
-    </a>
+      <a href="/the-thao">
+        <p>thể thao</p>
+      </a>
+      <a href="/cong-nghe">
+        <p>công nghệ</p>
+      </a>
+      <a href="/phu-nu">
+        <p>phụ nữ</p>
+      </a>
+    </div>
   </div>
 </div>
-
-<!-- <div class="overlay-nav"></div> -->
+<!-- <div class="over lay-nav"></div> -->
 <div class="nav-mobile">
   <div class="menu-item">
     <div class="nav-item">
@@ -130,7 +129,7 @@
       <a href="/van-nghe">
         <p>văn nghệ</p>
       </a>
-      <a href="/gia-tri">
+      <a href="/giai-tri">
         <p>giải trí</p>
       </a>
     </div>
@@ -154,7 +153,7 @@
       <a href="/phu-nu">
         <p>phụ nữ</p>
       </a>
-      <a href="/ly-tuong-song">
+      <a href="/ly-tuong">
         <p>lý tưởng sống</p>
       </a>
     </div>

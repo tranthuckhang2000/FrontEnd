@@ -41,7 +41,7 @@ let routes: Routes = [
   {path:'the-thao', component:ThethaoMenuComponent},
   {path:'ly-tuong', component:LytuongsongMenuComponent},
   {path:'noi-thang', component:NoithangMenuComponent},
-  {path:'tin-docquyen', component:TindocquyenMenuComponent},
+  {path:'tin-doc-quyen', component:TindocquyenMenuComponent},
   {path:'phu-nu', component:PhunuMenuComponent},
   {path:'dia-oc', component:DiaocMenuComponent},
   {path:'thi-truong', component:ThitruongMenuComponent}
