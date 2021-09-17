@@ -20,9 +20,9 @@
   }
 }
 
-.nav-header {
+.nav-header-fixed {
   position: fixed;
-  z-index: 300;
+  z-index: 400;
   top: 0;
   left: 0;
   right: 0;
@@ -238,13 +238,13 @@
   }
 
   .nav-mobile {
-    transform: translate(0, -100%);
+    transform: translate(100%, 0);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     position: fixed;
     // width: 50%;
     z-index: 200;
     background-color: #ffffff;
-    top: 33px;
+    top: 7%;
     bottom: 0;
     right: 0;
     left: 0;
@@ -283,7 +283,7 @@
 }
 
 @media screen and (min-width: 46.25em) and (max-width: 63.9em) {
-    .format-margin {
+  .format-margin {
     margin-top: 100px;
   }
   #iconClose {
@@ -312,6 +312,7 @@
   }
 
   .menu-main-top {
+    // background-color:  red;
     .menu-main {
       justify-content: space-between;
       .logo-app {
@@ -352,23 +353,15 @@
     display: none;
   }
 
-  .overlay-nav {
-    position: fixed;
-    top: 63px;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 100;
-  }
   .nav-mobile {
-    transform: translate(0, -100%);
+    // display: none;
+    transform: translate(100%, 0);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     position: fixed;
     // width: 50%;
-    z-index: 200;
+    z-index: 250;
     background-color: #ffffff;
-    top: 5%;
+    top: 6%;
     bottom: 0;
     right: 0;
     left: 0;

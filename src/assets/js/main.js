@@ -192,34 +192,41 @@ function googleTranslateElementInit() {
 }
 $(document).ready(function () {
   $("#iconOpen").click(function () {
-      changeStatus("0%");
+      changeStatus("0%", "0");
       $("#iconOpen").toggle();
       $("#iconClose").toggle();
+      // $(".nav-mobile").toggle();
 
   });
   $("#iconClose").click(function () {
-    changeStatus("-100%");
+    changeStatus("100%", "0");
     $("#iconClose").toggle();
     $("#iconOpen").toggle();
+    // $(".nav-mobile").toggle();
+    $(".nav-header").removeClass('nav-header-fixed');
+    $('.nav-header').css('z-index', '300');
+
+
+
 
 });
 
-  function changeStatus(value) {
+  function changeStatus(left, right) {
     // $('.nav-overlay').toggle();
     $(".nav-mobile").css({
-      "-webkit-transform": `translate(0, ${value})`,
+      "-webkit-transform": `translate(${left}, ${right})`,
       "-webkit-transition": "transform linear 0.2s",
 
-      "-moz-transform": `translate(${value})`,
+      "-moz-transform": `translate(${left}, ${right})`,
       "-moz-transition": "transform linear 0.2s",
 
-      "-ms-transform": `translate(${value})`,
+      "-ms-transform": `translate(${left}, ${right})`,
       "-ms-transition": "transform linear 0.2s",
 
-      "-o-transform": `translate(${value})`,
+      "-o-transform": `translate(${left}, ${right})`,
       transition: "transform linear 0.2s",
 
-      "-o-transform": `translate(${value})`,
+      "-o-transform": `translate(${left}, ${right})`,
       transition: "transform linear 0.2s",
     });
   }
