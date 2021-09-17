@@ -24,6 +24,7 @@
     "angular-font-awesome": "^3.1.2",
     "apexcharts": "^3.28.1",
     "bootstrap": "^5.0.1",
+    "cors": "^2.8.5",
     "font-awesome": "^4.7.0",
     "jquerry": "^0.0.1-security",
     "jquery": "^3.6.0",
