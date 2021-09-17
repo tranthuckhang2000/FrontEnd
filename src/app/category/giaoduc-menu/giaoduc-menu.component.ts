@@ -13,6 +13,7 @@ export class GiaoducMenuComponent implements OnInit {
   data: FeedItems[] = [];
   data2: FeedItems[];
   data3: FeedItems[];
+  title = "";
   constructor(feedService: FeedService) {
     this.data = [];
     feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fgiao-duc-khoa-hoc.rss")
@@ -32,5 +33,7 @@ export class GiaoducMenuComponent implements OnInit {
 
   }
   ngOnInit(): void {
+    this.title = "Giáo dục";
+
   }
 }

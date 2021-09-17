@@ -35,7 +35,5 @@ export class BandocMenuComponent implements OnInit {
   }
   ngOnInit(): void {
     this.title = "Bạn đọc";
-    console.log('tin moi nhat')
-    console.log(this.data2)
   }
 }
