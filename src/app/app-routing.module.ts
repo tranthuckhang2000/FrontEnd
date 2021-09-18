@@ -21,73 +21,79 @@ import {PhunuMenuComponent} from "./category/phunu-menu/phunu-menu.component";
 import {DiaocMenuComponent} from "./category/diaoc-menu/diaoc-menu.component";
 import {ThitruongMenuComponent} from "./category/thitruong-menu/thitruong-menu.component";
 import {FeedDetailComponent} from "./feed/feed-detail/feed-detail.component";
-
+import {CategoryDetailComponent} from "./category/category-detail/category-detail.component";
 
 let routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'ban-doc', component: BandocMenuComponent},
-  {path: 'ban-doc/chi-tiet/:title/:link', component: FeedDetailComponent},
+
+  {path: 'danh-muc/:title/:link', component: CategoryDetailComponent},
+
   {path: 'chi-tiet/:title/:link', component: FeedDetailComponent},
 
-  {path: 'cong-doan', component:CongdoanMenuComponent},
-  {path: 'cong-doan/chi-tiet/:title/:link', component: FeedDetailComponent},
 
-  {path: 'giao-duc', component:GiaoducMenuComponent},
-  {path: 'giao-duc/chi-tiet/:title/:link', component: FeedDetailComponent},
-
+  {path: 'ban-doc', component: BandocMenuComponent},
+  // {path: 'ban-doc/chi-tiet/:title/:link', component: FeedDetailComponent},
+  // // {path: 'chi-tiet/:title/:link', component: FeedDetailComponent},
+  //
+  // {path: 'cong-doan', component:CongdoanMenuComponent},
+  // {path: 'cong-doan/chi-tiet/:title/:link', component: FeedDetailComponent},
+  //
+  // {path: 'giao-duc', component:GiaoducMenuComponent},
+  // {path: 'giao-duc/chi-tiet/:title/:link', component: FeedDetailComponent},
+  //
   {path: 'kinh-te', component:KinhteMenuComponent},
-  {path: 'kinh-te/chi-tiet/:title/:link', component: FeedDetailComponent},
-
-  {path: 'suc-khoe', component:SuckhoeMenuComponent},
-  {path: 'suc-khoe/chi-tiet/:title/:link', component: FeedDetailComponent},
-
-  {path: 'trong-nuoc', component:TrongNuocMenuComponent},
-  {path: 'trong-nuoc/chi-tiet/:title/:link', component: FeedDetailComponent},
-
+  // {path: 'kinh-te/chi-tiet/:title/:link', component: FeedDetailComponent},
+  //
+  // {path: 'suc-khoe', component:SuckhoeMenuComponent},
+  // {path: 'suc-khoe/chi-tiet/:title/:link', component: FeedDetailComponent},
+  //
+  // {path: 'trong-nuoc', component:TrongNuocMenuComponent},
+  // {path: 'trong-nuoc/chi-tiet/:title/:link', component: FeedDetailComponent},
+  //
   {path:'quoc-te', component:CategorymenuComponent},
-  {path: 'quoc-te/chi-tiet/:title/:link', component: FeedDetailComponent},
-
-  {path:'cong-nghe' , component:CongngheMenuComponent},
-  {path: 'cong-nghe/chi-tiet/:title/:link', component: FeedDetailComponent},
-
-
-  {path:'phap-luat' , component:PhapluatMenuComponent},
-  {path: 'phap-luat/chi-tiet/:title/:link', component: FeedDetailComponent},
-
-
-  {path:'giai-tri' , component:GiaitriMenuComponent},
-  {path: 'giai-tri/chi-tiet/:title/:link', component: FeedDetailComponent},
-
-
-  {path:'diem-den' , component:DiemdenMenuComponent},
-  {path: 'diem-den/chi-tiet/:title/:link', component: FeedDetailComponent},
-
-
-  {path:'the-thao', component:ThethaoMenuComponent},
-  {path: 'the-thao/chi-tiet/:title/:link', component: FeedDetailComponent},
-
-
+  // {path: 'quoc-te/chi-tiet/:title/:link', component: FeedDetailComponent},
+  //
+  // {path:'cong-nghe' , component:CongngheMenuComponent},
+  // {path: 'cong-nghe/chi-tiet/:title/:link', component: FeedDetailComponent},
+  //
+  //
+  // {path:'phap-luat' , component:PhapluatMenuComponent},
+  // {path: 'phap-luat/chi-tiet/:title/:link', component: FeedDetailComponent},
+  //
+  //
+  // {path:'giai-tri' , component:GiaitriMenuComponent},
+  // {path: 'giai-tri/chi-tiet/:title/:link', component: FeedDetailComponent},
+  //
+  //
+  // {path:'diem-den' , component:DiemdenMenuComponent},
+  // {path: 'diem-den/chi-tiet/:title/:link', component: FeedDetailComponent},
+  //
+  //
+  // {path:'the-thao', component:ThethaoMenuComponent},
+  // {path: 'the-thao/chi-tiet/:title/:link', component: FeedDetailComponent},
+  //
+  //
   {path:'ly-tuong', component:LytuongsongMenuComponent},
-  {path: 'ly-tuong/chi-tiet/:title/:link', component: FeedDetailComponent},
-
-
-  {path:'noi-thang', component:NoithangMenuComponent},
-  {path: 'noi-thang/chi-tiet/:title/:link', component: FeedDetailComponent},
-
-
-  {path:'doc-quyen', component:TindocquyenMenuComponent},
-  {path: 'doc-quyen/chi-tiet/:title/:link', component: FeedDetailComponent},
-
-
-  {path:'phu-nu', component:PhunuMenuComponent},
-  {path: 'phu-nu/chi-tiet/:title/:link', component: FeedDetailComponent},
-
-  {path:'dia-oc', component:DiaocMenuComponent},
-  {path: 'dia-oc/chi-tiet/:title/:link', component: FeedDetailComponent},
-
-
-  {path:'thi-truong', component:ThitruongMenuComponent},
-  {path: 'thi-truong/chi-tiet/:title/:link', component: FeedDetailComponent},
+  // {path: 'ly-tuong/chi-tiet/:title/:link', component: FeedDetailComponent},
+  //
+  //
+  // {path:'noi-thang', component:NoithangMenuComponent},
+  // {path: 'noi-thang/chi-tiet/:title/:link', component: FeedDetailComponent},
+  //
+  //
+  // {path:'doc-quyen', component:TindocquyenMenuComponent},
+  // {path: 'doc-quyen/chi-tiet/:title/:link', component: FeedDetailComponent},
+  //
+  //
+  // {path:'phu-nu', component:PhunuMenuComponent},
+  // {path: 'phu-nu/chi-tiet/:title/:link', component: FeedDetailComponent},
+  //
+  // {path:'dia-oc', component:DiaocMenuComponent},
+  // {path: 'dia-oc/chi-tiet/:title/:link', component: FeedDetailComponent},
+  //
+  //
+  // {path:'thi-truong', component:ThitruongMenuComponent},
+  // {path: 'thi-truong/chi-tiet/:title/:link', component: FeedDetailComponent},
 
 ]
 

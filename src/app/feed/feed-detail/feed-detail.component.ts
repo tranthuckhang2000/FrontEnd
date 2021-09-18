@@ -56,6 +56,7 @@ export class FeedDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.content);
 
   }
 

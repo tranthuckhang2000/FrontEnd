@@ -57,45 +57,49 @@
           <fa-icon [icon]="faHome" class="home-icon"></fa-icon>
         </p>
       </a>
-      <a href="/trong-nuoc">
-        <p>trong nước</p>
-      </a>
-      <a href="/cong-doan">
-        <p>công đoàn</p>
-      </a>
-      <a href="/quoc-te">
-        <p>quốc tế</p>
-      </a>
-      <a href="/ban-doc">
-        <p>bạn đọc</p>
-      </a>
+        <a *ngFor="let i of categoryTop" [routerLink]="['/danh-muc', i.title, i.link]">
+          <p>{{i.title}}</p>
+        </a>
 
-      <a href="/kinh-te">
-        <p>kinh tế</p>
-      </a>
-      <a href="/suc-khoe">
-        <p>sức khoẻ</p>
-      </a>
+<!--      <a href="/trong-nuoc">-->
+<!--        <p>trong nước</p>-->
+<!--      </a>-->
+<!--      <a href="/cong-doan">-->
+<!--        <p>công đoàn</p>-->
+<!--      </a>-->
+<!--      <a href="/quoc-te">-->
+<!--        <p>quốc tế</p>-->
+<!--      </a>-->
+<!--      <a href="/ban-doc">-->
+<!--        <p>bạn đọc</p>-->
+<!--      </a>-->
 
-      <a href="/giao-duc">
-        <p>giáo dục</p>
-      </a>
-      <a href="/phap-luat">
-        <p>pháp luật</p>
-      </a>
-      <a href="/giai-tri">
-        <p>giải trí</p>
-      </a>
+<!--      <a href="/kinh-te">-->
+<!--        <p>kinh tế</p>-->
+<!--      </a>-->
+<!--      <a href="/suc-khoe">-->
+<!--        <p>sức khoẻ</p>-->
+<!--      </a>-->
 
-      <a href="/the-thao">
-        <p>thể thao</p>
-      </a>
-      <a href="/cong-nghe">
-        <p>công nghệ</p>
-      </a>
-      <a href="/phu-nu">
-        <p>phụ nữ</p>
-      </a>
+<!--      <a href="/giao-duc">-->
+<!--        <p>giáo dục</p>-->
+<!--      </a>-->
+<!--      <a href="/phap-luat">-->
+<!--        <p>pháp luật</p>-->
+<!--      </a>-->
+<!--      <a href="/giai-tri">-->
+<!--        <p>giải trí</p>-->
+<!--      </a>-->
+
+<!--      <a href="/the-thao">-->
+<!--        <p>thể thao</p>-->
+<!--      </a>-->
+<!--      <a href="/cong-nghe">-->
+<!--        <p>công nghệ</p>-->
+<!--      </a>-->
+<!--      <a href="/phu-nu">-->
+<!--        <p>phụ nữ</p>-->
+<!--      </a>-->
     </div>
   </div>
 </div>
