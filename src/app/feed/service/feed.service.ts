@@ -36,10 +36,12 @@ export class FeedService {
     ;
   }
 
-
-
   onSendService(formData: FormData):Observable<any>{
     return this.http.post<any>('http://localhost/APICrawlData/crawl.php', formData);
+  }
+
+  onSendRss(formData: FormData):Observable<any>{
+    return this.http.post<any>('http://localhost/APICrawlData/test.php', formData);
   }
 
   formatData(title: string, content: any[], image: any[], value: any){

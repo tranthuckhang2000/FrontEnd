@@ -2,7 +2,8 @@ import { Component, OnInit} from '@angular/core';
 import {FeedService} from "../feed/service/feed.service";
 import {FeedItems} from "../feed/model/feed-items";
 import {Image} from "../feed/model/image";
-
+import { HttpClient } from "@angular/common/http";
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,6 @@ import {Image} from "../feed/model/image";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
   newsFeed: FeedItems[] = [];
   nationalFeed: FeedItems[] = [];
   topFeed: FeedItems[] = [];
@@ -30,16 +30,17 @@ export class HomeComponent implements OnInit {
   businessFeed: FeedItems[] = [];
   monopolyFeed: FeedItems[] = [];
   internalFeed: FeedItems[] = [];
-  formData: FormData = new FormData();
-  title: "Tin mới";
   cover: any;
   content : string[] = [];
   imageSrc: string[] = [];
   imageAlt: string[] = [];
   imageArray: Image[] = [];
 
-  image: string = './assets/images/big_trump.jpg';
-  constructor(private feedService: FeedService) {
+  formData: FormData = new FormData();
+  title: "Tin mới";
+  link: string = "";
+   
+  constructor(private feedService: FeedService, private http: HttpClient) {
     feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fban-doc.rss")
     .subscribe(value => {
       feedService.createListFeedItems(this.newsFeed, value);
@@ -70,27 +71,30 @@ export class HomeComponent implements OnInit {
     });
     feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fgiao-duc.rss")
     .subscribe(value => {
+      // console.log(value.items[0].link);
+      this.link = value.items[0].link;
+      console.log(this.link)
+      this.onSend(this.link);
+      console.log('link: ' + this.link);
+      this.feedService.onSendService(this.formData).subscribe(
+        res =>{
+          this.cover = res.content[0]
+          console.log(this.cover);
+        },
+        error => {
+          console.log(error);
+        }
+      )
       feedService.createListFeedItems(this.eduFeed, value);
     });
 
-
-    this.onSend("https://nld.com.vn/kinh-te/ket-noi-cung-cau-nong-thuy-san-giua-cac-tinh-thanh-dbscl-va-tp-hcm-202109132153034.htm");
-    this.feedService.onSendService(this.formData).subscribe(
-      res =>{
-        this.feedService.formatData(this.title, this.content, this.imageArray, res);
-        this.title = res.title;
-        this.cover = res.cover;
-      },
-      error => {
-        console.log(error);
-      }
-    )
+  
    }
-
 
    onSend(name: string){
     this.formData.append('name', name);
   }
+  
 
   ngOnInit(): void {
 

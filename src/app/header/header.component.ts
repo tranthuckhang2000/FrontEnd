@@ -39,9 +39,8 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('title: ' + this.categoryTop[1].link)
-    console.log('link: ' + this.categoryTop[1].link)
-
+    // console.log('title: ' + this.categoryTop[1].link)
+    // console.log('link: ' + this.categoryTop[1].link)
   }
 
 }
