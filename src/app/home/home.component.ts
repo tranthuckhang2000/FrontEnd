@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import {FeedService} from "../feed/service/feed.service";
 import {FeedItems} from "../feed/model/feed-items";
-import {Image} from "../model/image";
+import {Image} from "../feed/model/image";
 
 
 @Component({
@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
   imageSrc: string[] = [];
   imageAlt: string[] = [];
   imageArray: Image[] = [];
-   
+
   image: string = './assets/images/big_trump.jpg';
   constructor(private feedService: FeedService) {
     feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fban-doc.rss")

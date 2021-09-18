@@ -75,8 +75,8 @@ let routes: Routes = [
   {path: 'noi-thang/chi-tiet/:title/:link', component: FeedDetailComponent},
 
 
-  {path:'tin-doc-quyen', component:TindocquyenMenuComponent},
-  {path: 'tin-doc-quyen/chi-tiet/:title/:link', component: FeedDetailComponent},
+  {path:'doc-quyen', component:TindocquyenMenuComponent},
+  {path: 'doc-quyen/chi-tiet/:title/:link', component: FeedDetailComponent},
 
 
   {path:'phu-nu', component:PhunuMenuComponent},

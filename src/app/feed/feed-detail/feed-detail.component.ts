@@ -3,7 +3,7 @@ import {FeedItems} from "../model/feed-items";
 import { ActivatedRoute, Router } from '@angular/router';
 // import * as $ from 'jquery';
 import {FeedService} from "../service/feed.service";
-import {Image} from "../../model/image";
+import {Image} from "../model/image";
 // import { faCoffee, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { faAlignJustify, faPlay, faThumbsUp, faNewspaper, faBell } from '@fortawesome/free-solid-svg-icons';
 
@@ -14,10 +14,8 @@ import { faAlignJustify, faPlay, faThumbsUp, faNewspaper, faBell } from '@fortaw
   styleUrls: ['./feed-detail.component.css']
 })
 export class FeedDetailComponent implements OnInit {
-  faAlignJustify = faAlignJustify;
   faThumbsUp = faThumbsUp;
   faPlay = faPlay;
-  faNewspaper = faNewspaper;
   faBell = faBell;
   product: FeedItems;
   dataContent: string[];
@@ -40,7 +38,7 @@ export class FeedDetailComponent implements OnInit {
     const title = param.get('title');
     url = link;
     this.title = title;
-    console.log(url);
+    // console.log(url);
     this.onSend(url);
     this.feedService.onSendService(this.formData).subscribe(
       res =>{

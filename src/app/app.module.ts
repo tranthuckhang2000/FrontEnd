@@ -1,7 +1,6 @@
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CategorymenuComponent } from './category/quocte-menu/categorymenu.component';
@@ -14,7 +13,6 @@ import { GiaoducMenuComponent } from './category/giaoduc-menu/giaoduc-menu.compo
 import { FeedComponent } from './feed/feed.component';
 import {Data} from "./feed/model/data";
 import {HttpClientModule} from "@angular/common/http";
-import { FeedListComponent } from './feed/feed-list/feed-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import {RouterModule} from "@angular/router";
 import { HomeComponent } from './home/home.component';
@@ -35,7 +33,6 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
     HeaderComponent,
     FooterComponent,
     CategorymenuComponent,
@@ -46,7 +43,6 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
     SuckhoeMenuComponent,
     GiaoducMenuComponent,
     FeedComponent,
-    FeedListComponent,
     HomeComponent,
     CongngheMenuComponent,
     DiemdenMenuComponent,
@@ -66,7 +62,7 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
         AppRoutingModule,
         RouterModule,
         FontAwesomeModule,
-        
+
     ],
   providers: [Data],
   exports: [HttpClientModule],
