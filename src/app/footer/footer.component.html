@@ -1,3 +1,4 @@
+
 <div class="container-fluid footer-main">
   <div class="container footer-top">
     <div class="logo-footer">
@@ -6,10 +7,11 @@
   </div>
   <div class="container footer-mid">
     <div class="footer-bot-item">
-      <a href="/trong-nuoc">
-        <p>trong nước</p>
-      </a>
-      <a href="/quoc-te">
+       <a *ngFor="let i of categoryFooter" [routerLink]="['/danh-muc', i.title, i.link]">
+        <p>{{i.title}}</p>
+      </a> 
+      
+      <!-- <a href="/quoc-te">
         <p>quốc tế</p>
       </a>
       <a href="/ban-doc">
@@ -45,7 +47,7 @@
       </a>
       <a href="/phu-nu">
         <p>phụ nữ</p>
-      </a>
+      </a> -->
     </div>
   </div>
 

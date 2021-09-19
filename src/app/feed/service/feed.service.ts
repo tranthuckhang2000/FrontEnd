@@ -47,7 +47,7 @@ export class FeedService {
   formatData(title: string, content: any[], image: any[], value: any){
     for (var i = 0; i <= value.content.length - 1; i++){
       content.push(value.content[i]);
-      console.log(content[i]);
+      // console.log(content[i]);
     }
     for (var i = 0; i <= value.imageSrc.length - 1; i++){
       let src = value.imageSrc[i];

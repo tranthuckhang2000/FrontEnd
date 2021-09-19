@@ -32,13 +32,18 @@ export class FeedDetailComponent implements OnInit {
   cover: any;
 
   constructor(private route: ActivatedRoute, private router: Router, private feedService: FeedService) {
+
+  }
+  onSend(name: string){
+    this.formData.append('name', name);
+  }
+
+  ngOnInit(): void {
     let url: any;
     const param = this.route.snapshot.paramMap;
     const link = param.get('link');
     const title = param.get('title');
     url = link;
-    this.title = title;
-    // console.log(url);
     this.onSend(url);
     this.feedService.onSendService(this.formData).subscribe(
       res =>{
@@ -50,12 +55,7 @@ export class FeedDetailComponent implements OnInit {
         console.log(error);
       }
     )
-  }
-  onSend(name: string){
-    this.formData.append('name', name);
-  }
-
-  ngOnInit(): void {
+    this.title = title;
     console.log(this.content);
 
   }

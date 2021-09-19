@@ -10,36 +10,9 @@
                   <img src="./assets/images/logo.ico" alt="logo" />
                 </a>
               </div>
-              <a href="/ly-tuong" class="menu-item">
-                <p class="icon-item">
-                  <fa-icon [icon]="faHeart"></fa-icon>
-                </p>
-                <p class="text-item">lý tưởng sống</p>
+              <a *ngFor="let i of categoryTop" [routerLink]="['/danh-muc',i.title, i.link]" class="menu-item">
+                <p class="text-item">{{i.title}}</p>
               </a>
-              <a href="/doc-quyen" class="menu-item">
-                <p class="icon-item">
-                  <fa-icon [icon]="faStar"></fa-icon>
-                </p>
-                <p class="text-item">độc quyền</p>
-              </a>
-              <a href="/noi-thang" class="menu-item">
-                <p class="icon-item">
-                  <fa-icon [icon]="faCommentAlt"></fa-icon>
-                </p>
-                <p class="text-item">nói thẳng</p>
-              </a>
-              <a href="/thi-truong" class="menu-item">
-                <p class="icon-item">
-                  <fa-icon [icon]="faGlobeAmericas"></fa-icon>
-                </p>
-                <p class="text-item">thị trường</p>
-              </a>
-              <p id="iconOpen" class="icon-menu-mobile">
-                <img src="./assets/images/menu.svg" alt="close">
-              </p>
-              <p id="iconClose" class="icon-menu-mobile">
-                <img src="./assets/images/close.svg" alt="close">
-              </p>
             </div>
             <div class="search">
               <input type="text" />
@@ -52,8 +25,8 @@
   </div>
   <div style="background-color: #2e2e2e" class="container-fluid bot-menu-main">
     <div class="container menu-bot-item">
-        <a *ngFor="let i of categoryTop" [routerLink]="['/danh-muc', i.title, i.link]">
-          <p>{{i.title}}</p>
+        <a *ngFor="let a of categoryMid" [routerLink]="['/danh-muc', a.title, a.link]">
+          <p>{{a.title}}</p>
         </a>
     </div>
   </div>
