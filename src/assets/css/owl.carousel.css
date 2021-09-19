@@ -140,7 +140,6 @@
   top: 50%;
   margin-left: -40px;
   margin-top: -40px;
-  background: url("src/assets/images/abigail-keenan-65477.jpg") no-repeat;
   cursor: pointer;
   z-index: 1;
   -webkit-backface-visibility: hidden;
@@ -166,4 +165,5 @@
   position: relative;
   z-index: 1;
   height: 100%;
-  width: 100%; }
+  width: 100%; 
+}
