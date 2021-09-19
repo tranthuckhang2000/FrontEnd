@@ -35,14 +35,13 @@ export class HomeComponent implements OnInit {
   imageSrc: string[] = [];
   imageAlt: string[] = [];
   imageArray: Image[] = [];
-
   test: any[] = [];
-
-
   formData: FormData = new FormData();
   title: "Tin mới";
   link: string = "";
-   
+
+  rssFeed: any[] = [];
+
   constructor(private feedService: FeedService, private http: HttpClient) {
     this.test = [
       {title: "trong nước", link: "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fthoi-su.rss"},
@@ -93,12 +92,12 @@ export class HomeComponent implements OnInit {
       // console.log(value.items[0].link);
       this.link = value.items[0].link;
       // console.log(this.link)
-      // this.onSend(this.link);
+      this.onSend(this.link);
       // console.log('link: ' + this.link);
       this.feedService.onSendService(this.formData).subscribe(
         res =>{
           this.cover = res.content[0]
-          // console.log(this.cover);
+          // console.log('cover: ' + this.cover);
         },
         error => {
           console.log(error);
@@ -107,15 +106,57 @@ export class HomeComponent implements OnInit {
       feedService.createListFeedItems(this.eduFeed, value);
     });
 
-  
+
    }
 
    onSend(name: string){
     this.formData.append('name', name);
   }
-  
-
   ngOnInit(): void {
+    this.rssFeed = [
+      {category: "Tin mới nhất", link: "https://nld.com.vn/tin-moi-nhat.rss"},
+      {category: "Thời sự", link: "https://nld.com.vn/thoi-su.rss"},
+      {category: "Quốc tế", link: "https://nld.com.vn/thoi-su-quoc-te.rss"},
+      {category: "Công đoàn", link: "https://nld.com.vn/cong-doan.rss"},
+      {category: "Bạn đọc", link: "https://nld.com.vn/ban-doc.rss"},
+      {category: "Kinh tế", link: "https://nld.com.vn/kinh-te.rss"},
+      {category: "Sức khoẻ", link: "https://nld.com.vn/suc-khoe.rss"},
+      {category: "Giáo dục", link: "https://nld.com.vn/giao-duc.rss"},
+      {category: "Pháp luật", link: "https://nld.com.vn/phap-luat.rss"},
+      {category: "Giải trí", link: "https://nld.com.vn/gia-tri.rss"},
+      {category: "Thể thao", link: "https://nld.com.vn/the-thao.rss"},
+      {category: "Công nghệ", link: "https://nld.com.vn/cong-nghe.rss"},
+      {category: "Điểm đến", link: "https://nld.com.vn/diem-den.rss"},
+      {category: "Lý tưởng sống", link: "https://nld.com.vn/ly-tuong-song.rss"},
+      {category: "Nói thẳng", link: "https://nld.com.vn/noi-thang.rss"},
+      {category: "Tin độc quyền", link: "https://nld.com.vn/tin-doc-quyen.rss"},
+      {category: "Địa ốc", link: "https://nld.com.vn/dia-oc.rss"},
+      {category: "Thị trường", link: "https://nld.com.vn/thi-truong.rss"},
+    ]
+    // for(let i = 0; i < this.rssFeed.length; i++){
+    //   this.formData.append('link', this.rssFeed[i].link);
+    //   this.formData.append('category', this.rssFeed[i].category);
+    //   this.feedService.onSendRssFeed(this.formData).subscribe(
+    //     res => {
+    //     console.log(res);
+    //     },
+    //     error => {
+    //       console.log(error);
+    //     }
+    //   );
+    // }
+
+    this.formData.append('category', 'kinh tế');
+    this.feedService.onSendLoadData(this.formData).subscribe(
+      res => {
+        this.feedService.loadDataFeed(this.internalFeed, res);
+        console.log(this.internalFeed);
+      },
+      error => {
+        // console.log(error);
+      }
+    );
+
 
   }
 
