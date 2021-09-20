@@ -26,7 +26,7 @@ import {CategoryDetailComponent} from "./category/category-detail/category-detai
 let routes: Routes = [
   {path: '', component: HomeComponent},
 
-  {path: 'danh-muc/:title/:link', component: CategoryDetailComponent},
+  {path: 'danh-muc/:category', component: CategoryDetailComponent},
 
   {path: 'chi-tiet/:title/:link', component: FeedDetailComponent},
 

@@ -10,8 +10,8 @@
                   <img src="./assets/images/logo.ico" alt="logo" />
                 </a>
               </div>
-              <a *ngFor="let i of categoryTop" [routerLink]="['/danh-muc',i.title, i.link]" class="menu-item">
-                <p class="text-item">{{i.title}}</p>
+              <a *ngFor="let i of categoryTop" [routerLink]="['/danh-muc',i.category]" class="menu-item">
+                <p class="text-item">{{i.category}}</p>
               </a>
             </div>
             <div class="search">
@@ -25,8 +25,8 @@
   </div>
   <div style="background-color: #2e2e2e" class="container-fluid bot-menu-main">
     <div class="container menu-bot-item">
-        <a *ngFor="let a of categoryMid" [routerLink]="['/danh-muc', a.title, a.link]">
-          <p>{{a.title}}</p>
+        <a *ngFor="let a of categoryMid" [routerLink]="['/danh-muc', a.category]">
+          <p>{{a.category}}</p>
         </a>
     </div>
   </div>

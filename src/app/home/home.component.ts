@@ -1,9 +1,9 @@
-import { Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FeedService} from "../feed/service/feed.service";
 import {FeedItems} from "../feed/model/feed-items";
 import {Image} from "../feed/model/image";
-import { HttpClient } from "@angular/common/http";
-import { ActivatedRoute, Router } from '@angular/router';
+import {HttpClient} from "@angular/common/http";
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
   monopolyFeed: FeedItems[] = [];
   internalFeed: FeedItems[] = [];
   cover: any;
-  content : string[] = [];
+  content: string[] = [];
   imageSrc: string[] = [];
   imageAlt: string[] = [];
   imageArray: Image[] = [];
@@ -39,8 +39,8 @@ export class HomeComponent implements OnInit {
   formData: FormData = new FormData();
   title: "Tin mới";
   link: string = "";
-
   rssFeed: any[] = [];
+  arrayFeedHome: any[] = [];
 
   constructor(private feedService: FeedService, private http: HttpClient) {
     // this.test = [
@@ -106,11 +106,12 @@ export class HomeComponent implements OnInit {
     //   feedService.createListFeedItems(this.eduFeed, value);
     // });
 
-   }
+  }
 
-   onSend(name: string){
+  onSend(name: string) {
     this.formData.append('name', name);
   }
+
   ngOnInit(): void {
     this.rssFeed = [
       {category: "Tin mới nhất", link: "https://nld.com.vn/tin-moi-nhat.rss"},
@@ -131,7 +132,8 @@ export class HomeComponent implements OnInit {
       {category: "Tin độc quyền", link: "https://nld.com.vn/tin-doc-quyen.rss"},
       {category: "Địa ốc", link: "https://nld.com.vn/dia-oc.rss"},
       {category: "Thị trường", link: "https://nld.com.vn/thi-truong.rss"},
-    ]
+    ];
+    // update new feed for all category
     // for(let i = 0; i < this.rssFeed.length; i++){
     //   this.formData.append('link', this.rssFeed[i].link);
     //   this.formData.append('category', this.rssFeed[i].category);
@@ -145,91 +147,34 @@ export class HomeComponent implements OnInit {
     //   );
     // }
 
-    this.formData.append('category', 'tin mới nhất');
-    this.feedService.onSendLoadData(this.formData).subscribe(
-      res => {
-        this.feedService.loadDataFeed(this.newsFeed, res);
-        console.log("tin moi nhat");
-        console.log(this.newsFeed[0].title);
-        // console.log(res);
-      },
-      error => {
-        console.log(error);
-      }
-    );
-    this.formData.append('category', 'giáo dục');
-    this.feedService.onSendLoadData(this.formData).subscribe(
-      res => {
-        this.feedService.loadDataFeed(this.newsFeed, res);
-        console.log(this.eduFeed);
-      },
-      error => {
-        // console.log(error);
-      }
-    );
+    // data for home
+    this.arrayFeedHome = [
+      {array: this.newsFeed, category: "Tin mới nhất"},
+      {array: this.unionFeed, category: "Công đoàn"},
+      {array: this.relaxFeed, category: "Giải trí"},
+      {array: this.eduFeed, category: "Giáo dục"},
+      {array: this.techniqueFeed, category: "Công nghệ"},
+      {array: this.estateFeed, category: "Địa ốc"},
+      {array: this.destinationFeed, category: "Điểm đến"}
+    ];
+    // Load data for home
+    this.arrayFeedHome.forEach(feed => {
+      this.formData.append('category', feed.category);
+      this.feedService.onSendLoadData(this.formData).subscribe(
+        res => {
+          this.feedService.loadDataFeed(feed.array, res);
+        },
+        error => {
+          console.log(error);
+        }
+      );
+    })
+  }
+    ;
 
-    this.formData.append('category', 'công đoàn');
-    this.feedService.onSendLoadData(this.formData).subscribe(
-      res => {
-        this.feedService.loadDataFeed(this.unionFeed, res);
-        console.log(this.eduFeed);
-      },
-      error => {
-        // console.log(error);
-      }
-    );
-    this.formData.append('category', 'giáo dục');
-    this.feedService.onSendLoadData(this.formData).subscribe(
-      res => {
-        this.feedService.loadDataFeed(this.eduFeed, res);
-        console.log('giáo dục: ')
-        console.log(res);
-      },
-      error => {
-        // console.log(error);
-      }
-    );
-
-    this.formData.append('category', 'công nghệ');
-    this.feedService.onSendLoadData(this.formData).subscribe(
-      res => {
-        this.feedService.loadDataFeed(this.techniqueFeed, res);
-      },
-      error => {
-        // console.log(error);
-      }
-    );
-    this.formData.append('category', 'địa ốc');
-    this.feedService.onSendLoadData(this.formData).subscribe(
-      res => {
-        this.feedService.loadDataFeed(this.estateFeed, res);
-      },
-      error => {
-        // console.log(error);
-      }
-    );
-
-    this.formData.append('category', 'giải trí');
-    this.feedService.onSendLoadData(this.formData).subscribe(
-      res => {
-        this.feedService.loadDataFeed(this.relaxFeed, res);
-      },
-      error => {
-        // console.log(error);
-      }
-    );
-    this.formData.append('category', 'điểm đến');
-    this.feedService.onSendLoadData(this.formData).subscribe(
-      res => {
-        this.feedService.loadDataFeed(this.destinationFeed, res);
-      },
-      error => {
-        // console.log(error);
-      }
-    );
 
 
 
   }
 
-}
+
