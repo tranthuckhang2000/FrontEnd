@@ -30,14 +30,14 @@ export class FeedDetailComponent implements OnInit {
   formData: FormData = new FormData();
   title_main: any;
   cover: any;
-
+  data2: FeedItems[] = [];
+  categoryTop: any[] = [];
   constructor(private route: ActivatedRoute, private router: Router, private feedService: FeedService) {
 
   }
   onSend(name: string){
     this.formData.append('name', name);
   }
-
   ngOnInit(): void {
     let url: any;
     const param = this.route.snapshot.paramMap;
@@ -57,10 +57,9 @@ export class FeedDetailComponent implements OnInit {
     )
     this.title = title;
     console.log(this.content);
-
   }
-
 }
+
 
 
 

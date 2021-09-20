@@ -1,6 +1,5 @@
 (function () {
   "use strict";
-
   var owlCarousel = function () {
     $("#slider1").owlCarousel({
       loop: false,
@@ -146,7 +145,7 @@
           }, 100);
         }
       },
-      { offset: "85%" }
+      {offset: "85%"}
     );
     // }, { offset: '90%'} );
   };
@@ -184,18 +183,20 @@
     googleTranslateFormStyling();
   });
 })();
+
 function googleTranslateElementInit() {
   new google.translate.TranslateElement(
-    { pageLanguage: "en" },
+    {pageLanguage: "en"},
     "google_translate_element"
   );
 }
+
 $(document).ready(function () {
   $("#iconOpen").click(function () {
-      changeStatus("0%", "0");
-      $("#iconOpen").toggle();
-      $("#iconClose").toggle();
-      // $(".nav-mobile").toggle();
+    changeStatus("0%", "0");
+    $("#iconOpen").toggle();
+    $("#iconClose").toggle();
+    // $(".nav-mobile").toggle();
 
   });
   $("#iconClose").click(function () {
@@ -207,9 +208,7 @@ $(document).ready(function () {
     $('.nav-header').css('z-index', '300');
 
 
-
-
-});
+  });
 
   function changeStatus(left, right) {
     // $('.nav-overlay').toggle();
@@ -231,3 +230,60 @@ $(document).ready(function () {
     });
   }
 });
+// Speech
+var seconds, minute, clear;
+var getvalue = function () {
+  seconds = Number(document.getElementById('secondCouter').innerHTML);
+  minute = Number(document.getElementById('minuteCouter').innerHTML);
+  seconds++;
+  if (seconds == 59) {
+    seconds = 0;
+    minute++;
+  }
+  document.getElementById('secondCouter').innerHTML = seconds;
+  document.getElementById('minuteCouter').innerHTML = minute;
+}
+
+function start() {
+  clear = setInterval(getvalue, 1000);
+}
+
+function stop() {
+  clearInterval(clear);
+}
+
+speech = new SpeechSynthesisUtterance();
+this.speech.lang = 'vi';
+var contentToSpeak = '';
+this.speech.text = '';
+
+function myFunction(x) {
+  var titleCover = document.getElementById('title_cover').innerHTML;
+  var content = document.getElementsByClassName('contentToSpeak');
+  for (var i = 0; i < content.length; i++) {
+    contentToSpeak += content[i].innerHTML;
+  }
+  this.speech.text = titleCover + contentToSpeak;
+  //this.speech.text = 'Chiều về thăm quê thăm lại kỉ niệm ngày xưa';
+  if (x.classList == "fa fa-play") {
+    if (window.speechSynthesis.paused == true) {
+      window.speechSynthesis.resume();
+      start();
+    } else {
+      window.speechSynthesis.speak(this.speech);
+      start();
+    }
+  } else if (x.classList == "fa fa-play fa-pause") {
+    window.speechSynthesis.pause();
+    stop();
+  }
+  x.classList.toggle("fa-pause");
+  var onend = this.speech.addEventListener('end', function (event) {
+    x.classList = "fa fa-play";
+    stop();
+    document.getElementById('secondCouter').innerHTML = 0;
+    document.getElementById('minuteCouter').innerHTML = 0;
+  });
+}
+
+// End Speech

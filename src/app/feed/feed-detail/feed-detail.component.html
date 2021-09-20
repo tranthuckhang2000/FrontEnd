@@ -37,23 +37,28 @@
                         </li>
                       </ul>
                     </div>
-                    <div class="voice">
+                    <div  class="voice">
                       <div class="void-item">
                         <p>
-                          <fa-icon [icon]="faPlay"></fa-icon>
+                          <i style="font-size: 20px;" onclick="myFunction(this)" class="fa fa-play"></i>
                         </p>
                         <p>BÁO NÓI</p>
                         <p>-</p>
-                        <p>4:12</p>
+                        <p id="timer">
+                          <span id="minuteCouter">0</span>
+                          <span>:</span>
+                          <span id="secondCouter">0</span>
+                        </p>
                       </div>
                     </div>
                   </div>
-                  <h5 style="margin-bottom: 20px;">{{ cover }}</h5>
+                  <h5 id="title_cover" style="margin-bottom: 20px;">{{ cover }}</h5>
                   <!-- <p *ngFor="let i of content">{{i}}</p> -->
+
                   <div class="content-body" *ngFor="let n of content">
-                    <p>{{n}}</p>
+                    <p class="contentToSpeak">{{n}}</p>
                   </div>
-                  
+
                   <div
                     style="text-align: center"
                     class="image-body"
