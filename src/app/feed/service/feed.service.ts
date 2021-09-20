@@ -60,7 +60,7 @@ export class FeedService {
 
 
   loadDataFeed(list: FeedRss[], value: any){
-    console.log(value.title);
+    // console.log(value.title);
     for (var i = 0; i < value.link.length; i++) {
       var category = value.category[i];
       var title = value.title[i];
@@ -68,10 +68,10 @@ export class FeedService {
       var link = value.link[i];
       var thumbnail = value.thumbnail[i];
       let feed = new FeedRss({category, title, pubDate, link, thumbnail});
-      console.log(feed);
+      // console.log(feed);
       list.push(feed);
     }
-    console.log(list);
+    // console.log(list);
   }
 
   createFeedData(list: FeedItems[], value: any) {

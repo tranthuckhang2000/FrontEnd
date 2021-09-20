@@ -53,7 +53,7 @@
                   <div class="content-body" *ngFor="let n of content">
                     <p>{{n}}</p>
                   </div>
-                  
+
                   <div
                     style="text-align: center"
                     class="image-body"
@@ -79,36 +79,13 @@
             </h5>
           </div>
           <div class="news-cover">
-            <div class="news-item">
+            <div class="news-item" *ngFor="let i of feedRecomment.slice(0,6)">
               <img
-                src="https://bachlongmobile.com/bnews/wp-content/uploads/2020/12/1-8.png"
+                src="{{i.thumbnail}}"
               />
-              <h6>Iphone 13 sẽ có giá 50 tỉ đồng</h6>
+              <h6>{{i.title}}</h6>
             </div>
-            <div class="news-item">
-              <img
-                src="https://papatrader.com/wp-content/uploads/2020/09/nasa-1200.jpg"
-              />
-              <h6>Nasa sắp phá sản do đại dịch Covid?</h6>
-            </div>
-            <div class="news-item">
-              <img
-                src="https://home.vnreview.vn/image/21/56/81/2156819.jpg?t=1609296191375"
-              />
-              <h6>Exciter 155 rớt giá thảm hại chỉ còn 20 triệu đồng</h6>
-            </div>
-            <div class="news-item">
-              <img
-                src="https://motosaigon.vn/wp-content/uploads/2019/12/bmw-s1000rr-2020-danh-gia-ban-motosaigon-30.jpg"
-              />
-              <h6>BMW S1000RR có gì nổi bật</h6>
-            </div>
-            <div class="news-item">
-              <img
-                src="https://cdnstatic.baotintuc.vn/web_images/logo-share-02.jpg"
-              />
-              <h6>Đại dịch Covid 19 đã gây hại như thế nào?</h6>
-            </div>
+
           </div>
         </div>
       </div>
