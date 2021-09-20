@@ -41,6 +41,24 @@ a.hoverLink:hover {
   // justify-content: left;
   flex-direction: column;
 }
+
+.search-detail{
+  .item-search{
+    margin-bottom: 30px;
+    display: flex;
+    .img-detail{
+      flex: 1;
+      img{
+        width: 90%;
+      }
+
+    }
+    .infor-detail{
+      flex: 1;
+
+    }
+  }
+}
 .table-covid {
   z-index: 10;
 }
@@ -256,7 +274,7 @@ a.hoverLink:hover {
 
 @media screen and (max-width: 46.25em) {
   .table-covid{
-    
+
     display: none;
   }
   .title-news {

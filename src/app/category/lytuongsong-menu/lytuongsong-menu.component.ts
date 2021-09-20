@@ -16,7 +16,7 @@ export class LytuongsongMenuComponent implements OnInit {
   title = "";
   constructor(feedService: FeedService) {
     this.data = [];
-    feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fly-tuong-song.rss")
+      feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fly-tuong-song.rss")
       .subscribe(value => {
         feedService.createListFeedItems(this.data,value);
       });

@@ -15,8 +15,12 @@
               </a>
             </div>
             <div class="search">
-              <input type="text" />
-              <img src="./assets/images/search.svg" alt="Search"/>
+              <input [(ngModel)]="titleSearch"  id="input_search" #title type="text" placeholder="Tìm kiếm..." />
+              <div class="search-icon">
+                <a style="color: #ffffff" [routerLink]="['/tim-kiem', titleSearch]">
+                  <fa-icon [icon]="faSearch"></fa-icon>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -25,6 +29,11 @@
   </div>
   <div style="background-color: #2e2e2e" class="container-fluid bot-menu-main">
     <div class="container menu-bot-item">
+      <a class="menu-item" href="/">
+        <p class="text-item">
+          <fa-icon [icon]="faHome"></fa-icon>
+        </p>
+      </a>
         <a *ngFor="let a of categoryMid" [routerLink]="['/danh-muc', a.category]">
           <p>{{a.category}}</p>
         </a>

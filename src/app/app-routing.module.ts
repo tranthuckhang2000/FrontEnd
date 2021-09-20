@@ -22,13 +22,13 @@ import {DiaocMenuComponent} from "./category/diaoc-menu/diaoc-menu.component";
 import {ThitruongMenuComponent} from "./category/thitruong-menu/thitruong-menu.component";
 import {FeedDetailComponent} from "./feed/feed-detail/feed-detail.component";
 import {CategoryDetailComponent} from "./category/category-detail/category-detail.component";
+import {SearchDetailComponent} from "./search-detail/search-detail.component";
 
 let routes: Routes = [
   {path: '', component: HomeComponent},
-
   {path: 'danh-muc/:category', component: CategoryDetailComponent},
-
   {path: 'chi-tiet/:title/:link', component: FeedDetailComponent},
+  {path: 'tim-kiem/:title', component: SearchDetailComponent},
 
 
   {path: 'ban-doc', component: BandocMenuComponent},

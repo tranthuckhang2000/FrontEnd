@@ -30,6 +30,8 @@ import { DiaocMenuComponent } from './category/diaoc-menu/diaoc-menu.component';
 import { FeedDetailComponent } from './feed/feed-detail/feed-detail.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import { CategoryDetailComponent } from './category/category-detail/category-detail.component';
+import { SearchDetailComponent } from './search-detail/search-detail.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -57,13 +59,15 @@ import { CategoryDetailComponent } from './category/category-detail/category-det
     ThitruongMenuComponent,
     DiaocMenuComponent,
     FeedDetailComponent,
-    CategoryDetailComponent
+    CategoryDetailComponent,
+    SearchDetailComponent
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         RouterModule,
         FontAwesomeModule,
+        FormsModule
 
     ],
   providers: [Data],

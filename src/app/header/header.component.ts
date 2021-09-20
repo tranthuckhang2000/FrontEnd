@@ -27,8 +27,13 @@ export class HeaderComponent implements OnInit {
   faTimes = faTimes;
   categoryTop: any[] = [];
   categoryMid: any[] = [];
+  public titleSearch = "";
 
   constructor() {}
+
+  movePage(){
+    this.titleSearch = "";
+  }
 
   ngOnInit(): void {
     this.categoryMid = [

@@ -1,0 +1,45 @@
+
+
+<app-header></app-header>
+<div style="min-height: 400px" class="container">
+  <h2 style="border-bottom: 5px solid #ef730d; padding-bottom: 10px; margin-bottom: 20px">
+    Kết quả tìm kiếm cho "{{this.title}}"
+  </h2>
+  <h1 style="color: red" *ngIf="dataSearch.length === 0">Không tìm thấy kết quả rồi đại vương ơi</h1>
+  <div class="row search-detail">
+    <div *ngFor="let item of dataSearch" class="col-sm-6">
+      <a class="item-search hoverBoxshadow" [routerLink]="['/chi-tiet', item.category, item.link]">
+      <div class="img-detail">
+        <img src="{{item.thumbnail}}" />
+      </div>
+      <div class="infor-detail">
+        <h5>
+        <span>{{item.title}} - </span>
+        <span style="text-decoration: underline">{{item.category}}</span>
+        </h5>
+        <p style="color: #000000">{{item.pubDate}}</p>
+      </div>
+      </a>
+    </div>
+
+  </div>
+<!--  <div class="news-main">-->
+<!--    <div class="row">-->
+<!--      <div class="col-sm-3">-->
+<!--        <h3 class="title-news">Tin đáng chú ý</h3>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="row">-->
+<!--      <div *ngFor="let i of techniqueFeed" class="col-sm-4">-->
+<!--        <a class="hoverLink" [routerLink]="['chi-tiet/Đáng chú ý', i.link]">-->
+<!--          <div class="news-main-item hoverBoxshadow">-->
+<!--            <img src="{{ i.thumbnail}}"/>-->
+<!--            <h6>{{i.title }}</h6>-->
+<!--            <p style="padding-bottom: 5px;" class="pubDate">{{ i.pubDate }}</p>-->
+<!--          </div>-->
+<!--        </a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+</div>
+<app-footer></app-footer>

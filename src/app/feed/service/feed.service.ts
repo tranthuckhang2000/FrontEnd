@@ -52,17 +52,26 @@ export class FeedService {
   onSendLoadData(formData: FormData):Observable<any>{
     return this.http.post<any>('http://localhost/APICrawlData/selectData.php', formData);
   }
+
+  onSendSearch(formData: FormData):Observable<any>{
+    return this.http.post<any>('http://localhost/APICrawlData/search.php', formData);
+  }
+
+
+
   loadDataFeed(list: FeedRss[], value: any){
+    console.log(value.title);
     for (var i = 0; i < value.link.length; i++) {
+      var category = value.category[i];
       var title = value.title[i];
       var pubDate = value.pubDate[i];
       var link = value.link[i];
       var thumbnail = value.thumbnail[i];
-      let feed = new FeedRss({title, pubDate, link, thumbnail});
-      // console.log(feed);
+      let feed = new FeedRss({category, title, pubDate, link, thumbnail});
+      console.log(feed);
       list.push(feed);
     }
-    // console.log(list);
+    console.log(list);
   }
 
   createFeedData(list: FeedItems[], value: any) {
