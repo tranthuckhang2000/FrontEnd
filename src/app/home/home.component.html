@@ -7,34 +7,31 @@
   </div>
   <div class="row news-header">
     <div class="col-sm-6">
-      <div class="news-top news-items hoverBoxshadow">
-        <a [routerLink]="['chi-tiet/Tin tổng hợp', eduFeed[0].link]">
-          <img src="{{ eduFeed[0].thumbnail }}" />
-          <div>
-            <h5>{{ eduFeed[0].title }}</h5>
-            <p style="color: #000000;">
-              {{cover}}
-            </p>
-          </div>
-        </a>
-      </div>
+            <div class="news-top news-items hoverBoxshadow">
+              <a [routerLink]="['chi-tiet/Tin tổng hợp', eduFeed[0].link]">
+                <img src="{{ eduFeed[0].thumbnail }}"/>
+                <div>
+                  <h5>{{ eduFeed[0].title }}</h5>
+                  <p style="color: #000000;">
+                    {{cover}}
+                  </p>
+                </div>
+              </a>
+            </div>
       <div class="news-bot news-items">
-        <!-- <a [routerLink]="['chi-tiet/Tin tổng hợp', unionFeed[1].link]"> -->
         <div style="padding: 0 5px" class="news-bot-item hoverBoxshadow">
           <a [routerLink]="['chi-tiet/Tin tổng hợp', unionFeed[1].link]">
-            <img src="{{ unionFeed[1].thumbnail }}" />
+            <img src="{{ unionFeed[1].thumbnail }}"/>
             <h6>{{ unionFeed[1].title }}</h6>
             <p class="pubDate">{{ unionFeed[1].pubDate }}</p>
           </a>
-
         </div>
         <div class="news-bot-item hoverBoxshadow">
           <a [routerLink]="['chi-tiet/Tin tổng hợp', unionFeed[2].link]">
-            <img src="{{ unionFeed[2].thumbnail }}" />
+            <img src="{{ unionFeed[2].thumbnail }}"/>
             <h6>{{ unionFeed[2].title }}</h6>
             <p class="pubDate">{{ unionFeed[2].pubDate }}</p>
           </a>
-
         </div>
       </div>
     </div>
@@ -43,7 +40,7 @@
         <div style="margin-bottom: 15px; padding: 10px" *ngFor="let i of newsFeed" class="col-sm-6 hoverBoxshadow">
           <a class="hoverLink" [routerLink]="['chi-tiet/Tin mới', i.link]">
             <div class="news-item">
-              <img src="{{ i.thumbnail }}" />
+              <img src="{{ i.thumbnail }}"/>
               <h6>{{ i.title }}</h6>
               <p class="pubDate">{{ i.pubDate }}</p>
             </div>
@@ -115,78 +112,78 @@
     </div>
   </div>
 
-  <div class="news-main">
-    <div class="row">
-      <div class="col-sm-3">
-        <h3 class="title-news">Tin đáng chú ý</h3>
+    <div class="news-main">
+      <div class="row">
+        <div class="col-sm-3">
+          <h3 class="title-news">Tin đáng chú ý</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div *ngFor="let i of techniqueFeed" class="col-sm-4">
+          <a class="hoverLink" [routerLink]="['chi-tiet/Đáng chú ý', i.link]">
+            <div class="news-main-item hoverBoxshadow">
+              <img src="{{ i.thumbnail}}"/>
+              <h6>{{i.title }}</h6>
+              <p style="padding-bottom: 5px;" class="pubDate">{{ i.pubDate }}</p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div *ngFor="let i of techniqueFeed" class="col-sm-4">
-        <a class="hoverLink" [routerLink]="['chi-tiet/Đáng chú ý', i.link]">
-          <div class="news-main-item hoverBoxshadow">
-            <img src="{{ i.thumbnail}}" />
-            <h6>{{i.title }}</h6>
-            <p style="padding-bottom: 5px;" class="pubDate">{{ i.pubDate }}</p>
-          </div>
-        </a>
+    <div class="news-main">
+      <div class="row">
+        <div class="col-sm-3">
+          <h3 class="title-news">Địa ốc</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div *ngFor="let i of estateFeed" class="col-sm-4">
+          <a class="hoverLink" [routerLink]="['chi-tiet/Địa ốc', i.link]">
+            <div class="news-main-item hoverBoxshadow">
+              <img src="{{ i.thumbnail}}"/>
+              <h6>{{i.title }}</h6>
+              <p style="padding-bottom: 5px;" class="pubDate">{{ i.pubDate}}</p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="news-main">
-    <div class="row">
-      <div class="col-sm-3">
-        <h3 class="title-news">Địa ốc</h3>
+    <div class="news-main">
+      <div class="row">
+        <div class="col-sm-3">
+          <h3 class="title-news">Điểm đến</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div *ngFor="let i of destinationFeed" class="col-sm-4">
+          <a class="hoverLink" [routerLink]="['chi-tiet/Điểm đến', i.link]">
+            <div class="news-main-item hoverBoxshadow">
+              <img src="{{ i.thumbnail}}"/>
+              <h6>{{i.title }}</h6>
+              <p style="padding-bottom: 5px;" class="pubDate">{{ i.pubDate }}</p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div *ngFor="let i of estateFeed" class="col-sm-4">
-        <a class="hoverLink" [routerLink]="['chi-tiet/Địa ốc', i.link]">
-          <div class="news-main-item hoverBoxshadow">
-            <img src="{{ i.thumbnail}}" />
-            <h6>{{i.title }}</h6>
-            <p style="padding-bottom: 5px;" class="pubDate">{{ i.pubDate}}</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="news-main">
-    <div class="row">
-      <div class="col-sm-3">
-        <h3 class="title-news">Điểm đến</h3>
-      </div>
-    </div>
-    <div class="row">
-      <div *ngFor="let i of destinationFeed" class="col-sm-4">
-        <a class="hoverLink" [routerLink]="['chi-tiet/Điểm đến', i.link]">
-          <div class="news-main-item hoverBoxshadow">
-            <img src="{{ i.thumbnail}}" />
-            <h6>{{i.title }}</h6>
-            <p style="padding-bottom: 5px;" class="pubDate">{{ i.pubDate }}</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="news-main">
-    <div class="row">
-      <div class="col-sm-3">
-        <h3 class="title-news">Giải trí</h3>
-      </div>
-    </div>
-    <div class="row">
-      <div *ngFor="let i of relaxFeed" class="col-sm-4">
-        <a class="hoverLink" [routerLink]="['chi-tiet/Giải trí', i.link]">
-          <div class="news-main-item hoverBoxshadow">
-            <img src="{{ i.thumbnail}}" />
-            <h6>{{i.title }}</h6>
-            <p style="padding-bottom: 5px;" class="pubDate">{{ i.pubDate }}</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
+<!--  <div class="news-main">-->
+<!--    <div class="row">-->
+<!--      <div class="col-sm-3">-->
+<!--        <h3 class="title-news">Giải trí</h3>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--        <div class="row">-->
+<!--          <div *ngFor="let i of relaxFeed" class="col-sm-4">-->
+<!--            <a class="hoverLink" [routerLink]="['chi-tiet/Giải trí', i.link]">-->
+<!--              <div class="news-main-item hoverBoxshadow">-->
+<!--                <img src="{{ i.thumbnail}}"/>-->
+<!--                <h6>{{i.title }}</h6>-->
+<!--                <p style="padding-bottom: 5px;" class="pubDate">{{ i.pubDate }}</p>-->
+<!--              </div>-->
+<!--            </a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--  </div>-->
 
 </div>
 
