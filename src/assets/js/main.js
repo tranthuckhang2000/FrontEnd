@@ -231,3 +231,54 @@ $(document).ready(function () {
     });
   }
 });
+// Speech
+var seconds, minute, clear;
+var getvalue = function () {
+  seconds = Number(document.getElementById('secondCouter').innerHTML);
+  minute = Number(document.getElementById('minuteCouter').innerHTML);
+  seconds++;
+  if (seconds == 59) {
+    seconds = 0;
+    minute++;
+  }
+  document.getElementById('secondCouter').innerHTML = seconds;
+  document.getElementById('minuteCouter').innerHTML = minute;
+}
+
+function start() {
+  clear = setInterval(getvalue, 1000);
+}
+function stop() {
+  clearInterval(clear);
+}
+speech = new SpeechSynthesisUtterance();
+this.speech.lang = 'vi';
+var contentToSpeak = '';
+function myFunction(x) {
+  var titleCover = document.getElementById('title_cover').innerHTML;
+  var content = document.getElementsByClassName('contentToSpeak');
+  for (var i = 0; i < content.length; i++) {
+    contentToSpeak += content[i].innerHTML;
+  }
+  this.speech.text = titleCover + contentToSpeak;
+  if (x.classList == "fa fa-play") {
+    if (window.speechSynthesis.paused == true) {
+      window.speechSynthesis.resume();
+      start();
+    } else {
+      window.speechSynthesis.speak(this.speech);
+      start();
+    }
+  } else if (x.classList == "fa fa-play fa-pause") {
+    window.speechSynthesis.pause();
+    stop();
+  }
+  x.classList.toggle("fa-pause");
+  // var onend = this.speech.addEventListener('end', function (event) {
+  //   x.classList = "fa fa-play";
+  //   stop();
+  //   document.getElementById('secondCouter').innerHTML = 0;
+  //   document.getElementById('minuteCouter').innerHTML = 0;
+  // });
+}
+// End Speech
