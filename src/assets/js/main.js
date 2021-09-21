@@ -256,7 +256,9 @@ speech = new SpeechSynthesisUtterance();
 this.speech.lang = 'vi';
 var contentToSpeak = '';
 this.speech.text = '';
+if (performance.navigation.type == 1) {
 
+}
 function myFunction(x) {
   var titleCover = document.getElementById('title_cover').innerHTML;
   var content = document.getElementsByClassName('contentToSpeak');
