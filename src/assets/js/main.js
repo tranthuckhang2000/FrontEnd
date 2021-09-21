@@ -254,6 +254,9 @@ function stop() {
 speech = new SpeechSynthesisUtterance();
 this.speech.lang = 'vi';
 var contentToSpeak = '';
+if (performance.navigation.type == 1) {
+  window.speechSynthesis.cancel();
+}
 function myFunction(x) {
   var titleCover = document.getElementById('title_cover').innerHTML;
   var content = document.getElementsByClassName('contentToSpeak');
@@ -274,11 +277,11 @@ function myFunction(x) {
     stop();
   }
   x.classList.toggle("fa-pause");
-  // var onend = this.speech.addEventListener('end', function (event) {
-  //   x.classList = "fa fa-play";
-  //   stop();
-  //   document.getElementById('secondCouter').innerHTML = 0;
-  //   document.getElementById('minuteCouter').innerHTML = 0;
-  // });
+  var onend = this.speech.addEventListener('end', function (event) {
+    x.classList = "fa fa-play";
+    stop();
+    document.getElementById('secondCouter').innerHTML = 0;
+    document.getElementById('minuteCouter').innerHTML = 0;
+  });
 }
 // End Speech
