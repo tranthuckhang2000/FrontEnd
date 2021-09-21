@@ -18,11 +18,7 @@ export class CategoryDetailComponent implements OnInit {
   feedRss1: FeedRss[]= [];
   feedRss2: FeedRss[]= [];
   feedRss3: FeedRss[]= [];
-
   formData: FormData = new FormData();
-
-
-
   constructor(private route: ActivatedRoute, private router: Router, private feedService: FeedService) {
     feedService.getDataRss("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Ftin-moi-nhat.rss")
       .subscribe(value => {
