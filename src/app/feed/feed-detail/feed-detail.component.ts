@@ -90,7 +90,8 @@ export class FeedDetailComponent implements OnInit {
       }
     )
     this.title = title;
-    console.log(this.content);
+    // console.log('content');
+    // console.log(this.content);
 
   }
 

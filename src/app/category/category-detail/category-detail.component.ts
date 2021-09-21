@@ -73,17 +73,6 @@ export class CategoryDetailComponent implements OnInit {
       );
     })
   }
-  // ngOnChanges(): void{
-  //   this.route.paramMap.subscribe((params) => {
-  //     // let url = ""
-  //     // let param = this.route.snapshot.paramMap;
-  //     this.link = params.get('link');
-  //     this.feedService.getDataRss(this.link)
-  //       .subscribe(value => {
-  //         console.log(this.link)
-  //         this.feedService.createListFeedItems(this.data,value);
-  //       });
-  //   })
 
 
 // }

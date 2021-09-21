@@ -3,7 +3,7 @@
   <div class="container d-flex  banner-all">
     <!--Banner all use for responsive -->
     <div  class="flex-item-left">
-      <a [routerLink]="['/chi-tiet',title, feedRss1[0].link]">
+      <a [routerLink]="['/chi-tiet',feedRss1[0].category, feedRss1[0].link]">
         <div style="border: none;border-radius: 0px;" class="card bg-dark text-white">
           <img style="opacity: 0.5;height: 416px" class="card-img" src="{{feedRss1[0].thumbnail}}" alt="Card image">
           <div class="card-img-overlay position-absolute">
@@ -30,7 +30,7 @@
         </a>
       </div>
       <div class="bg-dark flex-item2">
-        <a [routerLink]="['/chi-tiet',title, feedRss1[2].link]">
+        <a [routerLink]="['/chi-tiet',feedRss1[2].category, feedRss1[2].link]">
           <div style="border: none;border-radius: 0px;" class="card bg-dark text-white">
             <img style="height: 207px;opacity: 0.5;border-radius: 0px;" src="{{feedRss1[2].thumbnail}}" class="card-img" alt="...">
             <div class="card-img-overlay">
@@ -52,7 +52,7 @@
     <!--start left column-->
     <div  class="left-column container d-flex flex-wrap">
       <div class="left-column-item" *ngFor="let d of feedRss1 | slice:2:10">
-        <a [routerLink]="['/chi-tiet',title, d.link]">
+        <a [routerLink]="['/chi-tiet',d.category, d.link]">
           <div style="border: none;" class="card">
             <img width="365px" height="208px" src="{{d.thumbnail}}">
             <div class="mt-3">
@@ -85,12 +85,12 @@
         <button style="height: 40px;font-size: 20px;font-weight: bold" class="btn-danger btn-outline- w-50">Thời Sự</button>
         <div *ngFor="let n of feedRss3 | slice:0:10" class="row pb-2 pt-1" style="margin: 0;height: 120px; background: #eff2eb;">
           <div class="col-5 h-100 bg-danger" style="width: 150px;padding: 0;">
-            <a [routerLink]="['/chi-tiet',title, n.link]">
+            <a [routerLink]="['/chi-tiet',n.category, n.link]">
               <img src="{{n.thumbnail}}" alt="img" class="fh5co_most_trading w-100 h-100"/>
             </a>
           </div>
           <div class="mini-title col-sm-7 paddding pt-sm-0">
-            <a [routerLink]="['/chi-tiet',title, n.link]">
+            <a [routerLink]="['/chi-tiet',n.category, n.link]">
               <div style="font-size: 15px;font-weight: bold;margin-top: -3px;" class="ml-2"> {{n.title}}</div>
             </a>
           </div>
@@ -109,7 +109,7 @@
     </div>
     <div class="owl-carousel owl-theme" id="slider2">
       <div  class="item px-2">
-        <a [routerLink]="['/chi-tiet',title, feedRss2[0].link]">
+        <a [routerLink]="['/chi-tiet', feedRss2[0].category, feedRss2[0].link]">
           <div class="fh5co_hover_news_img">
             <div class="fh5co_news_img"><img src="{{feedRss2[0].thumbnail}}" alt=""/></div>
             <div>
@@ -122,7 +122,7 @@
         </a>
       </div>
       <div  class="item px-2">
-        <a [routerLink]="['/chi-tiet',title, feedRss2[1].link]">
+        <a [routerLink]="['/chi-tiet',feedRss2[1].category, feedRss2[1].link]">
           <div class="fh5co_hover_news_img">
             <div class="fh5co_news_img"><img src="{{feedRss2[1].thumbnail}}" alt=""/></div>
             <div>
@@ -135,7 +135,7 @@
         </a>
       </div>
       <div  class="item px-2">
-        <a [routerLink]="['/chi-tiet',title, feedRss2[2].link]">
+        <a [routerLink]="['/chi-tiet',feedRss2[1].category, feedRss2[2].link]">
           <div class="fh5co_hover_news_img">
             <div class="fh5co_news_img"><img src="{{feedRss2[2].thumbnail}}" alt=""/></div>
             <div>
@@ -148,7 +148,7 @@
         </a>
       </div>
       <div  class="item px-2">
-        <a [routerLink]="['/chi-tiet',title, feedRss2[3].link]">
+        <a [routerLink]="['/chi-tiet',feedRss2[3].category, feedRss2[3].link]">
           <div class="fh5co_hover_news_img">
             <div class="fh5co_news_img"><img src="{{feedRss2[3].thumbnail}}" alt=""/></div>
             <div>
@@ -161,7 +161,7 @@
         </a>
       </div>
       <div  class="item px-2">
-        <a [routerLink]="['/chi-tiet',title, feedRss2[4].link]">
+        <a [routerLink]="['/chi-tiet',feedRss2[4].category, feedRss2[4].link]">
           <div class="fh5co_hover_news_img">
             <div class="fh5co_news_img"><img src="{{feedRss2[4].thumbnail}}" alt=""/></div>
             <div>
@@ -174,7 +174,7 @@
         </a>
       </div>
       <div  class="item px-2">
-        <a [routerLink]="['/chi-tiet',title, feedRss2[5].link]">
+        <a [routerLink]="['/chi-tiet',feedRss2[5].category, feedRss2[5].link]">
           <div class="fh5co_hover_news_img">
             <div class="fh5co_news_img"><img src="{{feedRss2[5].thumbnail}}" alt=""/></div>
             <div>
@@ -187,7 +187,7 @@
         </a>
       </div>
       <div  class="item px-2">
-        <a [routerLink]="['/chi-tiet',title, feedRss2[6].link]">
+        <a [routerLink]="['/chi-tiet',feedRss2[6].category, feedRss2[6].link]">
           <div class="fh5co_hover_news_img">
             <div class="fh5co_news_img"><img src="{{feedRss2[6].thumbnail}}" alt=""/></div>
             <div>
@@ -200,7 +200,7 @@
         </a>
       </div>
       <div  class="item px-2">
-        <a [routerLink]="['/chi-tiet',title, feedRss2[7].link]">
+        <a [routerLink]="['/chi-tiet',feedRss2[7].category, feedRss2[7].link]">
           <div class="fh5co_hover_news_img">
             <div class="fh5co_news_img"><img src="{{feedRss2[7].thumbnail}}" alt=""/></div>
             <div>
@@ -213,7 +213,7 @@
         </a>
       </div>
       <div  class="item px-2">
-        <a [routerLink]="['/chi-tiet',title, feedRss2[8].link]">
+        <a [routerLink]="['/chi-tiet',feedRss2[8].category, feedRss2[8].link]">
           <div class="fh5co_hover_news_img">
             <div class="fh5co_news_img"><img src="{{feedRss2[8].thumbnail}}" alt=""/></div>
             <div>
@@ -226,7 +226,7 @@
         </a>
       </div>
       <div  class="item px-2">
-        <a [routerLink]="['/chi-tiet',title, feedRss2[9].link]">
+        <a [routerLink]="['/chi-tiet',feedRss2[9].category, feedRss2[9].link]">
           <div class="fh5co_hover_news_img">
             <div class="fh5co_news_img"><img src="{{feedRss2[9].thumbnail}}" alt=""/></div>
             <div>

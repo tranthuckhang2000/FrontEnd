@@ -1,3 +1,4 @@
+
 <div style="height: 20%; margin-bottom: 30px" class="nav-header">
   <div class="container-fluid top-menu-main">
     <div class="container">
@@ -13,6 +14,13 @@
               <a *ngFor="let i of categoryTop" [routerLink]="['/danh-muc',i.category]" class="menu-item">
                 <p class="text-item">{{i.category}}</p>
               </a>
+              <p  class="icon-menu-mobile">
+                <fa-icon id="iconOpen" [icon]="faBars"></fa-icon>
+                <fa-icon id="iconClose" [icon]="faTimes" class="home-icon"></fa-icon>
+              </p>
+              <!-- <p id="iconClose" class="icon-menu-mobile">
+                <fa-icon [icon]="faTimes" class="home-icon"></fa-icon>
+              </p> -->
             </div>
             <div class="search">
               <input [(ngModel)]="titleSearch"  id="input_search" #title type="text" placeholder="Tìm kiếm..." />
@@ -43,69 +51,66 @@
 <div class="nav-mobile">
   <div class="menu-item">
     <div class="nav-item">
-      <a href="/quoc-te">
-        <p>quốc tế</p>
-      </a>
-      <a href="/ban-doc">
-        <p>bạn đọc</p>
+      <a *ngFor="let i of categoryMid" [routerLink]="['/danh-muc',i.category]" class="menu-item">
+        <p class="text-item">{{i.category}}</p>
       </a>
     </div>
-    <div class="nav-item">
-      <a href="/kinh-te">
-        <p>kinh tế</p>
-      </a>
-      <a href="/suc-khoe">
-        <p>sức khoẻ</p>
-      </a>
-    </div>
-    <div class="nav-item">
-      <a href="/giao-duc">
-        <p>giáo dục</p>
-      </a>
-      <a href="/phap-luat">
-        <p>pháp luật</p>
-      </a>
-    </div>
-    <div class="nav-item">
-      <a href="/the-thao">
-        <p>thể thao</p>
-      </a>
-      <a href="/cong-nghe">
-        <p>công nghệ</p>
-      </a>
-    </div>
-    <div class="nav-item">
-      <a href="/diem-den">
-        <p>điểm đến</p>
-      </a>
-      <a href="/dia-oc">
-        <p>địa ốc</p>
-      </a>
-    </div>
-    <div class="nav-item">
-      <a href="/phu-nu">
-        <p>phụ nữ</p>
-      </a>
-      <a href="/ly-tuong">
-        <p>lý tưởng sống</p>
-      </a>
-    </div>
-    <div class="nav-item">
-      <a href="/doc-quyen">
-        <p>độc quyền</p>
-      </a>
-      <a href="/noi-thang">
-        <p>nói thẳng</p>
-      </a>
-    </div>
-    <div class="nav-item">
-      <a href="/giai-tri">
-        <p>giải trí</p>
-      </a>
-      <a href="/thi-truong">
-        <p>thị trường</p>
-      </a>
-    </div>
+<!--    <div class="nav-item">-->
+<!--      <a href="/kinh-te">-->
+<!--        <p>kinh tế</p>-->
+<!--      </a>-->
+<!--      <a href="/suc-khoe">-->
+<!--        <p>sức khoẻ</p>-->
+<!--      </a>-->
+<!--    </div>-->
+<!--    <div class="nav-item">-->
+<!--      <a href="/giao-duc">-->
+<!--        <p>giáo dục</p>-->
+<!--      </a>-->
+<!--      <a href="/phap-luat">-->
+<!--        <p>pháp luật</p>-->
+<!--      </a>-->
+<!--    </div>-->
+<!--    <div class="nav-item">-->
+<!--      <a href="/the-thao">-->
+<!--        <p>thể thao</p>-->
+<!--      </a>-->
+<!--      <a href="/cong-nghe">-->
+<!--        <p>công nghệ</p>-->
+<!--      </a>-->
+<!--    </div>-->
+<!--    <div class="nav-item">-->
+<!--      <a href="/diem-den">-->
+<!--        <p>điểm đến</p>-->
+<!--      </a>-->
+<!--      <a href="/dia-oc">-->
+<!--        <p>địa ốc</p>-->
+<!--      </a>-->
+<!--    </div>-->
+<!--    <div class="nav-item">-->
+<!--      <a href="/phu-nu">-->
+<!--        <p>phụ nữ</p>-->
+<!--      </a>-->
+<!--      <a href="/ly-tuong">-->
+<!--        <p>lý tưởng sống</p>-->
+<!--      </a>-->
+<!--    </div>-->
+<!--    <div class="nav-item">-->
+<!--      <a href="/doc-quyen">-->
+<!--        <p>độc quyền</p>-->
+<!--      </a>-->
+<!--      <a href="/noi-thang">-->
+<!--        <p>nói thẳng</p>-->
+<!--      </a>-->
+<!--    </div>-->
+<!--    <div class="nav-item">-->
+<!--      <a href="/giai-tri">-->
+<!--        <p>giải trí</p>-->
+<!--      </a>-->
+<!--      <a href="/thi-truong">-->
+<!--        <p>thị trường</p>-->
+<!--      </a>-->
+<!--    </div>-->
   </div>
 </div>
 <!-- <div class="over lay-nav"></div> -->

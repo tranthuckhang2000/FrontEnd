@@ -1,3 +1,5 @@
+
+
 @mixin formatLink() {
   a {
     color: #ffffff;
@@ -113,6 +115,10 @@
   align-items: center;
   border-bottom: 1px solid black;
   @include formatLink;
+  font-size: 10px;
+  a{
+    font-size: 5px;
+  }
 }
 p.icon-menu-mobile {
   display: flex;
@@ -121,6 +127,9 @@ p.icon-menu-mobile {
 }
 
 @media screen and(min-width: 63.9em) {
+  .icon-menu-mobile{
+    display: none;
+  }
   p.icon-menu-mobile {
     display: none;
   }
@@ -168,6 +177,7 @@ p.icon-menu-mobile {
       @include formatLink;
       .menu-item {
         margin-right: 15px;
+
       }
     }
     .search {
@@ -276,10 +286,11 @@ p.icon-menu-mobile {
       }
     }
     .menu-item {
-      margin-top: 25px;
+      margin-top: 5px;
       .nav-item {
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
         margin-bottom: 4%;
         a {
           border: 1px solid #e7e9eb;
@@ -378,9 +389,9 @@ p.icon-menu-mobile {
   }
 
   .nav-mobile {
-    // display: none;
+     //display: none;
     transform: translate(100%, 0);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0 , 0.24) 0px 3px 8px;
     position: fixed;
     // width: 50%;
     z-index: 250;
@@ -400,10 +411,14 @@ p.icon-menu-mobile {
       }
     }
     .menu-item {
-      margin-top: 20px;
+      // background-color: aqua;
+      margin-top: 10px;
       .nav-item {
+        //display: flex;
+        //justify-content: space-around;
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
         margin-bottom: 4%;
         a {
           border: 1px solid #e7e9eb;
