@@ -51,7 +51,7 @@
   <div class="container d-flex two-column-flex">
     <!--start left column-->
     <div  class="left-column container d-flex flex-wrap">
-      <div class="left-column-item" *ngFor="let d of feedRss1 | slice:2:11">
+      <div class="left-column-item" *ngFor="let d of feedRss1 | slice:2:10">
         <a [routerLink]="['/chi-tiet',title, d.link]">
           <div style="border: none;" class="card">
             <img width="365px" height="208px" src="{{d.thumbnail}}">
@@ -83,7 +83,7 @@
       <div style="height: 90%" class="list-news w-100">
         <!-- test-->
         <button style="height: 40px;font-size: 20px;font-weight: bold" class="btn-danger btn-outline- w-50">Thời Sự</button>
-        <div *ngFor="let n of feedRss3" class="row pb-2 pt-1" style="margin: 0;height: 120px; background: #eff2eb;">
+        <div *ngFor="let n of feedRss3 | slice:0:10" class="row pb-2 pt-1" style="margin: 0;height: 120px; background: #eff2eb;">
           <div class="col-5 h-100 bg-danger" style="width: 150px;padding: 0;">
             <a [routerLink]="['/chi-tiet',title, n.link]">
               <img src="{{n.thumbnail}}" alt="img" class="fh5co_most_trading w-100 h-100"/>
@@ -100,9 +100,6 @@
     <!--End Right column-->
   </div>
 </div>
-
-
-test
 <div class="container-fluid pb-4 pt-5">
   <div class="container animate-box">
     <div>
