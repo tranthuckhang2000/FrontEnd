@@ -9,7 +9,7 @@ import {SearchDetailComponent} from "./search-detail/search-detail.component";
 let routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'danh-muc/:category', component: CategoryDetailComponent},
-  {path: 'chi-tiet/:title/:link', component: FeedDetailComponent},
+  {path: 'chi-tiet/:title/:link'  , component: FeedDetailComponent},
   {path: 'tim-kiem/:title', component: SearchDetailComponent},
 
 ]

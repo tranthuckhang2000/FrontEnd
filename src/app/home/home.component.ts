@@ -71,18 +71,18 @@ export class HomeComponent implements OnInit {
       {category: "Thị trường", link: "https://nld.com.vn/thi-truong.rss"},
     ];
     // update new feed for all category
-    // for(let i = 0; i < this.rssFeed.length; i++){
-    //   this.formData.append('link', this.rssFeed[i].link);
-    //   this.formData.append('category', this.rssFeed[i].category);
-    //   this.feedService.onSendRssFeed(this.formData).subscribe(
-    //     res => {
-    //     console.log(res);
-    //     },
-    //     error => {
-    //       console.log(error);
-    //     }
-    //   );
-    // }
+    for(let i = 0; i < this.rssFeed.length; i++){
+      this.formData.append('link', this.rssFeed[i].link);
+      this.formData.append('category', this.rssFeed[i].category);
+      this.feedService.onSendRssFeed(this.formData).subscribe(
+        res => {
+        console.log(res);
+        },
+        error => {
+          console.log(error);
+        }
+      );
+    }
 
     // data for home
     this.arrayFeedHome = [
